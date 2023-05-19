@@ -14,7 +14,8 @@ library(knitr)
 ```{r echo = FALSE}
 syllabi <- tribble(
   ~title, ~institution, ~department, ~level, ~prereqs, ~instructor, ~intructor_discipline,  ~`link`, ~semester,
-   "The Ethics of Data and Artificial Intelligence", "London School of Economics","Philosophy, Logic, and Scientific Method", "Undergraduate", "None", "Kate Vredenburgh, Ali Boyle, Alex Voorhoeve, Paoloa Romero", "Philosophy, Logic, and Scientific Method", '<a target="_top" href = "https://www.lse.ac.uk/ss-asset-library/course-outlines/2023/ME102-Course-Outline-2023.pdf" target = "_blank">Syllabus Link</a>', "Summer 2023")
+   "The Ethics of Data and Artificial Intelligence", "London School of Economics","Philosophy, Logic, and Scientific Method", "Undergraduate", "None", "Kate Vredenburgh, Ali Boyle, Alex Voorhoeve, Paoloa Romero", "Philosophy, Logic, and Scientific Method", '<a target="_top" href = "https://www.lse.ac.uk/ss-asset-library/course-outlines/2023/ME102-Course-Outline-2023.pdf" target = "_blank">Syllabus Link</a>', "Summer 2023",
+  "Data, Ethics, and Society", "Rice University", "Data Science", "Undergraduate", "None", "Elizabeth Petrick", "History", '<a target="_top" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjBqtWbooD_AhUhIzQIHXWLD_c4ChAWegQIBhAB&url=https%3A%2F%2Festher.rice.edu%2Fselfserve%2F!bwzkpsyl.v_viewDoc%3Fterm%3D202120%26crn%3D23021%26type%3DSYLLABUS&usg=AOvVaw1zimMugXOdwaI0SYtmBHVE" target = "_blank">Syllabus Link\n(automatically downloads)</a>', "Spring 2021")
 ```
 
 ```{r echo = FALSE}
@@ -22,7 +23,7 @@ DT::datatable(syllabi, escape = FALSE,
               rownames = F,
               colnames = c("Course Title", "Institution", "Department", "Course Level",
                            "Prerequesites", "Instructor(s)", "Instructor's Discpline", 
-                           "Syllabus Link", "Syllabus' Semester"),
+                           "Syllabus Link", "Syllabus' Term"),
               extensions = "Buttons",
               options = list(dom = "Bfrtip",
                              buttons = c("csv", "pdf", "print"),
