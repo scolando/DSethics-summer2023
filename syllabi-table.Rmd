@@ -1,0 +1,32 @@
+---
+title: "Syllabi Table Creation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(DT)
+library(knitr)
+```
+
+```{r echo = FALSE}
+syllabi <- tribble(
+  ~title, ~institution, ~department, ~level, ~prereqs, ~instructor, ~intructor_discipline,  ~`link`, ~semester,
+   "The Ethics of Data and Artificial Intelligence", "London School of Economics","Philosophy, Logic, and Scientific Method", "Undergraduate", "None", "Kate Vredenburgh, Ali Boyle, Alex Voorhoeve, Paoloa Romero", "Philosophy, Logic, and Scientific Method", '<a target="_top" href = "https://www.lse.ac.uk/ss-asset-library/course-outlines/2023/ME102-Course-Outline-2023.pdf" target = "_blank">Syllabus Link</a>', "Summer 2023")
+```
+
+```{r echo = FALSE}
+DT::datatable(syllabi, escape = FALSE,
+              rownames = F,
+              colnames = c("Course Title", "Institution", "Department", "Course Level",
+                           "Prerequesites", "Instructor(s)", "Instructor's Discpline", 
+                           "Syllabus Link", "Syllabus' Semester"),
+              extensions = "Buttons",
+              options = list(dom = "Bfrtip",
+                             buttons = c("csv", "pdf", "print"),
+                             pageLength = 15)) %>%
+  DT::saveWidget('./docs/syllabi/syllabi-table.html')
+```
+
