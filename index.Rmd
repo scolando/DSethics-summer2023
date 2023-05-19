@@ -1,0 +1,6 @@
+---
+title: "Data Science Ethics Summer 2023"
+output: html_document
+---
+
+this is the index file
