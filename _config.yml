@@ -1,17 +1,6 @@
-project:
-  type: website
-  output-dir: docs
-
-website:
-  title: "Data Science Ethics Summer 2023"
-  site-url: https://scolando.github.io/DSethics-summer2023
-  repo-url: https://github.com/scolando/DSethics-summer2023
-  page-navigation: false
-  navbar: false
-
 output:
   html_document:
-    theme: yeti
+    remote_theme: pages-themes/dinky@v0.2.0
     css: styles.css
     toc: false
 
