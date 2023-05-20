@@ -1,8 +1,6 @@
 ---
 title: "Data Science Ethics Summer 2023"
-output: 
-  html_document:
-    css: styles.css
+output: html_document
 ---
 
 ## [[INTRODUCTION TO WEBSITE]]
