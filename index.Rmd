@@ -1,7 +1,8 @@
 ---
 title: "Data Science Ethics Summer 2023"
-output: html_document
-theme: jekyll-theme-cayman
+output: 
+  html_document:
+    css: styles.css
 ---
 
 ## [[INTRODUCTION TO WEBSITE]]
