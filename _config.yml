@@ -1,8 +1,5 @@
-output:
-  html_document:
-    remote_theme: pages-themes/dinky@v0.2.0
-    css: styles.css
-    toc: false
+theme: jekyll-theme-dinky
+css: styles.css
 
 
 
