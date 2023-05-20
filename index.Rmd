@@ -1,9 +1,11 @@
 ---
 title: "Data Science Ethics Summer 2023"
-output: html_document
+layout: default
 ---
 
 ## [[INTRODUCTION TO WEBSITE]]
+
+trying here to edit things
 
 ## Syllabi Table 
 
