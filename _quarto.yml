@@ -9,8 +9,8 @@ website:
   page-navigation: false
   navbar: false
 
-format:
-  html:
+output:
+  html_document:
     theme: yeti
     css: styles.css
     toc: false
