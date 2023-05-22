@@ -43,7 +43,7 @@ DT::datatable(syllabi, escape = FALSE,
               extensions = "Buttons",
               options = list(dom = "Bfrtip",
                              buttons = c("csv", "pdf", "print"),
-                             pageLength = 15)) %>%
+                             pageLength = 16)) %>%
   DT::saveWidget('./docs/syllabi/syllabi-table.html')
 ```
 
