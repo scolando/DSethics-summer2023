@@ -29,7 +29,7 @@ syllabi <- tribble(
   "The Ethics and Governance of Artificial Intelligence", 'Massachussetts Institute of Technology,<br>Harvard University', "Cross-Disciplinary", "Graduate", "None", 'Joi Ito<br>Jonathan Zittrain', 'Joi Ito: Practice in Media Arts and Science<br>Jonathon Zittrain: International Law, Computer Science, and Public Policy', '<a target="_top" href = "https://dam-prod.media.mit.edu/x/2018/02/07/Ethics%20and%20Governance%20of%20AI%20S18%20.pdf" target = "_blank">Syllabus PDF\n(automatically downloads)</a>', "Spring 2018", "Yes",
   "Ethics, Public Policy, and Technological Change", "Stanford University", "Computer Science", "Undergraduate", "None", "Rob Reich, Mehran Sahami, Jeremy Weinstein", 'Rob Reich: Political Science<br>Mehran Sahami:Ccomputer Science<br>Jeremy Weinstein: Computer Science', '<a target="_top" href = "https://web.stanford.edu/class/cs182/" target = "_blank">Syllabus Link</a>', "Winter 2023","Yes",
   "Ethics, Data, and Technology", "University of Florida", "Philosophy", "Undergraduate", "None", "David Gray Grant", "Philosophy", '<a target="_top" href = "https://phil.ufl.edu/wp-content/uploads/sites/145/2022/01/PHI3681-Grant-Syllabus-2021-28-12.pdf" target = "_blank">Syllabus Link</a>', "Spring 2022", "Yes",
-  "Responsible Data Science", "New York University", "Undergraduate", "Data Science", "Introduction to Data Science<br>(teaches Python)", "Elisha Cohen", "Data Science", 
+  "Responsible Data Science", "New York University", "Data Science", "Undergraduate", "Introduction to Data Science<br>(teaches Python)", "Elisha Cohen", "Data Science", 
   '<a target="_top" href = "https://dataresponsibly.github.io/rds23/" target = "_blank">Syllabus Link</a>', "Spring 2023", "Yes"
   )
 ```
