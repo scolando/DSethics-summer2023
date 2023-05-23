@@ -1,6 +1,1 @@
-# SITE CONFIGURATION
-baseurl: "/DSethics-summer2023"
-url: "https://scolando.github.io"
-
-theme: jekyll-theme-dinky
-css: styles.css
+remote_theme: pages-themes/architect@v0.2.0
