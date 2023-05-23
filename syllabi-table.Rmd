@@ -25,25 +25,64 @@ syllabi <- tribble(
   "Philosophical Foundations of Machine Learning", "Carnegie Mellon University", "Machine Learning", "Graduate/Undergraduate", "None", "Zachary Lipton", "Machine Learning and Operations Research", '<a target="_top" href = "https://github.com/acmi-lab/cmu-10721-philosophy-machine-intelligence" target = "_blank">Syllabus Link</a>', "Spring 2023", "Yes",
   "Ethics and Policy in Data Analytics", "Carnegie Mellon University", "Information Systems and Public Policy", "Graduate", "Familiarity with Data Analytics Pipeline is Recommended", "David Danks, Sina Fazelpour", 'David Danks: Data Science and Philosophy<br>Sina Fazelpour: Computer Science and Philosophy', '<a target="_top" href = "https://www.heinz.cmu.edu/current-students/courses/94-836/2238/" target = "_blank">Syllabus Link</a>', "Spring 2021", "Yes",
   "Ethics in AI", "", "Philosophy", "Masters/Undergraduate", "Prior Coursework in Moral/Political Philosophy and Logic/Statistics is Useful", "Liam Kofi Bright", "Philosophy", '<a target="_top" href = "https://philpeople.org/public_cache/file?content_type=application%2Fpdf&key=z1d1wj8yk9ztczwt4d9wspqbl6qb" target = "_blank">Syllabus Link</a>', "Spring 2023", "Yes",
-  "Ethics and Policy in Data Science", "Cornell University", "Information Sciences", "Masters/Undergraduate", "None", "Solon Barocas", "Information Science (and Principle Researcher at Microsoft", '<a target="_top" href = "https://docs.google.com/document/d/1GV97qqvjQNvyM2I01vuRaAwHe9pQAZ9pbP7KkKveg1o/edit" target = "_blank">Syllabus Link</a>', "Fall 2017", "Yes",
+  "Ethics and Policy in Data Science", "Cornell University", "Information Sciences", "Masters/Undergraduate", "None", "Solon Barocas", "Information Science (and Principle Researcher at Microsoft)", '<a target="_top" href = "https://docs.google.com/document/d/1GV97qqvjQNvyM2I01vuRaAwHe9pQAZ9pbP7KkKveg1o/edit" target = "_blank">Syllabus Link</a>', "Fall 2017", "Yes",
   "The Ethics and Governance of Artificial Intelligence", 'Massachussetts Institute of Technology,<br>Harvard University', "Cross-Disciplinary", "Graduate", "None", 'Joi Ito<br>Jonathan Zittrain', 'Joi Ito: Practice in Media Arts and Science<br>Jonathon Zittrain: International Law, Computer Science, and Public Policy', '<a target="_top" href = "https://dam-prod.media.mit.edu/x/2018/02/07/Ethics%20and%20Governance%20of%20AI%20S18%20.pdf" target = "_blank">Syllabus PDF\n(automatically downloads)</a>', "Spring 2018", "Yes",
-  "Ethics, Public Policy, and Technological Change", "Stanford University", "Computer Science", "Undergraduate", "None", "Rob Reich, Mehran Sahami, Jeremy Weinstein", 'Rob Reich: Political Science<br>Mehran Sahami:Ccomputer Science<br>Jeremy Weinstein: Computer Science', '<a target="_top" href = "https://web.stanford.edu/class/cs182/" target = "_blank">Syllabus Link</a>', "Winter 2023","Yes",
+  "Ethics, Public Policy, and Technological Change", "Stanford University", "Computer Science", "Undergraduate", "None", "Rob Reich, Mehran Sahami, Jeremy Weinstein", 'Rob Reich: Political Science<br>Mehran Sahami:Computer Science<br>Jeremy Weinstein: Computer Science', '<a target="_top" href = "https://web.stanford.edu/class/cs182/" target = "_blank">Syllabus Link</a>', "Winter 2023","Yes",
   "Ethics, Data, and Technology", "University of Florida", "Philosophy", "Undergraduate", "None", "David Gray Grant", "Philosophy", '<a target="_top" href = "https://phil.ufl.edu/wp-content/uploads/sites/145/2022/01/PHI3681-Grant-Syllabus-2021-28-12.pdf" target = "_blank">Syllabus Link</a>', "Spring 2022", "Yes",
-  "Responsible Data Science", "New York University", "Data Science", "Undergraduate", "Introduction to Data Science<br>(teaches Python)", "Elisha Cohen", "Data Science", 
-  '<a target="_top" href = "https://dataresponsibly.github.io/rds23/" target = "_blank">Syllabus Link</a>', "Spring 2023", "Yes"
+  "Special Topics in Data Science:<br>
+Responsible Data Science", "New York University", "Data Science", "Undergraduate", "Introduction to Data Science or <br> Introduction to Computer Science", "Julia Stoyanovich", "Data Science, Computer Science, and Engineering", 
+  '<a target="_top" href = "https://dataresponsibly.github.io/courses/spring19/" target = "_blank">Syllabus Link</a>', "Spring 2019", "Yes"
   )
 ```
 
-```{r echo = FALSE}
-DT::datatable(syllabi, escape = FALSE,
+```{r}
+reactable(syllabi, columns = list(title = colDef("Course Title"),
+                                                    institution = colDef("Institution",
+                                                                         html = TRUE), 
+                                                    department = colDef("Department",
+                                                                        html = TRUE), 
+                                                    level = colDef("Course Level",
+                                                                   html = TRUE),
+                                                    prereqs = colDef("Prerequesites",
+                                                                     html = TRUE),
+                                                    instructor = colDef("Instructor(s)",
+                                                                        html = TRUE),
+                                                    intructor_discipline = colDef("Instructor's Discpline",
+                                                                                  html = TRUE),
+                                                    link = colDef("Syllabus Link", html = TRUE),
+                                                    semester = colDef("Syllabus' Term"), 
+                                                    list = colDef("Reading List Included?")), 
+          highlight = TRUE,
+          searchable = TRUE,
+          showSortable = TRUE,
+          showPagination = TRUE,
+          filterable = TRUE,
+          width = 1920,
+          height = 1000,
+           theme = reactableTheme(highlightColor = "grey90",  style = list(
+      fontFamily = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    ))) %>%
+  reactablefmtr::save_reactable_test('./docs/syllabi/syllabi-table.html')
+```
+
+
+```{r echo = FALSE, eval = FALSE}
+DT::datatable(syllabi, 
+              escape = FALSE,
               rownames = F,
+              class = 'cell-border stripe',
               colnames = c("Course Title", "Institution", "Department", "Course Level",
                            "Prerequesites", "Instructor(s)", "Instructor's Discpline", 
                            "Syllabus Link", "Syllabus' Term", "Reading List Included?"),
               extensions = "Buttons",
-              options = list(dom = "Bfrtip",
-                             buttons = c("csv", "pdf", "print"),
-                             pageLength = 16)) %>%
+              options = list(
+                             #buttons = c("csv", "pdf", "print"),
+                             #pageLength = 16,
+                             initComplete = JS(
+    "function(settings, json) {",
+    "$('body').css({'font-family': 'Calibri'});",
+    "}"))) %>%
+  DT::formatStyle(columns = c("title", "institution", "department", "level", "prereqs", "instructor", "intructor_discipline", "link", "semester", "list"), backgroundColor = "grey") %>%
   DT::saveWidget('./docs/syllabi/syllabi-table.html')
 ```
 
