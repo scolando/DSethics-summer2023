@@ -2,9 +2,27 @@
 title: "Inside the Syllabi:<br>Course Outcomes and Listed Topics"
 output: 
   html_document:
+    css: styles.css
     toc: TRUE
+    toc_float: TRUE
+    number_sections: TRUE
 bibliography: DSethics-summer2023.bib
 ---
+
+```{css, echo=FALSE}
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+```
+
+
 
 ----
 
@@ -243,7 +261,16 @@ These are taken from the "Learning Objectives" section of **CITE**.
 
 This course is run by Swarthmore College. It is a first-year seminar course that is co-taught by Ameet Soni, an Associate Professor of Computer Science, and Krista Karbowski Thomason, an Associate Professor of Philosophy. The course has no formal prerequisites. 
 
-### Course Outcomes [MISSING]
+### Course Outcomes
+The following is extrapolated from the "Course Goals" sections and course readings listed in **CITE**.
+
+* Students improve their ability to read and write philosophically.
+
+* Students gain an understanding of some key ethical theories and how they would be applied.
+
+* Students understand fundamental ethical issues surrounding algorithms such as bias, surveillance and privacy, and consciousness in AI. 
+
+* Students improve their ability to craft a  philosophical argument surrounding the ethical issues listed above.  
 
 
 ### Course Topics
@@ -256,6 +283,8 @@ This course is run by Swarthmore College. It is a first-year seminar course that
 
 * Machine Learning and Algorithmic Bias
 
+* Surveillance and Privacy.
+
 * Ethics surrounding Artificial Intelligence 
 
 * Transhumanism
@@ -266,16 +295,16 @@ This course is run by Swarthmore College. It is a first-year seminar course that
 
 ### Background Information
 
-This course is run by Carnegie Mellon University's ____. The faculty instructors are David Danks, ____, and Sina Fazelpour, ___. There are no formal prerequisites for the course, though some familiarity with the data analytics pipeline is helpful. 
+This course is run by Carnegie Mellon University's Department of Information Systems and Public Policy. The faculty instructors are David Danks, who is a Professor of Data Science and Philosophy, and Sina Fazelpour, who is an Assistant Professor of Philosophy and Computer Science. There are no formal prerequisites for the course, though some familiarity with the data analytics pipeline is helpful. 
 
 ### Course Outcomes
 The following is taken from the "Learning Objectives" section of **CITE**
 
-* Students understand the key concepts of privacy, fairness, bias, explainability, and trust/
+* Students understand the key concepts of privacy, fairness, bias, explainability, and trust.
 
-* Students can determine the ethical impacts (along these dimensions) of various standard data analysis practices, methods, and products/
+* Students can determine the ethical impacts (along these dimensions) of various standard data analysis practices, methods, and products.
 
-* Students can derive relevant, key policy and legal constraints on data analytic practices and products
+* Students can derive relevant, key policy and legal constraints on data analytic practices and products.
 
 * Students can apply both ethical and policy considerations to an analysis of the permissibility and/or
 legitimacy of different data analytics.
@@ -296,8 +325,34 @@ legitimacy of different data analytics.
 
 ## Data, Ethics, and Society by Rice University
 
+### Background Information
 
+This course is run by Rice University's Department of Data Science. The faculty instructor is Elizabeth Petrick, who is an Associate Professor of History. The course is meant for undergraduates and has no formal prerequisites **CITE**. 
 
+### Course Outcomes
+The following is taken from the "Objectives" section of **CITE**
+
+* Students will be able to explain the history of ethical concerns with data.
+
+* Students will be able to apply ethical reasoning when gathering, processing, and analyzing data.
+
+* Students will explore their individual ethical commitments as future data scientists.
+
+### Course Topics
+
+* Fundamental Ethical Frameworks: Utilitarianism, Deontology (Kantian Ethics), Virtue Ethics.
+
+* Who Counts and Who is Counted in Data Science: includes issues surrounding consent.
+
+* How is Data Resisted: Issues in Privacy
+
+* Who Owns and Controls Data: Governmental Surveillance, Data Security and Hacking, Data Breaches
+
+* How is Data Gathered and Used Today: The Right to be Forgotten, Internet Companies, Biometrics, Fingerprinting.
+
+* Machine Learning: Disability and AI, Creation and Circulation of Datasets, Autonomous Vehicles
+
+* Algorithms and Bias
 
 ----
 
@@ -414,9 +469,35 @@ The following is taken from the "Learning Objectives" section of **CITE OTHER**.
 
 ### Background Information
 
+This course is run by Cornell University's Computer Science Department. The faculty instructors are Joseph Halpern and Bart Selman, who are both Professors of Computer Science. The course is meant for undergraduates and there are no formal prerequisites for the course. Additionally, it is worth noting that this course is offered only as a Pass/No Credit discussion; there are no assignments beyond "active participation" in the class discussions **CITE**.
+
 ### Course Outcomes
+The following is extrapolated from the required readings and abstracts listed in **CITE**
+
+* Students understand some of the key ethical issues that are associated with developing and employing algorithmic technologies.
+
+* Students foresee some of the potential ethical and social issues facing the development and (widespread) employment of algorithmic technologies.
+
+* Students develop their ability to use philosophical language/frameworks to approach issues in AI.  
+
+* Students learn how to engage in discussions of the ethical and social issues of AI, where there are various stakeholders to consider.
 
 ### Course Topics
+The following is extrapolated from the required readings and abstracts listed in **CITE**
+
+* Future of AI: Laying out the Benefits and Risks
+
+* Inherent Trade-offs in Algorithmic Fairness
+
+* Interpretable AI 
+
+* Computational Ethics for AI 
+
+* The Relationship between Humans and Machines in the Workplace
+
+* The Ethics of Robotics, Autonomy, Embodiment, and Anthropomorphism
+
+* Moral Responsibility, Blameworthiness, and Intention of AI
 
 ----
 
@@ -428,11 +509,34 @@ There are courses that I do not fit well into philosophy or data science oriente
 
 ## Ethics, Public Policy, and Technological Change by Stanford University
 
-### Background Information [MISSING]
+### Background Information 
 
-### Course Outcomes [MISSING]
+This course in run by Stanford University's Department of Computer Science. The course instructors are Rob Reich (Professor of Political Science), Mehran Sahami (Professor of Computer Science and Engineering), and Jeremy Weinstein (Professor of Political Science). The course is meant for undergraduates and it has no formal prerequisites **CITE**.
 
-### Course Topics [MISSING]
+### Course Outcomes
+The following is extrapolated from the "Course Description" section and required readings of **CITE**.
+
+* Students integrate perspectives from computer science, philosophy, and social science to robustly and holistically examine the impact of technology on humans and societies.
+
+* Students critically reflect on their role as enablers and shapers of technological change in society.
+
+* Students will learn how to engage with students across different disciplines in discussions about the ethical and socio-political dimensions of technologies.
+
+### Course Topics
+
+* Algorithmic Decision-making
+
+* The Political Economy of Technology
+
+* Data Collection, Privacy, and Civil Liberties
+
+* Artificial Intelligence and Autonomous Systems
+
+* Power of Private Platforms
+
+* Blockchain and Decentralized Technical Architectures
+
+*Each topic is broken down into 6 sub-modules: Promise and Perils, Technical Deep Dive, Rights and Responsibilities, Moderated Discussion with Experts, Tensions and Trade-offs via a Case Study, and Making Product/System/Policy Choices in Light of these Trade-offs*  
 
 ----
 
@@ -442,8 +546,18 @@ There are courses that I do not fit well into philosophy or data science oriente
 
 This course is run by University of California, Berkeley's College of Computing, Data Science, and Society (and cross-listed by the History and Science Technology and Society department). This course's faculty instructors are Margo Boenig-Lipstin, who is the Director of Human Context and Ethics, and Ari Edmundson, who is a Lecturer in UC Berkeley's Data Science Undergraudate Studies Program. The course has no formal prerequisites.
 
-### Course Outcomes [MISSING]
+### Course Outcomes
+The following is taken from the "Scope and Objectives" section of **CITE**.
 
+* Students understand the challenge and importance of doing ethical data science amid shifting definitions of human subjects, consent, and privacy.
+
+* Students grapple with the changing relationship between data, democracy, and law.
+
+* Students understand the role of data analytics in how corporations and governments provide public goods such as health and security to citizens.
+
+* Students explore technologies like sensors, machine learning, and artificial intelligence and how they are changing the landscapes of labor, industry, and city life.
+
+* Students reflect on the implications of data for how the public and varied scientific disciplines *know* the world. 
 
 ### Course Topics
 
@@ -479,23 +593,95 @@ This course is run by University of California, Berkeley's College of Computing,
 
 ----
 
-## The Ethics and Governance of Artificial Intelligence by the Massachussetts Institute of Technology
+## The Ethics and Governance of Artificial Intelligence by the Massachusetts Institute of Technology
 
-### Background Information [MISSING]
+### Background Information
+
+This course is a Cross-Disciplinary course run by the Massachusetts Institute of Technology. The faculty instructors are Joi Ito, who is a Professor of Practice in Media Arts and Science, and Jonathan Zittrain, who is a Professor of International Law, Computer Science, and Public Policy. The course is meant for graduate students and there are no formal prerequisites **CITE**. 
 
 ### Course Outcomes [MISSING]
+The following is extrapolated from the "Course Description" section and course readings listed on **CITE**.
 
-### Course Topics [MISSING]
+* Students investigate the implications of emerging technologies (with an emphasis on the development and deployment of AI) from a  cross-disciplinary perspective.
+
+* Students grapple with complex issues surrounding AI such as how to balance regulation and innovation, how AI influences the dissemination of information, and questions related to individual rights.
+
+* Students analyze socio-political perspectives related to AI case studies in private corporations, labor, and governance.
+
+
+
+
+### Course Topics
+
+* Machine Learning and Philosophy of Mind
+
+* Algorithmic Opacity
+
+* Autonomy, System Design, Agency, and Liability
+
+* Algorithmic Bias: with case studies in Risk Assessment, Predictive Policing, Credit Scoring, and Image Recognition
+
+* Ownership, Control, and Access
+
+* Governance, Explainability, Accountability
+
+* Labor, Automation, and Regulation
+
+* Ethics, Morals, and Frontiers
 
 ----
 
 ## Ethics and Policy in Data Science by Cornell University
 
-### Background Information [MISSING]
+### Background Information
 
-### Course Outcomes [MISSING]
+This course is run by Cornell University's Department of Information Science. The faculty instructor for the course in Solon Barocas, who is an Adjunct Assistant Professor in the Department of Information Science and Principal Researcher at Microsoft. The course is meant for Masters/Undergraduate students and has no formal prerequisites **CITE**.
 
-### Course Topics [MISSING]
+### Course Outcomes 
+The following is extrapolated from the "Course Description and Objectives" section of **CITE**.
+
+* Students can recognize where and understand why ethical issues and policy questions can arise when applying data science to real world problems. 
+
+* Students develop fluency in key technical, ethical, policy, and legal terms and concepts that are relevant to a normative assessment of data science and gain exposure to legal scholarship and policy documents that will help them understand the current regulatory environment and potential future environments. 
+
+* Students develop their ability to bring  analytic and technical precision to normative debates about the role that data science, machine learning, and artificial intelligence play in consequential decision-making in commerce, employment, finance, healthcare, education, policing, and other areas.
+
+* Students will develop tools to conceptualize, measure, and mitigate bias in data-driven decision-making, to audit and evaluate models, and render these analytic tools more interpretable and their determinations more explainable.
+
+
+### Course Topics
+
+* Characterizing Data and the Importance of Data Science Ethics
+
+* Algorithmic Bias and Exclusion
+
+* The Social Science of Discrimination
+
+* How Machines Learn to Discriminate
+
+* Auditing Algorithms
+
+* Formalizing and Enforcing Fairness in Machine Learning
+
+* Profiling and Particularity
+
+* ALlocative to Representational Harms
+
+* Transparency and Due Process
+
+* Interpretability in Machine Learning
+
+* The Value of Explanation
+
+* Privacy
+
+* Price Discrimination
+
+* Case Studies with Insurance
+
+* Algorithmic Persuasion and Manipulation
+
+* Case Studies with Hiring
 
 ----
 

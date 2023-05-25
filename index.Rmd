@@ -1,19 +1,23 @@
 ---
-layout: default
 title: "Data Science Ethics Summer 2023"
+layout: default
+css: styles.css
 ---
 
-## [[INTRODUCTION TO WEBSITE]]
+## Introduction to Website
 
+I am a Mathematics and Philosophy double major at Pomona, who is passionate about issues surrounding Data Science Ethics. Through my coursework, I have seen the diverse approaches to grappling with Data Science Ethics issues from Statistical and Ethical perspectives. In turn, for my Summer Undergraduate Research Project in 2023, I am analyzing the pedagogies of existing Data Science Ethics courses at other institutions to understand whose teaching the course, who the course is being advertised to, and which topics are being emphasized within the course's curriculum. My end product will be a literature review of these pedagogies, which could aid Pomona College's development of an ethics course for the proposed Data Science minor. 
+
+This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in developing a Data Science Ethics course or learning more about the field but do not know where to begin. 
 
 ## Syllabi Table 
 :::{.column-page}   
-<iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi/syllabi-table.html" width="1920" height="1000" data-external="1" style="border: none;"></iframe>
+<iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi/syllabi-table.html" width="1000" height="1000" data-external="1" style="border: none;"></iframe>
 :::
 
-## Inside the Syllabi: Information on Course Outcomes and Topics
+## Inside the Syllabi: Course Outcomes and Topics
 
-For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, go to this link [here](https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html). 
+For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, click [**HERE**](https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html). 
 
 
 

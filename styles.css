@@ -1,5 +1,8 @@
 /* css styles */
 
+  h1 {
+  text-align: center;
+}
 
 a {
   color: #877e2c;
@@ -26,6 +29,7 @@ header h1 {
   color: #ffffff;
   font-family: 'Architects Daughter';
   padding: 0 10px;
+  text-align: center;
 }
 header h2 {
   width: 540px;
@@ -48,6 +52,7 @@ pre code {
   padding-right: 0.3em;
   margin-left: -0.9em;
   color: #c1b43e;
+  text-align: center;
   content: "/";
 }
 #main-content h2:before {
@@ -93,9 +98,11 @@ h6:before {
   }
   header h1, header h2 {
     width: 100%;
+    text-align: center;
   }
   header h1 {
     font-size: 48px;
+    text-align: center;
   }
   header h2 {
     font-size: 24px;
@@ -140,4 +147,5 @@ h6:before {
     margin-left: 0;
     content: none;
   }
+
 }
