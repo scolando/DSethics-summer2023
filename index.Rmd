@@ -11,6 +11,8 @@ I am a Mathematics and Philosophy double major at Pomona, who is passionate abou
 This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in developing a Data Science Ethics course or learning more about the field but do not know where to begin. 
 
 ## Syllabi Table 
+The table below details the syllabi that I have consulted during this project. A majority of them of Undergraduate courses and have a reading list included within their syllabus. 
+
 :::{.column-page}   
 <iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi/syllabi-table.html" width="1000" height="1000" data-external="1" style="border: none;"></iframe>
 :::

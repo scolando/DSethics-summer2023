@@ -59,6 +59,7 @@ reactable(syllabi, columns = list(title = colDef("Course Title"),
           showSortable = TRUE,
           showPagination = TRUE,
           filterable = TRUE,
+          resizable = TRUE,
           width = 1000,
           height = 1000,
            theme = reactableTheme(
