@@ -69,7 +69,7 @@ navbar:
   type: inverse
   right:
     - text: "Inside the Syllabi"
-      href: https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html                 
+      href: inside-syllabi.html                 
     - text: "Source Code"
       icon: fa-github
       href: https://github.com/scolando/DSethics-summer2023 

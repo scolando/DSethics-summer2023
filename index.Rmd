@@ -11,7 +11,7 @@ css: styles.css
 
 ## Introduction to Website
 
-I am a Mathematics and Philosophy double major at Pomona, who is passionate about issues surrounding Data Science Ethics. Through my coursework, I have seen the diverse approaches to grappling with Data Science Ethics issues from Statistical and Ethical perspectives. In turn, for my Summer Undergraduate Research Project in 2023, I am analyzing the pedagogies of existing Data Science Ethics courses at other institutions to understand whose teaching the course, who the course is being advertised to, and which topics are being emphasized within the course's curriculum. My end product will be a literature review of these pedagogies, which could aid Pomona College's development of an ethics course for the proposed Data Science minor. 
+I am a Mathematics and Philosophy double major at Pomona College, who is passionate about issues surrounding Data Science Ethics. Through my coursework, I have seen the diverse approaches to grappling with Data Science Ethics issues from Statistical and Ethical perspectives. In turn, for my Summer Undergraduate Research Project in 2023, I am analyzing the pedagogies of existing Data Science Ethics courses at other institutions to understand whose teaching the course, who the course is being advertised to, and which topics are being emphasized within the course's curriculum. My end product will be a literature review of these pedagogies, which could aid Pomona College's development of an ethics course for the proposed Data Science minor. 
 
 This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in developing a Data Science Ethics course or learning more about the field but do not know where to begin. 
 
@@ -26,7 +26,7 @@ The table below details the syllabi that I have consulted during this project. A
 
 ## Inside the Syllabi: Course Outcomes and Topics
 
-For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, click [**HERE**](https://scolando.github.io/DSethics-summer2023/inside-syllabi.html). 
+For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, click [**HERE**](inside-syllabi.html). 
 
 
 
