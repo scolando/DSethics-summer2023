@@ -18,25 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+#title: Your awesome title
+#email: your-email@example.com
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
   
   
-url: https://scolando.github.io   # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: /DSethics-summer2023 # the subpath of your site, e.g. /blog
-twitter_username: jekyllrb
-github_username:  jekyll
+#url: https://scolando.github.io   # the base hostname & protocol for your site, e.g. http://example.com
+#baseurl: /DSethics-summer2023 # the subpath of your site, e.g. /blog
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 # Build settings
 # theme: minima
-remote_theme: pages-themes/architect@v0.2.0
-plugins:
+#remote_theme: pages-themes/architect@v0.2.0
+#plugins:
 #  - jekyll-feed
-  - jekyll-remote-theme
+#  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -57,3 +57,25 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+output_dir: "."
+
+website:
+  tile: "Navigation Bar"                                
+  page-navigation: true
+  favicon: "trial.png"
+navbar:
+  logo: "trial.png"
+  title: "DS Ethics 2023"
+  type: inverse
+  right:
+    - text: "Inside the Syllabi"
+      href: https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html                 
+    - text: "Source Code"
+      icon: fa-github
+      href: https://github.com/scolando/DSethics-summer2023 
+output:
+  html_document:
+    theme: readable
+    
