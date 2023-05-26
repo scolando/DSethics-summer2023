@@ -21,12 +21,12 @@ This website serves as a hub for my work for the summer with the intention of it
 The table below details the syllabi that I have consulted during this project. A majority of them of Undergraduate courses and have a reading list included within their syllabus. <br>
 
 :::{.column-page}   
-<iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi/syllabi-table.html" width="1000" height="1000" data-external="1" style="border: none;"></iframe>
+<iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi-table.html" width="1000" height="1000" data-external="1" style="border: none;"></iframe>
 :::
 
 ## Inside the Syllabi: Course Outcomes and Topics
 
-For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, click [**HERE**](https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html). 
+For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, click [**HERE**](https://scolando.github.io/DSethics-summer2023/inside-syllabi.html). 
 
 
 

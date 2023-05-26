@@ -64,9 +64,7 @@ output_dir: "."
 website:
   tile: "Navigation Bar"                                
   page-navigation: true
-  favicon: "trial.png"
 navbar:
-  logo: "trial.png"
   title: "DS Ethics 2023"
   type: inverse
   right:
