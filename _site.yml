@@ -62,17 +62,26 @@
 output_dir: "."
 
 website:
-  tile: "Navigation Bar"                                
+  tile: "DS Ethics 2023"                                
   page-navigation: true
+  favicon: "images/DSethics.ico"
+  image: "images/DSethics.png"
 navbar:
-  title: "DS Ethics 2023"
+  title: <img src="images/DSethics.png"><body>DS Ethics 2023</body>
+  background: success
+  foreground: secondary
   type: inverse
   right:
-    - text: "Inside the Syllabi"
-      href: inside-syllabi.html                 
+    - text: "Inside the Syllabi Notes"
+      href: inside-syllabi.html 
+    - text: "Data Science Pipeline"
+      href: DS-pipeline.html 
     - text: "Source Code"
       icon: fa-github
       href: https://github.com/scolando/DSethics-summer2023 
+footer:
+  left: 
+    - text: "Created by Sara Colando as part of her Summer Undergraduate Research Project on Data Science Ethics at Pomona College"
 output:
   html_document:
     theme: readable

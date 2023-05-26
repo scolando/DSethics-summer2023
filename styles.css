@@ -3,23 +3,26 @@
 /*----------------NAVBAR ---------------*/
 /* These properties only apply to Distill sites and blogs  */
 
-ul{
-list-style:none;
-margin:0;
-padding:0;
+.nav.navbar-nav.navbar-right li a {
+    white-space: nowrap;
+    border: none;
 }
 
-navbar {
-   font-family: Helvetica;
-   color: rgba(0, 0, 0, 0.8)
-   
+.navbar-brand>img {
+   max-height: 100%;
+   height: 100%;
+   width: auto;
+   margin: 0 auto;
+   float: left;
+  padding-right: 20px;
 }
 
-.nav {
-  font-family: Helvetica;
-  color: rgba(0, 0, 0, 0.8)
-  background-color: rgba(0, 0, 0, 0.8);
+.nav.navbar-nav.navbar-right li a:hover {
+    white-space: nowrap;
+    border: none;
+    color: #746c25;
 }
+
 
   /* Whole document: */
 body{
