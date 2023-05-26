@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Inside the Syllabi: Course Outcomes and Listed Topics</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">DS Ethics 2023</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://scolando.github.io/DSethics-summer2023/syllabi/inside-syllabi.html">Inside the Syllabi</a>
+</li>
+<li>
+  <a href="https://github.com/scolando/DSethics-summer2023">
+    <span class="fa fa-github"></span>
+     
+    Source Code
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Inside the Syllabi:<br>Course Outcomes and
+Listed Topics</h1>
+
+</div>
+
+
+<style type="text/css">
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+</style>
+<hr />
+<div id="philosophy-oriented-courses" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Philosophy-Oriented
+Courses</h1>
+<p>These are the courses that I would categorize as philosophy-oriented
+data science ethics courses because the reading lists and/or assignments
+that students in the course are expected to produce come are (more)
+philosophically-rooted.</p>
+<hr />
+<div id="ethics-in-ai-by-liam-kofi-bright" class="section level2"
+number="1.1">
+<h2><span class="header-section-number">1.1</span> Ethics in AI by Liam
+Kofi Bright</h2>
+<div id="background-information" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Background
+Information</h3>
+<p>This course was created by Liam Kofi Bright who is a philosopher of
+science currently at London School of Economics. The course is intended
+for upper level undergraduate or masters students. There are no formal
+pre-requisites, though it would be beneficial to have some prior
+experience with moral/polical philosophy and logic/statistics <span
+class="citation">(Bright 2022)</span>.</p>
+</div>
+<div id="course-goals" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Course Goals</h3>
+<p>The following is taken from the “Course intent” section of <span
+class="citation">Bright (2022)</span>.</p>
+<ul>
+<li><p>Students understand what is morally and politically at stake in
+the wave of automation we are now undergoing.</p></li>
+<li><p>Students grapple with what sort of epistemic capacities we can
+reasonably expect from AI and other similar algorithms.</p></li>
+<li><p>Students work to understand how the epistemic capacities and
+moral and political stakes of AI interrelate to one another.</p></li>
+<li><p>Students work to apply philosophical reasoning skills to
+understand a series of issues surrounding AI that have aroused public
+concern: stakeholder-transparency, medical uses, labor rights, privacy,
+AI governance, and aligning AI values with designer values.</p></li>
+</ul>
+</div>
+<div id="course-topics" class="section level3" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Course Topics</h3>
+<p>Each week there is a different central topic. There are primary,
+secondary, and optional readings listed on the syllabus that relate to
+the week’s core topic.</p>
+<p>The core topics are the following:</p>
+<ul>
+<li><p>Ethical Foundations I: Bias</p></li>
+<li><p>Ethical Foundations II: Justice</p></li>
+<li><p>Explanatory Desiderata I: Accuracy</p></li>
+<li><p>Explanatory Desiderata II: Causal Inference</p></li>
+<li><p>the Good vs the True?</p></li>
+<li><p>Transparency</p></li>
+<li><p>Labor Rights</p></li>
+<li><p>Privacy</p></li>
+<li><p>Medical Decisions</p></li>
+<li><p>AI Governance</p></li>
+<li><p>Alignment</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div
+id="the-ethics-of-data-and-artificial-intelligence-by-the-london-school-of-economics"
+class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> The Ethics of Data
+and Artificial Intelligence by the London School of Economics</h2>
+<div id="background-information-1" class="section level3"
+number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Background
+Information</h3>
+<p>The course is run by the Department of Philosophy, Logic and
+Scientific Method at the London School of Economics. The lead faculty
+are all professors within the Department of Philosophy, Logic, and
+Scientific Method. This course is intended for undergraduates and there
+are no prerequisites <span class="citation">(Kate Vredenburgh
+2023)</span>.</p>
+</div>
+<div id="course-goals-1" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Course Goals</h3>
+<p>The following is taken from the “Course Outcomes” section of <span
+class="citation">Kate Vredenburgh (2023)</span>.</p>
+<ul>
+<li><p>Students understand core ethics concepts and how those concepts
+apply to AI systems.</p></li>
+<li><p>Students analyze the ethical issues raised by a particular
+technology by applying core ethical reasoning techniques to real-world
+cases.</p></li>
+<li><p>Students apply cutting-edge ethics research within the
+development process to build more ethical AI systems.</p></li>
+<li><p>Students communicate their own ethical viewpoint clearly and
+persuasively by reconstructing others’ arguments, objecting to them, and
+providing their own solution.</p></li>
+</ul>
+</div>
+<div id="course-topics-1" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Course Topics</h3>
+<ul>
+<li><p>Justice and the control of technology</p></li>
+<li><p>What is intelligence?</p></li>
+<li><p>Evaluating intelligence in AI systems</p></li>
+<li><p>Participatory AI</p></li>
+<li><p>Data and Privacy</p></li>
+<li><p>Fair Prediction</p></li>
+<li><p>Explainable AI</p></li>
+<li><p>AI, Privacy, and Consent to Personal Data Processing on Social
+Media</p></li>
+<li><p>Surveillance and workplace privacy</p></li>
+<li><p>AI and value alignment</p></li>
+<li><p>AI and democracy: political discourse and social media,
+regulating power</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div
+id="philosophical-foundations-of-machine-learning-by-carnegie-mellon-university"
+class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Philosophical
+Foundations of Machine Learning by Carnegie Mellon University</h2>
+<div id="background-information-2" class="section level3"
+number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Background
+Information</h3>
+<p>This course is run by Carnegie Mellon’s Machine Learning department.
+The faculty instructor is Zachary Lipton, who is a professor of Machine
+Learning and Operations Research. Philosopher Mel Andrews also helps
+instruct the class. The class is intended for graduate students though
+undergraduates can enroll with instructor permission. There are no
+formal prerequisites for the class <span class="citation">(Lipton
+2023a)</span>.</p>
+</div>
+<div id="course-goals-2" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Course Goals</h3>
+<p>There are no explicit/listed course goals on <span
+class="citation">Lipton (2023a)</span>. As such, the following list is
+based on extrapolation from the reading list and course information.</p>
+<ul>
+<li><p>Students learn the origins of Machine Learning through schlars
+like Turing, Misnky, and Pearl.</p></li>
+<li><p>Students understand the fundamental problem of induction and the
+evolution of philosophy of science through scholars like Kuhn, Hacking,
+and Hofstadter and then apply these philosophical concepts to field of
+Machine Learning.</p></li>
+<li><p>Students develop a Machine Learning langauge to talk about the
+philosphical conceptions related to probability and causal through
+scholars like Polya, Cox, Cartwright, and Pearl.</p></li>
+<li><p>Students analyze the ethical dimensions of deploying data driven
+models to automaye decisions in consequential domains.</p></li>
+<li><p>Students work to understand Machine Learning algorithms’
+relationship to knowledge and creativy.</p></li>
+</ul>
+</div>
+<div id="course-topics-2" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Course Topics</h3>
+<p>The course topics are pulled from <span class="citation">Lipton
+(2023b)</span>.</p>
+<ul>
+<li><p>The (Technical) Origins of AI, Cybernetics, and Machine
+Learning</p></li>
+<li><p>The Problem of Induction</p></li>
+<li><p>Induction and Statistical Learning Theory</p></li>
+<li><p>Causation</p></li>
+<li><p>Categories and Kinds</p></li>
+<li><p>Epistemological and Methodological Considerations of Machine
+Learning</p></li>
+<li><p>Understanding and Knowledge as it relates to Machine
+Learning</p></li>
+<li><p>Generative AI, Bullshit, and Creativity</p></li>
+<li><p>AI Consciousness</p></li>
+<li><p>The Troubles with Explanation (in Machine Learning)</p></li>
+<li><p>Ethics I: Justice</p></li>
+<li><p>Ethics II: Discrimination, Causal Interpretations, and
+Path-Specific Effects</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="ethics-data-and-technology-by-the-university-of-florida"
+class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Ethics, Data, and
+Technology by the University of Florida</h2>
+<div id="background-information-3" class="section level3"
+number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Background
+Information</h3>
+<p>This course is run by the University of Florida’s Philosophy
+department. The faculty instructor is David Gray Grant, who is an
+assistant professor of Philosophy at UF. The class is intended for
+undergraduates. There are no prerequisites for the class <span
+class="citation">(<span>“Ethics, Data, and Technology (PHI 3681)”</span>
+2021)</span>.</p>
+</div>
+<div id="course-goals-3" class="section level3" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Course Goals</h3>
+<p>The following is taken from the “Course Objectives” section of <span
+class="citation"><span>“Ethics, Data, and Technology (PHI 3681)”</span>
+(2021)</span>.</p>
+<ul>
+<li><p>Students develop of basic vocabulary for discussing the ethical
+dimensions of data science and its applications.</p></li>
+<li><p>Students analyze the issues and policies concerning emerging “big
+data” technologies through the application of ethical concepts.</p></li>
+<li><p>Students critique public policies, social practices, and social
+institutions that shape, and are shaped by, scientific discovery and
+technology design.</p></li>
+<li><p>Students discern the structure of arguments, represent them
+fairly and clearly, and evaluate them of cogency.</p></li>
+<li><p>Students formulate original arguments, anticipate objections, and
+respond in a conscientious fashion</p></li>
+<li><p>Students read and sicuss complex philosophical texts from both
+historical sources and contemporary works</p></li>
+<li><p>Students speak and write clearly and persuasively about abstract
+and conceptually elusive matters.</p></li>
+</ul>
+</div>
+<div id="course-topics-3" class="section level3" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Course Topics</h3>
+<ul>
+<li><p>The Alignment Problem: Defining ‘Algorithm’ and recognizing the
+gap between the values embedded into algorithms and our human
+values.</p></li>
+<li><p>Introduction to Ethics: Consequentialism</p></li>
+<li><p>AI Safety</p></li>
+<li><p>Privacy and Surveillance Capitalism (with a case study
+analysis)</p></li>
+<li><p>Autonomy and the Attention Economy (with a case study
+analysis)</p></li>
+<li><p>Algorithmic Opacity (with a case study analysis)</p></li>
+<li><p>Algorithmic Bias (with a case study analysis)</p></li>
+<li><p>Responsibility Gaps</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="data-ethics-by-the-university-of-california-san-diego"
+class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Data Ethics by the
+University of California, San Diego</h2>
+<div id="background-information-4" class="section level3"
+number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Background
+Information</h3>
+<p>This course is run by the University of California, San Diego’s
+Philosophy department. The faculty instructor is David Danks, who is a
+professor of Data Science and Philosophy. There are no formal
+prerequisites for this course <strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes" class="section level3" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Course
+Outcomes</h3>
+<p>These are taken from the “Learning Objectives” section of
+<strong>CITE</strong>.</p>
+<ul>
+<li><p>Students can describe the many ways that ethical issues arise
+throughout the lifecycle of a data science effort.</p></li>
+<li><p>Students can generate appropriate ethical questions for a given
+data science effort</p></li>
+<li><p>Students can work individually or collaboratively to develop more
+ethical &amp; responsible data science projects.</p></li>
+</ul>
+</div>
+<div id="course-topics-4" class="section level3" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Course Topics</h3>
+<ul>
+<li><p>Lifecycle of a data science effort</p></li>
+<li><p>Rights, values, and interests in data science</p></li>
+<li><p>The neutrality thesis for data and technology</p></li>
+<li><p>Algorithmic society</p></li>
+<li><p>Privacy and Consent in Data Collection and Use</p></li>
+<li><p>Bias and Fairness in Data Analysis and Modeling</p></li>
+<li><p>Algorithmic Explainability</p></li>
+<li><p>Algorithmic Justice</p></li>
+<li><p>Accountability in Using Data</p></li>
+<li><p>Data Colonialism and Sovereignty</p></li>
+<li><p>Case Studies in Workplace Surveillance and Healthcare
+Resources</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="ethics-and-technology-by-swarthmore-college"
+class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> Ethics and Technology
+by Swarthmore College</h2>
+<div id="background-information-5" class="section level3"
+number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Background
+Information</h3>
+<p>This course is run by Swarthmore College. It is a first-year seminar
+course that is co-taught by Ameet Soni, an Associate Professor of
+Computer Science, and Krista Karbowski Thomason, an Associate Professor
+of Philosophy. The course has no formal prerequisites.</p>
+</div>
+<div id="course-outcomes-1" class="section level3" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Course
+Outcomes</h3>
+<p>The following is extrapolated from the “Course Goals” sections and
+course readings listed in <strong>CITE</strong>.</p>
+<ul>
+<li><p>Students improve their ability to read and write
+philosophically.</p></li>
+<li><p>Students gain an understanding of some key ethical theories and
+how they would be applied.</p></li>
+<li><p>Students understand fundamental ethical issues surrounding
+algorithms such as bias, surveillance and privacy, and consciousness in
+AI.</p></li>
+<li><p>Students improve their ability to craft a philosophical argument
+surrounding the ethical issues listed above.</p></li>
+</ul>
+</div>
+<div id="course-topics-5" class="section level3" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Course Topics</h3>
+<ul>
+<li><p>Writing/Reading like a Philosopher</p></li>
+<li><p>Applied Ethical Theory: Relativism, Virtue Ethics, Humean Ethics,
+Kantian Ethics, Utilitarianism, Feminist Ethics, Buddhist
+Ethics</p></li>
+<li><p>Definitions of Technology</p></li>
+<li><p>Machine Learning and Algorithmic Bias</p></li>
+<li><p>Surveillance and Privacy.</p></li>
+<li><p>Ethics surrounding Artificial Intelligence</p></li>
+<li><p>Transhumanism</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div
+id="ethics-and-policy-of-data-analytics-by-carnegie-mellon-university"
+class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> Ethics and Policy of
+Data Analytics by Carnegie Mellon University</h2>
+<div id="background-information-6" class="section level3"
+number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> Background
+Information</h3>
+<p>This course is run by Carnegie Mellon University’s Department of
+Information Systems and Public Policy. The faculty instructors are David
+Danks, who is a Professor of Data Science and Philosophy, and Sina
+Fazelpour, who is an Assistant Professor of Philosophy and Computer
+Science. There are no formal prerequisites for the course, though some
+familiarity with the data analytics pipeline is helpful.</p>
+</div>
+<div id="course-outcomes-2" class="section level3" number="1.7.2">
+<h3><span class="header-section-number">1.7.2</span> Course
+Outcomes</h3>
+<p>The following is taken from the “Learning Objectives” section of
+<strong>CITE</strong></p>
+<ul>
+<li><p>Students understand the key concepts of privacy, fairness, bias,
+explainability, and trust.</p></li>
+<li><p>Students can determine the ethical impacts (along these
+dimensions) of various standard data analysis practices, methods, and
+products.</p></li>
+<li><p>Students can derive relevant, key policy and legal constraints on
+data analytic practices and products.</p></li>
+<li><p>Students can apply both ethical and policy considerations to an
+analysis of the permissibility and/or legitimacy of different data
+analytics.</p></li>
+</ul>
+</div>
+<div id="course-topics-6" class="section level3" number="1.7.3">
+<h3><span class="header-section-number">1.7.3</span> Course Topics</h3>
+<ul>
+<li><p>Characterizations of the “Ethics and Policy of Data
+Analytics”</p></li>
+<li><p>Privacy: its Ethical and Policy Considerations in Big Data
+Analytics</p></li>
+<li><p>Fairness and Bias: Ethical and Policy Considerations within
+Algorithmic Fairness Measures</p></li>
+<li><p>Explainability: Ethical and Policy Considerations in
+Algorithms</p></li>
+<li><p>Trust: a Unifying Approach?</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="data-ethics-and-society-by-rice-university"
+class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> Data, Ethics, and
+Society by Rice University</h2>
+<div id="background-information-7" class="section level3"
+number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Background
+Information</h3>
+<p>This course is run by Rice University’s Department of Data Science.
+The faculty instructor is Elizabeth Petrick, who is an Associate
+Professor of History. The course is meant for undergraduates and has no
+formal prerequisites <strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-3" class="section level3" number="1.8.2">
+<h3><span class="header-section-number">1.8.2</span> Course
+Outcomes</h3>
+<p>The following is taken from the “Objectives” section of
+<strong>CITE</strong></p>
+<ul>
+<li><p>Students will be able to explain the history of ethical concerns
+with data.</p></li>
+<li><p>Students will be able to apply ethical reasoning when gathering,
+processing, and analyzing data.</p></li>
+<li><p>Students will explore their individual ethical commitments as
+future data scientists.</p></li>
+</ul>
+</div>
+<div id="course-topics-7" class="section level3" number="1.8.3">
+<h3><span class="header-section-number">1.8.3</span> Course Topics</h3>
+<ul>
+<li><p>Fundamental Ethical Frameworks: Utilitarianism, Deontology
+(Kantian Ethics), Virtue Ethics.</p></li>
+<li><p>Who Counts and Who is Counted in Data Science: includes issues
+surrounding consent.</p></li>
+<li><p>How is Data Resisted: Issues in Privacy</p></li>
+<li><p>Who Owns and Controls Data: Governmental Surveillance, Data
+Security and Hacking, Data Breaches</p></li>
+<li><p>How is Data Gathered and Used Today: The Right to be Forgotten,
+Internet Companies, Biometrics, Fingerprinting.</p></li>
+<li><p>Machine Learning: Disability and AI, Creation and Circulation of
+Datasets, Autonomous Vehicles</p></li>
+<li><p>Algorithms and Bias</p></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="data-science-oriented-courses" class="section level1"
+number="2">
+<h1><span class="header-section-number">2</span> Data Science-Oriented
+Courses</h1>
+<p>These are the courses that I would categorize as data
+science-oriented data science ethics courses because the reading lists
+and/or assignments that students in the course are expected to produce
+are (more) data science (i.e., technical) in nature.</p>
+<hr />
+<div id="data-science-ethics-by-yale-university" class="section level2"
+number="2.1">
+<h2><span class="header-section-number">2.1</span> Data Science Ethics
+by Yale University</h2>
+<div id="background-information-8" class="section level3"
+number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Background
+Information</h3>
+<p>This course is run by Yale University’s Department of Statistics and
+Data Science. The faculty instructor is Elisa Celis, who is an assistant
+professor of Statistics and Data Science. The class is intended for
+undergraduates. The formal prerequisites for this class are probability
+and statistics as well as a data analysis course. Furthermore, prior
+coursework in AI/ML/Algorithms and Ethics/Philosophy is recommended
+<span class="citation">(Celis 2019)</span>.</p>
+</div>
+<div id="course-outcomes-4" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Course
+Outcomes</h3>
+<p>The following are taken from the “Course Learning Objectives” section
+of <span class="citation">Celis (2019)</span></p>
+<ul>
+<li><p>Students develop fluency in the key technical, ethical, policy,
+and legal terms and concepts related to data science.</p></li>
+<li><p>Students learn about algorithmic and data-driven approaches for
+mitigating biases in AI/ML systems.</p></li>
+<li><p>Students reason through problems with no clear answer in a
+systematic manner, taking and defending different viewpoints, and
+justifying your conclusions in a rigorous manner.</p></li>
+<li><p>Students improve their writing and communication skills both with
+a technical and lay audience.</p></li>
+<li><p>Students listen, understand and communicate with people of
+varying opinions, viewpoints, and ideas.</p></li>
+</ul>
+</div>
+<div id="course-topics-8" class="section level3" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Course Topics</h3>
+<ul>
+<li><p>Data Collection and Representation and Privacy via subtopics such
+as Data Sampling and Collection, Managing Datasets Responsibility and
+Data Cannibalism, the Goal(s) of Data Science, Inference and Privacy,
+and Re-Identification of Data.</p></li>
+<li><p>Machine Bias via subtopics such as Characterizing Machine Bias,
+Bias versus Correlation versus Causation, Understanding Fairness and
+Discrimination, Trade-offs between Data Science versus and Human
+Agents.</p></li>
+<li><p>Solutions to Bias via Algorithmic Fairness via subtopics such as
+Preprocessing Approaches and Debiasing Datasets, Impossibility Results,
+In-Processing Approaches to Fairness, Fairness in Deep Learning, and
+Representative Fairness.</p></li>
+<li><p>Social Implications and Feedback Loops via subtopics such as
+Polarization and Feedback Loops, Algorithmic Persuasion, Employment,
+Advertising, Opportunity, Understanding “Who is” Data Science.</p></li>
+<li><p>Controlling Machine Learning Systems via subtopics such as
+Transparency, Explainability/Interpretability, Accountability, Auditing
+Algorithms.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="computing-ethics-and-society-by-northwestern-university"
+class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Computing, Ethics,
+and Society by Northwestern University</h2>
+<div id="background-information-9" class="section level3"
+number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Background
+Information</h3>
+<p>This course is run by Northwestern University’s Computer Science
+Department in the School of Engineering. The course is taught by Sarah
+Van Wart, an assistant professor of instruction in Computer Science and
+Engineering. The course has no formal prerequisites
+<strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-5" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Course
+Outcomes</h3>
+<p>The following is taken from the “Course Learning Goals” section of
+<strong>CITE</strong>.</p>
+<ul>
+<li><p>Students recognize the impact of one’s own assumptions, biases,
+and experiences.</p></li>
+<li><p>Students identify (and question) dominant/normative ways of
+thinking about computing and technology.</p></li>
+<li><p>Students understand some of the underlying concepts that power AI
+and the internet.</p></li>
+<li><p>Students develop a framework for thinking about the relationship
+between technology and society.</p></li>
+<li><p>Students consider how to participate in a world that is heavily
+mediated by computing.</p></li>
+</ul>
+</div>
+<div id="course-topics-9" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Course Topics</h3>
+<p>These are based on “Schedule” listed on <strong>CITE</strong>.</p>
+<ul>
+<li><p>Morality, Ethics, and Human Values: Humans’ relationship to
+morality, understanding fundamental ethical frameworks such as
+Utilitarianism, Libertarianism, and Kantian ethics.</p></li>
+<li><p>Theories of Technology and Society: Understanding the
+relationship between human values and technology specifically with
+respect to race and social categories, media representation,
+surveillance, technological benevolence, and the role of classification
+systems in perpetuating systematic injustices.</p></li>
+<li><p>Computing Infrastructures: Big Data, Surveillance, AI, Content
+Moderation on Platforms, Business Models of Platforms, and combining
+these with normative values discussed earlier in the class.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div
+id="special-topics-in-data-science-responsible-data-science-by-new-york-university"
+class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Special Topics in
+Data Science: Responsible Data Science by New York University</h2>
+<div id="background-information-10" class="section level3"
+number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Background
+Information</h3>
+<p>This course is run by New York University’s Center for Data Science.
+It is taught by Julia Stoyanovich, who is an assistant professor of Data
+Science, Computer Science, and Engineering. The course has formal
+prerequisites of either Introduction to Data Science or Introduction to
+Computer Science or similar <strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-6" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Course
+Outcomes</h3>
+<p>The following is taken from the “Learning Objectives” section of
+<strong>CITE OTHER</strong>.</p>
+<ul>
+<li><p>Students can construct an end-to-end case study that illustrates
+the role of data science in society.</p></li>
+<li><p>Students can explain the ethical and/or legal constraints in the
+collection and sharing of data according to a framework of the student’s
+choice.</p></li>
+<li><p>Students can implement a computer program that applies
+anonymization and privacy techniques to a dataset, and explain the
+trade-offs with utility.</p></li>
+<li><p>Students can articulate the differences between various
+interpretations of algorithmic fairness, and relate these
+interpretations to the points of view of different
+stakeholders.</p></li>
+<li><p>Students can implement a computer program that audits a black-box
+classifier.</p></li>
+</ul>
+</div>
+<div id="course-topics-10" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Course Topics</h3>
+<ul>
+<li><p>Algorithmic Fairness</p></li>
+<li><p>Causality in Algorithms (and its Relationship to Algorithmic
+Fairness)</p></li>
+<li><p>Anonymity and Privacy in Data Science</p></li>
+<li><p>The Trade-off between Privacy and Utility</p></li>
+<li><p>Profiling and Particularity</p></li>
+<li><p>Algorithmic Transparency</p></li>
+<li><p>Data Cleaning</p></li>
+<li><p>Legal frameworks, Codes of Ethics, and Personal Responsibility
+around Data Science</p></li>
+<li><p>Civil Rights, Predictive Policing, and Criminal Justice.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="ethical-and-social-issues-in-ai-by-cornell-university"
+class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Ethical and Social
+Issues in AI by Cornell University</h2>
+<div id="background-information-11" class="section level3"
+number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Background
+Information</h3>
+<p>This course is run by Cornell University’s Computer Science
+Department. The faculty instructors are Joseph Halpern and Bart Selman,
+who are both Professors of Computer Science. The course is meant for
+undergraduates and there are no formal prerequisites for the course.
+Additionally, it is worth noting that this course is offered only as a
+Pass/No Credit discussion; there are no assignments beyond “active
+participation” in the class discussions <strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-7" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Course
+Outcomes</h3>
+<p>The following is extrapolated from the required readings and
+abstracts listed in <strong>CITE</strong></p>
+<ul>
+<li><p>Students understand some of the key ethical issues that are
+associated with developing and employing algorithmic
+technologies.</p></li>
+<li><p>Students foresee some of the potential ethical and social issues
+facing the development and (widespread) employment of algorithmic
+technologies.</p></li>
+<li><p>Students develop their ability to use philosophical
+language/frameworks to approach issues in AI.</p></li>
+<li><p>Students learn how to engage in discussions of the ethical and
+social issues of AI, where there are various stakeholders to
+consider.</p></li>
+</ul>
+</div>
+<div id="course-topics-11" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Course Topics</h3>
+<p>The following is extrapolated from the required readings and
+abstracts listed in <strong>CITE</strong></p>
+<ul>
+<li><p>Future of AI: Laying out the Benefits and Risks</p></li>
+<li><p>Inherent Trade-offs in Algorithmic Fairness</p></li>
+<li><p>Interpretable AI</p></li>
+<li><p>Computational Ethics for AI</p></li>
+<li><p>The Relationship between Humans and Machines in the
+Workplace</p></li>
+<li><p>The Ethics of Robotics, Autonomy, Embodiment, and
+Anthropomorphism</p></li>
+<li><p>Moral Responsibility, Blameworthiness, and Intention of
+AI</p></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="miscellaneous-courses" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Miscellaneous
+Courses</h1>
+<p>There are courses that I do not fit well into philosophy or data
+science oriented data science ethics courses. Some of these courses are
+more policy-oriented, whereas others have a science, technology, and
+society flavor to them.</p>
+<hr />
+<div
+id="ethics-public-policy-and-technological-change-by-stanford-university"
+class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Ethics, Public
+Policy, and Technological Change by Stanford University</h2>
+<div id="background-information-12" class="section level3"
+number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Background
+Information</h3>
+<p>This course in run by Stanford University’s Department of Computer
+Science. The course instructors are Rob Reich (Professor of Political
+Science), Mehran Sahami (Professor of Computer Science and Engineering),
+and Jeremy Weinstein (Professor of Political Science). The course is
+meant for undergraduates and it has no formal prerequisites
+<strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-8" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Course
+Outcomes</h3>
+<p>The following is extrapolated from the “Course Description” section
+and required readings of <strong>CITE</strong>.</p>
+<ul>
+<li><p>Students integrate perspectives from computer science,
+philosophy, and social science to robustly and holistically examine the
+impact of technology on humans and societies.</p></li>
+<li><p>Students critically reflect on their role as enablers and shapers
+of technological change in society.</p></li>
+<li><p>Students will learn how to engage with students across different
+disciplines in discussions about the ethical and socio-political
+dimensions of technologies.</p></li>
+</ul>
+</div>
+<div id="course-topics-12" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Course Topics</h3>
+<ul>
+<li><p>Algorithmic Decision-making</p></li>
+<li><p>The Political Economy of Technology</p></li>
+<li><p>Data Collection, Privacy, and Civil Liberties</p></li>
+<li><p>Artificial Intelligence and Autonomous Systems</p></li>
+<li><p>Power of Private Platforms</p></li>
+<li><p>Blockchain and Decentralized Technical Architectures</p></li>
+</ul>
+<p><em>Each topic is broken down into 6 sub-modules: Promise and Perils,
+Technical Deep Dive, Rights and Responsibilities, Moderated Discussion
+with Experts, Tensions and Trade-offs via a Case Study, and Making
+Product/System/Policy Choices in Light of these Trade-offs</em></p>
+<hr />
+</div>
+</div>
+<div
+id="human-contexts-and-ethics-of-data-by-the-university-of-california-berkeley"
+class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Human Contexts and
+Ethics of Data by the University of California, Berkeley</h2>
+<div id="background-information-13" class="section level3"
+number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Background
+Information</h3>
+<p>This course is run by University of California, Berkeley’s College of
+Computing, Data Science, and Society (and cross-listed by the History
+and Science Technology and Society department). This course’s faculty
+instructors are Margo Boenig-Lipstin, who is the Director of Human
+Context and Ethics, and Ari Edmundson, who is a Lecturer in UC
+Berkeley’s Data Science Undergraudate Studies Program. The course has no
+formal prerequisites.</p>
+</div>
+<div id="course-outcomes-9" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Course
+Outcomes</h3>
+<p>The following is taken from the “Scope and Objectives” section of
+<strong>CITE</strong>.</p>
+<ul>
+<li><p>Students understand the challenge and importance of doing ethical
+data science amid shifting definitions of human subjects, consent, and
+privacy.</p></li>
+<li><p>Students grapple with the changing relationship between data,
+democracy, and law.</p></li>
+<li><p>Students understand the role of data analytics in how
+corporations and governments provide public goods such as health and
+security to citizens.</p></li>
+<li><p>Students explore technologies like sensors, machine learning, and
+artificial intelligence and how they are changing the landscapes of
+labor, industry, and city life.</p></li>
+<li><p>Students reflect on the implications of data for how the public
+and varied scientific disciplines <em>know</em> the world.</p></li>
+</ul>
+</div>
+<div id="course-topics-13" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Course Topics</h3>
+<ul>
+<li><p>The History of Datafication</p></li>
+<li><p>Data Futures: Past and Present</p></li>
+<li><p>Characterizations of Data and Data Science</p></li>
+<li><p>(Ethically) Responsible Data Science</p></li>
+<li><p>Data Shaping Identities</p></li>
+<li><p>Populations and States</p></li>
+<li><p>Surveillance and Security</p></li>
+<li><p>Predictive Policing</p></li>
+<li><p>Making Arguments with Data</p></li>
+<li><p>Choice, Influence, Manipulation, and Governance</p></li>
+<li><p>Algorithmic Sentencing</p></li>
+<li><p>Data and Democracy</p></li>
+<li><p>Data’s Influence on Scientific Research</p></li>
+<li><p>Machines and Industry</p></li>
+<li><p>The Ethos of Making</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div
+id="the-ethics-and-governance-of-artificial-intelligence-by-the-massachusetts-institute-of-technology"
+class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> The Ethics and
+Governance of Artificial Intelligence by the Massachusetts Institute of
+Technology</h2>
+<div id="background-information-14" class="section level3"
+number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Background
+Information</h3>
+<p>This course is a Cross-Disciplinary course run by the Massachusetts
+Institute of Technology. The faculty instructors are Joi Ito, who is a
+Professor of Practice in Media Arts and Science, and Jonathan Zittrain,
+who is a Professor of International Law, Computer Science, and Public
+Policy. The course is meant for graduate students and there are no
+formal prerequisites <strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-missing" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Course Outcomes
+[MISSING]</h3>
+<p>The following is extrapolated from the “Course Description” section
+and course readings listed on <strong>CITE</strong>.</p>
+<ul>
+<li><p>Students investigate the implications of emerging technologies
+(with an emphasis on the development and deployment of AI) from a
+cross-disciplinary perspective.</p></li>
+<li><p>Students grapple with complex issues surrounding AI such as how
+to balance regulation and innovation, how AI influences the
+dissemination of information, and questions related to individual
+rights.</p></li>
+<li><p>Students analyze socio-political perspectives related to AI case
+studies in private corporations, labor, and governance.</p></li>
+</ul>
+</div>
+<div id="course-topics-14" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Course Topics</h3>
+<ul>
+<li><p>Machine Learning and Philosophy of Mind</p></li>
+<li><p>Algorithmic Opacity</p></li>
+<li><p>Autonomy, System Design, Agency, and Liability</p></li>
+<li><p>Algorithmic Bias: with case studies in Risk Assessment,
+Predictive Policing, Credit Scoring, and Image Recognition</p></li>
+<li><p>Ownership, Control, and Access</p></li>
+<li><p>Governance, Explainability, Accountability</p></li>
+<li><p>Labor, Automation, and Regulation</p></li>
+<li><p>Ethics, Morals, and Frontiers</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="ethics-and-policy-in-data-science-by-cornell-university"
+class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Ethics and Policy in
+Data Science by Cornell University</h2>
+<div id="background-information-15" class="section level3"
+number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Background
+Information</h3>
+<p>This course is run by Cornell University’s Department of Information
+Science. The faculty instructor for the course in Solon Barocas, who is
+an Adjunct Assistant Professor in the Department of Information Science
+and Principal Researcher at Microsoft. The course is meant for
+Masters/Undergraduate students and has no formal prerequisites
+<strong>CITE</strong>.</p>
+</div>
+<div id="course-outcomes-10" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Course
+Outcomes</h3>
+<p>The following is extrapolated from the “Course Description and
+Objectives” section of <strong>CITE</strong>.</p>
+<ul>
+<li><p>Students can recognize where and understand why ethical issues
+and policy questions can arise when applying data science to real world
+problems.</p></li>
+<li><p>Students develop fluency in key technical, ethical, policy, and
+legal terms and concepts that are relevant to a normative assessment of
+data science and gain exposure to legal scholarship and policy documents
+that will help them understand the current regulatory environment and
+potential future environments.</p></li>
+<li><p>Students develop their ability to bring analytic and technical
+precision to normative debates about the role that data science, machine
+learning, and artificial intelligence play in consequential
+decision-making in commerce, employment, finance, healthcare, education,
+policing, and other areas.</p></li>
+<li><p>Students will develop tools to conceptualize, measure, and
+mitigate bias in data-driven decision-making, to audit and evaluate
+models, and render these analytic tools more interpretable and their
+determinations more explainable.</p></li>
+</ul>
+</div>
+<div id="course-topics-15" class="section level3" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> Course Topics</h3>
+<ul>
+<li><p>Characterizing Data and the Importance of Data Science
+Ethics</p></li>
+<li><p>Algorithmic Bias and Exclusion</p></li>
+<li><p>The Social Science of Discrimination</p></li>
+<li><p>How Machines Learn to Discriminate</p></li>
+<li><p>Auditing Algorithms</p></li>
+<li><p>Formalizing and Enforcing Fairness in Machine Learning</p></li>
+<li><p>Profiling and Particularity</p></li>
+<li><p>ALlocative to Representational Harms</p></li>
+<li><p>Transparency and Due Process</p></li>
+<li><p>Interpretability in Machine Learning</p></li>
+<li><p>The Value of Explanation</p></li>
+<li><p>Privacy</p></li>
+<li><p>Price Discrimination</p></li>
+<li><p>Case Studies with Insurance</p></li>
+<li><p>Algorithmic Persuasion and Manipulation</p></li>
+<li><p>Case Studies with Hiring</p></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="references" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> References</h1>
+<hr />
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Liam-Kofi-syllabus" class="csl-entry">
+Bright, Liam Kofi. 2022. <span>“Ethics in AI Syllabus.”</span> <a
+href="https://philpeople.org/teaching_materials/3554/download">https://philpeople.org/teaching_materials/3554/download</a>.
+</div>
+<div id="ref-Yale-syllabus" class="csl-entry">
+Celis, Elisa. 2019. <span>“Data Science Ethics Syllabus.”</span> <a
+href="https://datascienceethics.wordpress.com/the-course/syllabus/">https://datascienceethics.wordpress.com/the-course/syllabus/</a>.
+</div>
+<div id="ref-UF-syllabus" class="csl-entry">
+<span>“Ethics, Data, and Technology (PHI 3681).”</span> 2021. <a
+href="https://phil.ufl.edu/wp-content/uploads/sites/145/2022/01/PHI3681-Grant-Syllabus-2021-28-12.pdf">https://phil.ufl.edu/wp-content/uploads/sites/145/2022/01/PHI3681-Grant-Syllabus-2021-28-12.pdf</a>.
+</div>
+<div id="ref-LSE-syllabus" class="csl-entry">
+Kate Vredenburgh, Alex Voorhoeve, Ali Boyle. 2023. <span>“The Ethics of
+Data and Artificial Intelligence (ME102).”</span> <a
+href="https://www.lse.ac.uk/ss-asset-library/course-outlines/2023/ME102-Course-Outline-2023.pdf">https://www.lse.ac.uk/ss-asset-library/course-outlines/2023/ME102-Course-Outline-2023.pdf</a>.
+</div>
+<div id="ref-CMU-ML-syllabus" class="csl-entry">
+Lipton, Zachary. 2023a. <span>“Carnegie Mellon University 10721:
+Philosophical Foundations of Machine Intelligence 2023.”</span> <a
+href="https://github.com/acmi-lab/cmu-10721-philosophy-machine-intelligence/tree/main">https://github.com/acmi-lab/cmu-10721-philosophy-machine-intelligence/tree/main</a>.
+</div>
+<div id="ref-CMU-ML-reading" class="csl-entry">
+———. 2023b. <a
+href="https://github.com/acmi-lab/cmu-10721-philosophy-machine-intelligence/blob/main/schedule.md">https://github.com/acmi-lab/cmu-10721-philosophy-machine-intelligence/blob/main/schedule.md</a>.
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
