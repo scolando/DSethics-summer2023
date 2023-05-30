@@ -7,6 +7,8 @@ output:
     toc_float: TRUE
     number_sections: TRUE
 bibliography: DSethics-summer2023.bib
+link-citations: true
+csl: apa-6th-edition.csl
 ---
 
 ```{css, echo=FALSE}

@@ -1,11 +1,37 @@
 /* css styles */
 
 /*----------------NAVBAR ---------------*/
-/* These properties only apply to Distill sites and blogs  */
+
+.dropdown-menu >.active>a:hover { 
+  background-color: #ffffff;
+  
+}
+
 
 .nav.navbar-nav.navbar-right li a {
     white-space: nowrap;
     border: none;
+    font-family: "Helvetica Neue";
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-menu li a:hover{
+    white-space: nowrap;
+    border: none;
+    color: #746c25; 
+    background-color: #ffffff; 
+}
+
+.dropdown-menu li a:focus{
+    white-space: nowrap;
+    border: none;
+    color: #ffffff; 
+    background-color: #746c25;
+}
+
+.dropdown-menu >.active>a {
+    background-color: #ffffff; 
+    color: #746c25;
 }
 
 .navbar-brand>img {
@@ -15,6 +41,12 @@
    margin: 0 auto;
    float: left;
   padding-right: 20px;
+}
+
+.navbar-brand{
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .nav.navbar-nav.navbar-right li a:hover {
@@ -37,6 +69,11 @@ body{
 }
 
   h2 {
+     color: rgba(0, 0, 0, 0.8); 
+       font-family: Helvetica;
+  }
+  
+    h3 {
      color: rgba(0, 0, 0, 0.8); 
        font-family: Helvetica;
   }

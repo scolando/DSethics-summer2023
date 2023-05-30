@@ -40,7 +40,8 @@ Responsible Data Science", "New York University", "Data Science", "Undergraduate
 ```
 
 ```{r echo = FALSE}
-reactable(syllabi, columns = list(title = colDef("Course Title", html = TRUE),
+reactable(syllabi, elementId = "syllabi-table",
+          columns = list(title = colDef("Course Title", html = TRUE),
                                                     institution = colDef("Institution",
                                                                          html = TRUE), 
                                                     department = colDef("Department",

@@ -3,17 +3,13 @@ title: "Data Science Ethics Summer 2023"
 css: styles.css
 ---
 
-```{r echo = FALSE}
-# 'arg' should be one of “default”, “bootstrap”, “cerulean”, “cosmo”, “darkly”, “flatly”, “journal”, “lumen”, #“paper”, “readable”, “sandstone”, “simplex”, “spacelab”, “united”, “yeti”
-```
-
 <br>
 
 ## Introduction to Website
 
-I am a Mathematics and Philosophy double major at Pomona College, who is particularly interested in Data Science Ethics. Through my coursework, I have seen the diverse approaches to grappling with Data Science Ethics issues from Statistical and Ethical perspectives. In turn, for my Summer Undergraduate Research Project in 2023, I am analyzing the pedagogies of existing Data Science Ethics courses at other institutions to understand whose teaching the course, who the course is being advertised to, and which topics are being emphasized within the course's curriculum. My end product will be a literature review of these pedagogies, which could aid Pomona College's development of an ethics course for the proposed Data Science minor. 
+I am a Mathematics and Philosophy double major at Pomona College, who is particularly interested in Data Science Ethics. Through my coursework in both Math and Philosophy, I have seen the diverse approaches to grappling with ethical issues in Data Science. In turn, for my Summer Undergraduate Research Project in 2023, I am analyzing the pedagogies of existing Data Science Ethics courses at other institutions to understand whose teaching the course, who the course is being advertised to, and which topics are being emphasized within the course's curriculum. My end product will be a literature review of these pedagogies, which could aid Pomona College's development of an ethics course for the proposed Data Science minor. 
 
-This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in developing a Data Science Ethics course or learning more about the field but do not know where to begin. 
+This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in understanding more about Data Science Ethics courses or learning more about Data Science Ethics in general but do not know where to begin. 
 
 ## Syllabi Table 
 The table below details the syllabi that I have consulted during this project. A majority of them of Undergraduate courses and have a reading list included within their syllabus. <br>
