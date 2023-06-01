@@ -48,7 +48,7 @@ The goal of the Common Topics and their Data Science Lifecycle Locations" page i
 
 There are several ways to depict the data science lifecycle or pipeline. Though it might not be explicit, the endorsement of one lifecycle or pipeline over another endorses specific views about data, data models, and their respective relationships to what we take to be knowledge about our world. Philosopher of Science Sabina Leonelli explicates the value-ladenness of how we conceive of the data science lifecycle or pipeline in @Leonelli. 'Data models' refer to the "arrangements of data that are evaluated, manipulated and modified with the explicit goal of representing a phenomenon, which is often (though not always) meant to capture specific aspects of the world," [@Leonelli]. For example, a simple linear regression that uses years of education to model the expected income is a data model, as is an algorithm that utilizes millions of hyperparameters to predict an incarcerated individual's risk of recidivism. Yet, Leonelli definition of 'data models' also expands beyond statistical models. For instance, Leonelli would also classify data visualizations that describe a relationship between variables as a data model.
 
-Per Leonelli, there are two popular conceptions of the relationship between data and data models and what we interpret to be knowledge about our world (i.e., different conceptions of the data and data models' epistemic roles). The first conception is the **representational view** of data and models and the second conception is the **relational view** of data and models. 
+Per Leonelli, there are two popular conceptions of the relationship between data and data models and what we interpret to be knowledge about our world (i.e., different conceptions of the data and data models' epistemic roles). The first conception is the **representational view of data and data models** and the second conception is the **relational view of data and data models**. 
 
 In the following two subsections, I provide a explication of the representational and relational view of data and models and provide reasoning for why we ought to reject the representational account of data and models in favor the relational view. I recommend reading Leonelli's article for a more in-depth justification of why we should use the relational view of data and models over the representational view.  
 
@@ -79,9 +79,9 @@ knitr::include_graphics("images/DS-pipeline.png")
 
 Consider how soccer match data influences our valuation of the match’s players (i.e., the phenomenon we are interested in understanding). 
 
-**From the representational view of data and models:** the data inherently represents the actual soccer matches and players’ values. As such, questions about the data are solely focused on whether our data is good enough. For instance, we may wonder if the sensors on the pitch are calibrated correctly.
+**From the representational view of data and data models:** the data inherently represents the actual soccer matches and players’ values. As such, questions about the data are solely focused on whether our data is good enough. For instance, we may wonder if the sensors on the pitch are calibrated correctly.
 
-**Meanwhile, from the relational view of data and models:** data is only evidence in virtue of how it is organized. In turn, we would question why specific data can be evidence of a player’s value. For instance, we may ask if using data about the percentage of passes completed or kilometers run is better evidence of a soccer player’s value given our data model [@Beaulieu-Leonelli,59]. 
+**Meanwhile, from the relational view of data and data models:** data is only evidence in virtue of how it is organized. In turn, we would question why specific data can be evidence of a player’s value. For instance, we may ask if using data about the percentage of passes completed or kilometers run is better evidence of a soccer player’s value given our data model [@Beaulieu-Leonelli,59]. 
 
 Such an example shows data in itself is *representationally ambiguous*. For instance, it is unclear what the sensors should be calibrated for (in other words, what they should measure), which data model should be used, which variables should be used within the data model and, thus, which data should be transformed into evidence. To determine what data represents researchers must use their background assumptions or theories to gather evidence about soccer players' valuations. 
 
@@ -91,7 +91,7 @@ Such an example shows data in itself is *representationally ambiguous*. For inst
 
 ## Data Science Lifecycle Superimposed with Paradigmatic Data Science Practices
 
-```{r dpi= 500, fig.align='center', echo = FALSE, out.width='100%', out.height='100%', fig.alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. Data Collection belongs to (1) Interactions with the World. Data Processing creates (2) Objects. Data Cleaning produces (3) Data. Exploratory Data Analysis is an intermediary between (3) Data and (4) Models. Machine Learning, Algorithms, Statistical Models are paradigmatic examples of (4) Models representing the World. Deployment of (4) Models creates interpretations of (5) Knowledge, which includes Communication, Visualizations, Report-Findings, and Decision making. Finally, (5) Knowledge informs further (1) Interactions with the world via Data Product Development.", fig.cap = "Data Science Lifecycle under the Relational View of Data and Models Superimposed with Paradigmatic Data Science Practices from page 58 of Beaulieu and Leonelli (2021)."}
+```{r dpi= 500, fig.align='center', echo = FALSE, out.width='90%', out.height='90%', fig.alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. Data Collection belongs to (1) Interactions with the World. Data Processing creates (2) Objects. Data Cleaning produces (3) Data. Exploratory Data Analysis is an intermediary between (3) Data and (4) Models. Machine Learning, Algorithms, Statistical Models are paradigmatic examples of (4) Models representing the World. Deployment of (4) Models creates interpretations of (5) Knowledge, which includes Communication, Visualizations, Report-Findings, and Decision making. Finally, (5) Knowledge informs further (1) Interactions with the world via Data Product Development.", fig.cap = "Data Science Lifecycle under the Relational View of Data and Models Superimposed with Paradigmatic Data Science Practices [@Beaulieu-Leonelli, 58]."}
 knitr::include_graphics("images/Pipeline-Practices.png")
 ```
 
@@ -131,7 +131,12 @@ syllabi_topics %>%
 
 ----
 
-<span style="color:#877e2c; border-width:3px; border-style:solid; border-color:#F0EDD1; background-color: #F0EDD1"> **Note: 'Most Common' = has a count of 3 or more** </span>
+<span style="color:#877e2c;">**'Most Common' = has a count of 3 or more**</span>
+<br>
+
+<ul> I considered paradigmatic ethical issues that relate to each most common topic to place them on the Data Science lifecycle:</ul>
+
+<br>
 
 
 ```{r results='hide'}
@@ -145,8 +150,8 @@ most_common <- syllabi_topics %>%
 most_common_topics <- most_common$Syllabi_Topics
 ```
 
-```{r dpi= 500, fig.align='center', echo = FALSE, out.width='100%', out.height='100%', fig.cap = "To place the syllabi topics, I thought of the paradigmatic ethical issues that relate to each topic. This helps us visualize which stages or processes of the lifecycle are represented and which stages or processes are underrepresented, in general, by the syllabi. Importantly though, there are arguments to be made for almost all of these topics belonging to other stages of the lifecycle too."} 
-#knitr::include_graphics("")
+```{r dpi= 1000, fig.align='center', echo = FALSE, out.width='90%', out.height='80%', fig.cap = "<br>This diagram helps us understand which stages or processes of the Data Science lifecycle are represented in the syllabi and which stages or processes are (generally) underrepresented in the syllabi. Importantly though, there are arguments to be made for why the most common topics should overlap with other stages of the lifecycle too."} 
+knitr::include_graphics("images/Pipeline-Ethics.png")
 ```
 Link to Draft: https://docs.google.com/presentation/d/1QkjmPpTrcJRuClHb6wgmcaZZVfssLu_ue-5m-Gu3Uzs/edit?usp=sharing
 
