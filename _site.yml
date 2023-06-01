@@ -68,8 +68,10 @@ project:
 
 name: "DS Ethics 2023"                                
 page-navigation: true
-favicon: "images/DSethics.ico"
-image: "images/DSethics.png"
+favicon:
+  use_default: false 
+  path: "images/favicon.ico"
+  
 site-url: https://scolando.github.io/DSethics-summer2023/
 repo-url: https://github.com/scolando/DSethics-summer2023
 navbar:
