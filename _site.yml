@@ -59,19 +59,11 @@
 #   - vendor/ruby/
 
 
+
+
+name: DS Ethics 2023
+favicon: images/DSethics.png
 output_dir: "."
-
-project:
-  type: website
-
-
-
-name: "DS Ethics 2023"                                
-page-navigation: true
-favicon: images/favicon.ico
-  
-site-url: https://scolando.github.io/DSethics-summer2023/
-repo-url: https://github.com/scolando/DSethics-summer2023
 navbar:
   title: <img src="images/DSethics.png"><body>Data Science Ethics Summer 2023</body>
   background: success

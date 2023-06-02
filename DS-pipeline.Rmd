@@ -131,8 +131,10 @@ syllabi_topics %>%
 
 ----
 
-<span style="color:#877e2c;">**'Most Common' = has a count of 3 or more**</span>
+<span style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;">**'Most Common' = has a count of 3 or more**</span>
 <br>
+
+## Lifecycle 1
 
 <ul> I considered paradigmatic ethical issues that relate to each most common topic to place them on the Data Science lifecycle:</ul>
 
@@ -150,11 +152,44 @@ most_common <- syllabi_topics %>%
 most_common_topics <- most_common$Syllabi_Topics
 ```
 
-```{r dpi= 1000, fig.align='center', echo = FALSE, out.width='90%', out.height='80%', fig.cap = "<br>This diagram helps us understand which stages or processes of the Data Science lifecycle are represented in the syllabi and which stages or processes are (generally) underrepresented in the syllabi. Importantly though, there are arguments to be made for why the most common topics should overlap with other stages of the lifecycle too."} 
+```{r dpi= 1500, fig.align='center', echo = FALSE, out.width='100%', out.height='80%', fig.cap = "<br>This diagram helps us understand which stages or processes of the Data Science lifecycle are represented in the syllabi and which stages or processes are (generally) underrepresented in the syllabi. Importantly though, there are arguments to be made for why the most common topics should overlap with other stages of the lifecycle too."} 
 knitr::include_graphics("images/Pipeline-Ethics.png")
 ```
-Link to Draft: https://docs.google.com/presentation/d/1QkjmPpTrcJRuClHb6wgmcaZZVfssLu_ue-5m-Gu3Uzs/edit?usp=sharing
 
+
+----
+
+## Lifecycle 2
+
+*Rings with less opacity denote areas where there seems to be substantial overlap between common topics and the data science stage though these considerations are not "paradigmatic" ethical issues.* 
+
+```{r dpi= 1500, fig.align='center', echo = FALSE, out.width='100%', out.height='80%', fig.cap = "."} 
+knitr::include_graphics("images/Pipeline-Ethics-Alpha.png")
+```
+
+
+----
+
+## Justifications
+
+<span style = "color: #6aa84fff;">**Consent:**</span>
+
+<span style = "color: #ffab40ff;">**Privacy:**</span>
+
+<span style = "color: #d78db2ff;">**Explainability, Interpretability, Transparency:**</span>
+
+<span style="color: #dd7e6bff;">**Democracy, Workplace, Predictive Policing:**</span>
+
+<span style= "color: #f1be22ff;">**Causation:**</span>
+
+<span style = "color: #6aa84fff;">**Bias, Fairness, Justice:**</span>
+
+<span style = "color: #0097a7ff;">**Alignment, Responsibility, Characterizations of Data and Data Science:**</span>
+
+
+----
+
+Link to Draft: https://docs.google.com/presentation/d/1QkjmPpTrcJRuClHb6wgmcaZZVfssLu_ue-5m-Gu3Uzs/edit?usp=sharing
 
 ----
 
