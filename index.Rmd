@@ -1,6 +1,5 @@
 ---
 title: "Data Science Ethics Summer 2023"
-css: styles.css
 ---
 
 <br>

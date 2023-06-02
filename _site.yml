@@ -79,4 +79,13 @@ navbar:
     - text: "Source Code"
       icon: fa-github
       href: https://github.com/scolando/DSethics-summer2023 
+      
+      
+output:
+  html_document:
+    theme: readable
+    self-contained: false
+    css: styles.css
+    favicon: images/DSethics.png
+    
     

@@ -2,7 +2,6 @@
 title: "Inside the Syllabi Notes:<br>Course Outcomes and Listed Topics"
 output: 
   html_document:
-    css: styles.css
     toc: TRUE
     toc_float: TRUE
     number_sections: TRUE

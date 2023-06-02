@@ -2,7 +2,6 @@
 title: "Inside the Syllabi:<br> Common Topics and their Data Science Lifecycle Locations"
 output: 
   html_document:
-    css: styles.css
     toc: TRUE
     toc_float: TRUE
     number_sections: TRUE
