@@ -5,6 +5,13 @@ css:
   styles.css
 ---
 
+
+```{r}
+yml_empty() %>%
+  yml_site_opts(name = "DS Ethics 2023", favicon = "images/favicon.ico", output_dir = ".")
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
