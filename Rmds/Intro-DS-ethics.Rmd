@@ -24,8 +24,39 @@ h1 {
 }
 ```
 
----
+----
+
+**Readings**
+
+* https://medium.com/big-data-at-berkeley/things-you-need-to-know-before-you-become-a-data-scientist-a-beginners-guide-to-data-ethics-8f9aa21af742
+
+* https://royalsocietypublishing.org/doi/10.1098/rsta.2016.0360
+
+* https://towardsdatascience.com/the-ethics-of-data-science-55bcba9b4ecb
+
+* https://www.knowledgehut.com/blog/data-science/data-science-ethics#
+
+* https://royalsocietypublishing.org/doi/10.1098/rsta.2016.0122
+
+* https://link.springer.com/article/10.1007/s00146-020-01112-w
+
+* https://datascience.stanford.edu/research/research-areas/ethics-and-data-science
+
+* https://plato.stanford.edu/entries/science-big-data/
+
+* https://plato.stanford.edu/entries/it-moral-values/
+
+* https://journals.sagepub.com/doi/full/10.1177/2053951714559253
+
+* https://static1.squarespace.com/static/5f6d0320212a261d8716949f/t/62131c54cd700b409e9d486f/1645419605462/TranslationalEthics-Final.pdf
+
+* https://philpapers.org/rec/COEAE
+
+
+
+
+----
 
 # References
 
----
+----
