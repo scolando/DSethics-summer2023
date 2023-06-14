@@ -1,0 +1,31 @@
+---
+title: "What is Data Science Ethics?"
+output: html_document
+bibliography: bibliographies/DSethics-summer2023.bib
+link-citations: true
+csl: bibliographies/apa-6th-edition.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{css, echo=FALSE}
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+```
+
+---
+
+# References
+
+---

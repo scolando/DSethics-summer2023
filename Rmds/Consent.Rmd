@@ -1,0 +1,96 @@
+---
+title: "Consent Readings"
+output: html_document
+bibliography: bibliographies/DSethics-readings.bib
+link-citations: true
+csl: bibliographies/apa-6th-edition.csl
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+```
+
+```{css}
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+```
+
+```{r}
+consent <- tribble( ~Reading_One, ~Summary, ~Readability, ~Tags,
+                                        '<p><span class="citation">Eyal (<a href="#ref-sep-informed-consent" role="doc-biblioref">2019</a>)</span></p>', "This Stanford Encyclopedia of Philosophy (SEP) entry overviews the philosophical discussions about Informed Consent. Specifically, this entry discusses what informed consent is, in which scenarios informed one is morally obligated to obtain informed consent, and why a moral obligation to obtain informed consent exists in the first place. This entry focuses on informed consent in the medical field. Yet, several concepts discussed in the SEP entry could be pertinent to the worries surrounding informed consent in data science.", "no", "lol",
+                    '<p><span class="citation">Solove (<a href="#ref-Solove"
+role="doc-biblioref">2012</a>)</span></p>',
+                    "'Privacy Self-Management and the Consent Dilemma' by Daniel J. Solove articulates how the rights to 'privacy self-management' and informed consent are deeply intertwined when collecting, using, and disclosing information (e.g., personal data). In this article, Solove contends that individuals cannot adequately weigh the costs and benefits of revealing personal information or permitting its use and transfer, which limits the ability for privacy to be self-managed. Solove argues that these issues in privacy self-management lead to a 'consent dilemma' about how to ensure that one's informed consent to collect, use, or disclose personal data is meaningful without resorting to paternalistic laws or policies. Solove ends by proposing ways for privacy law to 'grapple with the consent dilemma'.", 
+"no", 
+"lol",
+'<p><span class="citation">Acquisti, Brandimarte, &amp; Loewenstein (<a
+href="#ref-Acquisti" role="doc-biblioref">2015</a>)</span></p>',
+"here",
+"here",
+"here",
+'<p><span class="citation">Miller &amp; Wertheimer (<a
+href="#ref-ethics-consent" role="doc-biblioref">2010</a>)</span></p>',
+'here',
+'here',
+'here',
+'<p><span class="citation">Wolmarans &amp; Voorhoeve (<a
+href="#ref-wolmarans_voorhoeve_2022"
+role="doc-biblioref">2022</a>)</span></p>',
+'here',
+'here',
+'here',
+'<p><span class="citation">Parasidis, Pike, &amp; McGraw (<a
+href="#ref-Belmont" role="doc-biblioref">2019</a>)</span></p>',
+'here',
+'here',
+'here',
+'<span class="citation">Butler, Delaney, Hesselbo, &amp; Spoelstra
+(<a href="#ref-beyond-measure"
+role="doc-biblioref">2020</a>)</span>',
+'here',
+'here',
+'here',
+'<span class="citation">Rusert (<a href="#ref-Coercion"
+role="doc-biblioref">2019</a>)</span>',
+'here',
+'here',
+'here')
+```
+
+```{r}
+reactable(consent,
+          columns = list(Reading_One = colDef("Reference", html = TRUE, minWidth = 100, align = "center", vAlign = "center"),
+                         Summary = colDef("Summary", html = TRUE, minWidth = 250),
+                         Readability = colDef("Readability", html = TRUE),
+                         Tags = colDef("Tags", html = TRUE, width = 90)),
+          resizable = TRUE,
+          highlight = TRUE,
+          pagination = FALSE,
+          showSortable = TRUE,
+          searchable = TRUE,
+          theme = reactableTheme(
+             highlightColor = "#F0EDD1",
+             style = list(
+      fontFamily = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif",
+      fontSize = '16px')
+          )
+)
+```
+
+----
+
+# References
+
+----

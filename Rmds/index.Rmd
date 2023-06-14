@@ -1,0 +1,31 @@
+---
+title: "Data Science Ethics Summer 2023"
+output: 
+  html_document:
+    output_dir: "."
+---
+
+<br>
+
+## Introduction to Website
+
+My name is Sara, and I am a Mathematics and Philosophy double major at Pomona College. Through my coursework in Math and Philosophy, I have seen the diverse approaches to grappling with the ethical issues that arise in Data Science. For my Summer Undergraduate Research Project in 2023, I am exploring the pedagogies of existing Data Science Ethics courses at other institutions to better understand the who's teaching the course, what the common topics are, and how these courses cater to students with different backgrounds. 
+
+This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in understanding more about the pedagogies of Data Science Ethics courses or just generally about the nascent field of Data Science Ethics.
+
+## Syllabi Table 
+The table below details the syllabi that I have consulted during this project. A majority of them our Undergraduate courses and have a reading list included within their syllabus. 
+
+<br>
+
+:::{.column-page}   
+<iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi-table.html" width="95%" height="1000" data-external="1" style="border: none; text-align = 'center';"></iframe>
+:::
+
+```{r extraneous, echo = FALSE}
+## Inside the Syllabi: Course Outcomes and Topics
+
+#For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, #click [**HERE**](inside-syllabi.html).
+```
+ 
+

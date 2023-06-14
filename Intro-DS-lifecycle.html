@@ -11,7 +11,7 @@
 
 
 
-<title>Common Topics and their Connections to the Data Science Lifecycle</title>
+<title>Data Science Lifecycle</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -35,13 +35,6 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
-<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
-<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -70,6 +63,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -381,13 +396,11 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Common Topics and their Connections to the
-Data Science Lifecycle</h1>
+<h1 class="title toc-ignore">Data Science Lifecycle</h1>
 
 </div>
 
 
-<hr />
 <style type="text/css">
 h1 {
   text-align: left;
@@ -401,144 +414,161 @@ h1 {
 }
 </style>
 <hr />
-<div id="common-syllabi-topics" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Common Syllabi
-Topics</h1>
+<p>The goal of the Common Topics and their Data Science Lifecycle
+Locations” page is to place many of the common syllabi topics in the
+data science lifecycle or pipeline to see which stages of the lifecycle
+or pipeline these classes generally focus on. To achieve this goal, I
+first introduce two different ways of interpreting data, which would
+inform the data science lifecycle or pipeline. I then provide
+justification for why I adopt Philosopher of Science Sabina Leonelli’s
+relational view of data and the data science lifecycle. I next provide
+examples of data science practices that would live within each stage of
+Leonelli’s lifecycle. These examples ultimately inform my placement of
+many of the common “Course Topics” from the collected syllabi.</p>
 <hr />
+<p>There are several ways to depict the data science lifecycle or
+pipeline. Though it might not be explicit, the endorsement of one
+lifecycle or pipeline over another endorses specific views about data,
+data models, and their respective relationships to what we take to be
+knowledge about our world. Philosopher of Science Sabina Leonelli
+explicates the value-ladenness of how we conceive of the data science
+lifecycle or pipeline in <span class="citation">Leonelli (<a
+href="#ref-Leonelli" role="doc-biblioref">2018</a>)</span>. ‘Data
+models’ refer to the “arrangements of data that are evaluated,
+manipulated and modified with the explicit goal of representing a
+phenomenon, which is often (though not always) meant to capture specific
+aspects of the world,” <span class="citation">(<a href="#ref-Leonelli"
+role="doc-biblioref">Leonelli, 2018</a>)</span>. For example, a simple
+linear regression that uses years of education to model the expected
+income is a data model, as is an algorithm that utilizes millions of
+hyperparameters to predict an incarcerated individual’s risk of
+recidivism. Yet, Leonelli definition of ‘data models’ also expands
+beyond statistical models. For instance, Leonelli would also classify
+data visualizations that describe a relationship between variables as a
+data model.</p>
+<p>Per Leonelli, there are two popular conceptions of the relationship
+between data and data models and what we interpret to be knowledge about
+our world (i.e., different conceptions of the data and data models’
+epistemic roles). The first conception is the <strong>representational
+view of data and data models</strong> and the second conception is the
+<strong>relational view of data and data models</strong>.</p>
+<p>In the following two subsections, I provide a explication of the
+representational and relational view of data and models and provide
+reasoning for why we ought to reject the representational account of
+data and models in favor the relational view. I recommend reading
+Leonelli’s article for a more in-depth justification of why we should
+use the relational view of data and models over the representational
+view.</p>
+<hr />
+<div id="representational-view-of-data-and-data-models"
+class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Representational View
+of Data and Data Models</h1>
+<p>In the representational view of data and data models informational
+content of data is regarded as fixed and completely independent of the
+researchers’ background assumptions and context. Thus, data models are
+important insofar as they extract truth from the data. <strong>CONTINUE
+TO CLARIFY</strong>.</p>
 <div class="figure" style="text-align: center">
-<div id="htmlwidget-58e94e216b8b442d1538" class="reactable html-widget " style="width:800px;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-58e94e216b8b442d1538">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Syllabi_Topics":["Privacy","Bias","Fairness","Explainability","Workplace","Alignment","Transparency","Causation","Characterizations of Data and Data Science","Consent","Democracy","Interpretability","Justice","Predictive Policing","Responsibility","Accountability","Auditing","Autonomy","Governance","Healthcare","Kantian Ethics","Profiling and Particularity","Rights","Surveillance","Utilitarianism","AI Intelligence","Accuracy","Allocative to Representational Harms","Anthropomorphism","Benevolence","Blameworthiness","Blockchain and Decentralized Technical Architectures","Buddhist Ethics","Business Models","Categories and Kinds","Causal Inference","Characterization of Technology","Characterizations of Intelligence","Classification","Consciousness","Consequentialism","Content Moderation","Data Cleaning","Data Colonialism","Datafication","Decision-making","Discrimination","Embodiment","Ethical Theories","Feedback loops","Feminist Ethics","Generative AI, Bullshit, and Creativity","Humean Ethics","Impossibility Result","Induction and Statistical Learning Theory","Industry","Insurance","Intention","Knowledge","Libertarianism","Making Arguments with Data","Media Representation","Moral Responsibility","Neutrality Thesis","Opacity","Participatory","Persuasion and Manipulation","Politics","Power of Private Platforms","Price Discrimination","Privacy and Utility Trade-off","Relativism","Representation","Safety","Scientific Research","Social Categories","Surveillance and Security","The Problem of Induction","Transhumanism","Trust","Virtue Ethics","the Good vs the True"],"Count":[11,8,8,6,5,4,4,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},"columns":[{"id":"Syllabi_Topics","name":"Syllabi Topic","type":"character"},{"id":"Count","name":"Count","type":"numeric"}],"searchable":true,"defaultPageSize":7,"showPagination":true,"highlight":true,"showSortable":true,"width":"800px","theme":{"highlightColor":"#F0EDD1","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"}},"dataKey":"a79b858a840fe073a41f8610d8ed5557"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<img src="images/DS-replifecycle.png" alt="Data Science Lifecycle under the Representational View of Data and Models described by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 3 components that all interact with one another. The components include: (1) World, (2) Data, and (3) Knowledge. (1) World is documented via (2) Data and (2) Data represents (1) World. Additonally, (3) Knowledge is based on (2) Data and (2) Data is used to infer (3) Knowledge." width="70%" height="70%" />
 <p class="caption">
-Syllabi Topics Arranged in Descending Order by Count
+Data Science Lifecycle under the Representational View of Data and
+Models described by Sabina Leonelli in 2019. Any processing of the data,
+data organizing, or data modelling would merely be a tool to elcucidate
+the connection between Data and Knowledge and the World.
 </p>
 </div>
 <hr />
 </div>
-<div id="lifecycle-locations-of-the-most-common-syllabi-topics"
-class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Lifecycle Locations of
-the Most Common Syllabi Topics</h1>
-<hr />
-<p><span
-style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;"><strong>‘Most
-Common’ = has a count of 3 or more</strong></span> <br></p>
-<div id="lifecycle-1" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Lifecycle 1</h2>
-<ul>
-I considered paradigmatic ethical issues that relate to each most common
-topic to place them on the Data Science lifecycle:
-</ul>
-<p><br></p>
+<div id="relational-view-of-data-and-data-models" class="section level1"
+number="2">
+<h1><span class="header-section-number">2</span> Relational View of Data
+and Data Models</h1>
+<p>Meanwhile, on the relational view of data and data models, data is
+any object treated as evidence for at least one claim about the world
+that “is possible to circulate…among individuals/groups” <span
+class="citation">(<a href="#ref-Leonelli" role="doc-biblioref">Leonelli,
+2018</a>)</span>. Consequently, the informational content of data
+depends on the researchers’ background assumptions and context about
+what they classify as evidence. As such, data models, not data, are
+taken to represent our world’s phenomenon <span class="citation">(<a
+href="#ref-Leonelli" role="doc-biblioref">Leonelli,
+2018</a>)</span>.</p>
 <div class="figure" style="text-align: center">
-<img src="images/Pipeline-Ethics.png" alt="&lt;br&gt;This diagram helps us understand which stages or processes of the Data Science lifecycle are represented in the syllabi and which stages or processes are (generally) underrepresented in the syllabi. Importantly though, there are arguments to be made for why the most common topics should overlap with other stages of the lifecycle too." width="100%" height="80%" />
+<img src="images/DS-pipeline.png" alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. The stages of inquiry include: (1) 'Interactions with the World', which produce (2) 'Objects', which are processed as 'Data', which are ordered as (4) 'Models representing the World', which is then interpreted as (5) 'Knowledge'. What is interpreted as (5) 'Knowledge' further informs (1) 'Interactions with the World'." width="50%" height="50%" />
 <p class="caption">
-<br>This diagram helps us understand which stages or processes of the
-Data Science lifecycle are represented in the syllabi and which stages
-or processes are (generally) underrepresented in the syllabi.
-Importantly though, there are arguments to be made for why the most
-common topics should overlap with other stages of the lifecycle too.
+Data Science Lifecycle under the Relational View of Data and Models
+conceptualized by Sabina Leonelli in 2019.
 </p>
 </div>
 <hr />
-</div>
-<div id="lifecycle-2" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Lifecycle 2</h2>
-<p><em>Rings with less opacity denote areas where there seems to be
-substantial overlap between common topics and the data science stage
-though these considerations are not “paradigmatic” ethical
-issues.</em></p>
-<div class="figure" style="text-align: center">
-<img src="images/Pipeline-Ethics-Alpha.png" alt="." width="100%" height="80%" />
-<p class="caption">
-.
-</p>
-</div>
-<hr />
-</div>
-</div>
-<div id="connections" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Connections</h1>
-<p><em>I think the best way to structure this section would be to pull
-sources from syllabi to show what people are interested in. This likely
-will involve reading, at the very least, the abstracts to connect
-diagram above to the syllabi.</em></p>
-<p><em>The general thoughts for where I added transparency should be
-based on readings as well but likely that will not be (generally)
-represented on syllabi. These would likely come from papers read last
-semester in class AND be corroborated via my own Google
-searches.</em></p>
-<p><em>All readings cited should be pretty readable
-(philosophically-speaking)</em></p>
-<div id="consent" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Consent</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Consent
-Readings</strong></a></p>
-</div>
-<div id="privacy" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Privacy</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Privacy
-Readings</strong></a></p>
-</div>
-<div id="explainability-interpretability-transparency"
-class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Explainability,
-Interpretability, Transparency</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Explainability,
-Interpretability, and Transparency Readings</strong></a></p>
-</div>
-<div id="democracy-workplace-predictive-policing" class="section level2"
-number="3.4">
-<h2><span class="header-section-number">3.4</span> Democracy, Workplace,
-Predictive Policing</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Democracy
-Readings</strong></a></p>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Workplace
-Readings</strong></a></p>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Predictive
-Policing Readings</strong></a></p>
-</div>
-<div id="causation" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Causation</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Causation
-Readings</strong></a></p>
-</div>
-<div id="bias-fairness-justice" class="section level2" number="3.6">
-<h2><span class="header-section-number">3.6</span> Bias, Fairness,
-Justice</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Bias,
-Fairness, Justice Readings</strong></a></p>
 </div>
 <div
-id="alignment-responsibility-characterizations-of-data-and-data-science"
-class="section level2" number="3.7">
-<h2><span class="header-section-number">3.7</span> Alignment,
-Responsibility, Characterizations of Data and Data Science</h2>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Alignment
-Readings</strong></a></p>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Responsibility
-Readings</strong></a></p>
-<p><a style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Characterizations
-of Data and Data Science Readings</strong></a></p>
-<hr />
-<p>Link to Draft: <a
-href="https://docs.google.com/presentation/d/1QkjmPpTrcJRuClHb6wgmcaZZVfssLu_ue-5m-Gu3Uzs/edit?usp=sharing"
-class="uri">https://docs.google.com/presentation/d/1QkjmPpTrcJRuClHb6wgmcaZZVfssLu_ue-5m-Gu3Uzs/edit?usp=sharing</a></p>
-<hr />
-<p><strong>EXTRA</strong></p>
-<p>I explicate Leonelli’s view rather than merely supplying the final
-data science lifecycle is to underscore how our values influence data
-science. Leonelli’s explication of the representational versus
-relational view of data and data models showcase that our conception of
-data science is deeply connected with how we value data and models.
-Ultimately, the idea that values influence Data Science is important to
-framing several of the ethical issues raised by data science, and
-avoiding the objection that ….</p>
+id="the-relational-view-versus-the-representational-view-in-practice"
+class="section level1" number="3">
+<h1><span class="header-section-number">3</span> The Relational View
+versus the Representational View In-Practice</h1>
+<p>Consider how soccer match data influences our valuation of the
+match’s players (i.e., the phenomenon we are interested in
+understanding).</p>
+<p><strong>From the representational view of data and data
+models:</strong> the data inherently represents the actual soccer
+matches and players’ values. As such, questions about the data are
+solely focused on whether our data is good enough. For instance, we may
+wonder if the sensors on the pitch are calibrated correctly.</p>
+<p><strong>Meanwhile, from the relational view of data and data
+models:</strong> data is only evidence in virtue of how it is organized.
+In turn, we would question why specific data can be evidence of a
+player’s value. For instance, we may ask if using data about the
+percentage of passes completed or kilometers run is better evidence of a
+soccer player’s value given our data model <span class="citation">(<a
+href="#ref-Beaulieu-Leonelli" role="doc-biblioref">Beaulieu &amp;
+Leonelli, 2021, p. 59</a>)</span>.</p>
+<p>Such an example shows data in itself is <em>representationally
+ambiguous</em>. For instance, it is unclear what the sensors should be
+calibrated for (in other words, what they should measure), which data
+model should be used, which variables should be used within the data
+model and, thus, which data should be transformed into evidence. To
+determine what data represents researchers must use their background
+assumptions or theories to gather evidence about soccer players’
+valuations.</p>
+<p><strong>Another Soccer Related Case Study:</strong> <a
+href="https://journals.sagepub.com/doi/full/10.1177/2515245917747646">Many
+Analysts, One Data Set: Making Transparent How Variations in Analytic
+Choices Affect Results</a></p>
 <hr />
 </div>
+<div
+id="data-science-lifecycle-superimposed-with-paradigmatic-data-science-practices"
+class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Data Science Lifecycle
+Superimposed with Paradigmatic Data Science Practices</h1>
+<div class="figure" style="text-align: center">
+<img src="images/Pipeline-Practices.png" alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. Data Collection belongs to (1) Interactions with the World. Data Processing creates (2) Objects. Data Cleaning produces (3) Data. Exploratory Data Analysis is an intermediary between (3) Data and (4) Models. Machine Learning, Algorithms, Statistical Models are paradigmatic examples of (4) Models representing the World. Deployment of (4) Models creates interpretations of (5) Knowledge, which includes Communication, Visualizations, Report-Findings, and Decision making. Finally, (5) Knowledge informs further (1) Interactions with the world via Data Product Development." width="90%" height="90%" />
+<p class="caption">
+Data Science Lifecycle under the Relational View of Data and Models
+Superimposed with Paradigmatic Data Science Practices <span
+class="citation">(<a href="#ref-Beaulieu-Leonelli"
+role="doc-biblioref">Beaulieu &amp; Leonelli, 2021, p. 58</a>)</span>.
+</p>
 </div>
-<div id="references" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> References</h1>
 <hr />
+</div>
+<div id="references" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> References</h1>
+<hr />
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-Beaulieu-Leonelli" class="csl-entry">
+Beaulieu, A., &amp; Leonelli, S. (2021). <em>Data and society: A
+critical introduction</em> (First). SAGE Publications Ltd.
+</div>
+<div id="ref-Leonelli" class="csl-entry">
+Leonelli, S. (2018). What distinguishes data from models? <em>European
+Journal for Philosophy of Science</em>, <em>9</em>. <a
+href="https://doi.org/10.1007/s13194-018-0246-0">https://doi.org/10.1007/s13194-018-0246-0</a>
+</div>
+</div>
 </div>
 
 <html>

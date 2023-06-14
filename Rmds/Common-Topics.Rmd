@@ -1,0 +1,95 @@
+---
+title: "Common Syllabi Topics"
+output: html_document
+bibliography: bibliographies/DSethics-summer2023.bib
+link-citations: true
+csl: bibliographies/apa-6th-edition.csl
+---
+
+<br>
+
+```{css, echo=FALSE}
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(reactable)
+library(reactablefmtr)
+```
+
+**EXPLAIN METHODOLOGY**
+
+----
+
+# Syllabi Topics
+
+----
+
+```{r message=FALSE, warning=FALSE, fig.align='center', fig.cap="Syllabi Topics Arranged in Descending Order by Count"}
+syllabi_topics <- readr::read_csv("syllabi-topics.csv")
+
+syllabi_topics %>%
+  group_by(Syllabi_Topics) %>%
+  count() %>%
+  arrange(desc(n)) %>%
+  rename(Count = n) %>%
+  reactable(
+    columns = list(Syllabi_Topics = colDef("Syllabi Topic"),
+    Count = colDef("Count")),
+    highlight = TRUE,
+    showSortable = TRUE,
+    showPagination = TRUE,
+    searchable = TRUE,
+    defaultPageSize = 7,
+    width = '100%',
+    theme = reactableTheme(
+             highlightColor = "#F0EDD1",
+             style = list(
+      fontFamily = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+             )))
+```
+
+----
+
+# Most Common Syllabi Topics
+
+----
+
+<span style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;">**'Most Common' = has a count of 3 or more**</span>
+<br>
+
+```{r message=FALSE, warning=FALSE, fig.align='center', fig.cap="Most Common Syllabi Topics Arranged in Descending Order by Count"}
+syllabi_topics <- readr::read_csv("syllabi-topics.csv")
+
+syllabi_topics %>%
+  group_by(Syllabi_Topics) %>%
+  count() %>%
+  arrange(desc(n)) %>%
+  rename(Count = n) %>%
+  filter(Count >= 3) %>% 
+  reactable(
+    columns = list(Syllabi_Topics = colDef("Syllabi Topic"),
+    Count = colDef("Count")),
+    highlight = TRUE,
+    showSortable = TRUE,
+    pagination = FALSE,
+    searchable = TRUE,
+    width = '100%',
+    theme = reactableTheme(
+             highlightColor = "#F0EDD1",
+             style = list(
+      fontFamily = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+             ))) 
+```
+
