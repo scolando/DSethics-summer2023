@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Data Science Lifecycle</title>
+
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/DSethics.png"><body>Data Science Ethics Summer 2023</body></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Intro to Data Science Ethics
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Intro-DS-ethics.html">What is Data Science Ethics?</a>
+    </li>
+    <li>
+      <a href="DS-pedagogies.html">Data Science Ethics Pedagogies</a>
+    </li>
+    <li>
+      <a href="Intro-DS-lifecycle.html">Data Science Lifecycle</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Inside the Syllabi
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="inside-syllabi.html">Inside the Syllabi Notes</a>
+    </li>
+    <li>
+      <a href="Common-Topics.html">Common Syllabi Topics</a>
+    </li>
+    <li>
+      <a href="DS-pipeline.html">Data Science Lifecycle Connections</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Reading-Tags.html">
+    <span class="fa fa-book-open"></span>
+     
+    Readings
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Data Science Lifecycle</h1>
+
+</div>
+
+
+<hr />
+<style type="text/css">
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+</style>
+<p style="background-color: #ededed; border: 5px solid #ededed;">
+<strong>A Data Science Lifecycle or Pipeline:</strong> a diagram that
+depicts a relationship between different stages of data science (e.g.,
+data collection, data cleaning, model-building).
+</p>
+<p>Though it might not be explicit, using one lifecycle or pipeline over
+another endorses specific views about data, data models, and their
+respective relationships to what we take to be knowledge about our
+world. Thus, the choice to use a certain data science lifecycle is
+<strong>value-laden</strong>.</p>
+<p>There are two popular conceptions of the relationships between data,
+data models, and what we should interpret as knowledge about our world
+(i.e., the epistemic roles of data and data models) <span
+class="citation">(<a href="#ref-Leonelli" role="doc-biblioref">Leonelli,
+2018</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>The representational view of data and data
+models</strong></p></li>
+<li><p><strong>The relational view of data and data
+models</strong></p></li>
+</ol>
+<p style="background-color: #ededed; border: 5px solid #ededed;">
+<strong>Data Models:</strong> “arrangements of data that are evaluated,
+manipulated and modified with the explicit goal of representing a
+phenomenon, which is often (though not always) meant to capture specific
+aspects of the world,” <span class="citation">(<a href="#ref-Leonelli"
+role="doc-biblioref">Leonelli, 2018</a>)</span>.<br><br><strong>Examples
+of Data Models:</strong><br><br>1. A simple linear regression that uses
+years of education to model the expected income is a data
+model.<br><br>2. An algorithm that utilizes millions of hyperparameters
+to predict an incarcerated individual’s risk of recidivism.<br><br>3. A
+data visualization that describes a relationship between variables
+within a sample.
+</p>
+<p>In the following two subsections, I provide an explication of the
+representational and relational view of data and data models and some
+reasoning for why we ought to reject the representational view of data
+and data models in favor of the relational one. I recommend reading
+<span class="citation">Leonelli (<a href="#ref-Leonelli"
+role="doc-biblioref">2018</a>)</span> for a more in-depth justification
+of the value of a relational view of data and data models over a
+representational one.</p>
+<hr />
+<div id="the-representational-view" class="section level1">
+<h1>The Representational View</h1>
+<hr />
+<p>Under the representational view of data and data models, the
+informational content of data is fixed and independent of the
+researchers’ background assumptions and context. Thus, data models are
+important only insofar as they extract the truth from the data. Hence,
+under the representational view, models are either objectively correct
+or incorrect, depending on their ability to elucidate the truth stored
+in the data. In other words, data models are only relevant because they
+clarify the arrows between data and knowledge in the diagram below <span
+class="citation">(<a href="#ref-Leonelli" role="doc-biblioref">Leonelli,
+2018</a>)</span>.</p>
+<div class="figure" style="text-align: center">
+<img src="images/DS-replifecycle.png" alt="Data Science Lifecycle under the Representational View of Data and Models described by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 3 components that all interact with one another. The components include: (1) World, (2) Data, and (3) Knowledge. (1) World is documented via (2) Data and (2) Data represents (1) World. Additonally, (3) Knowledge is based on (2) Data and (2) Data is used to infer (3) Knowledge." width="70%" height="70%" />
+<p class="caption">
+Data Science Lifecycle under the Representational View of Data and
+Models described by Sabina Leonelli in 2019. Any processing of the data,
+data organizing, or data modeling would merely be a tool to elucidate
+the connection between Data and Knowledge and the World.
+</p>
+</div>
+<hr />
+</div>
+<div id="the-relational-view" class="section level1">
+<h1>The Relational View</h1>
+<hr />
+<p>Meanwhile, under the relational view of data and data models, data is
+understood as any object treated as evidence for at least one claim
+about the world and “is possible to circulate…among individuals/groups,”
+<span class="citation">(<a href="#ref-Leonelli"
+role="doc-biblioref">Leonelli, 2018</a>)</span>. Consequently, the
+informational content of data depends on the researchers’ background
+assumptions and social context. So, truth is not stored in data and is
+instead defined by its social environment and the function it is
+supposed to serve. As such, data models, not data, serve as
+representations of our world, making data models necessary and highly
+influential to knowledge production under the relational view of data
+and data models <span class="citation">(<a href="#ref-Leonelli"
+role="doc-biblioref">Leonelli, 2018</a>)</span>.</p>
+<div class="figure" style="text-align: center">
+<img src="images/DS-pipeline.png" alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. The stages of inquiry include: (1) 'Interactions with the World', which produce (2) 'Objects', which are processed as 'Data', which are ordered as (4) 'Models representing the World', which is then interpreted as (5) 'Knowledge'. What is interpreted as (5) 'Knowledge' further informs (1) 'Interactions with the World'." width="50%" height="50%" />
+<p class="caption">
+Data Science Lifecycle under the Relational View of Data and Models
+conceptualized by Sabina Leonelli in 2019.
+</p>
+</div>
+<hr />
+</div>
+<div id="the-relational-vs.-representational-view-in-practice"
+class="section level1">
+<h1>The Relational vs. Representational View In-Practice</h1>
+<hr />
+<p>Consider how soccer match data influences our valuation of the
+match’s players (i.e., the phenomenon we are interested in
+understanding).</p>
+<p><strong>From the representational view of data and data
+models:</strong> the data inherently represents the actual soccer
+matches and players’ values. As such, questions about the data are
+solely focused on whether it is good enough. For instance, we may wonder
+if the sensors on the pitch are calibrated correctly.</p>
+<p><strong>Meanwhile, from the relational view of data and data
+models:</strong> data is only evidence in virtue of how it is organized.
+In turn, we would question why specific data should be evidence of a
+player’s value and how the larger social environment influences what
+data is generated. For instance, we may ask if data about the percentage
+of passes completed or kilometers run is better evidence of a soccer
+player’s value given our data model or how social contexts, like the
+role of FIFA videogames or social media, influence perceptions of soccer
+and data generation <span class="citation">(<a
+href="#ref-Beaulieu-Leonelli" role="doc-biblioref">Beaulieu &amp;
+Leonelli, 2021, p. 59</a>)</span>.</p>
+<p>Such an example shows data in itself is <em>representationally
+ambiguous</em> and is dependent on its broader social environment. For
+instance, it is unclear what the sensors should be calibrated for,
+especially if calibration for foot speed reduces calibration for ball
+location, et cetera. There are many other questions that the
+representational view of data and data models neglects, such as which
+data model should be used and which variables (i.e., components of data)
+should be used within a given data model. Researchers must rely upon
+their background assumptions, knowledge, value judgments, and social
+contexts to answer these questions and, thus, what data is taken as
+evidence.</p>
+<p style="background-color: #ededed; border: 5px solid #ededed;">
+<strong>Therefore, this case study gives us reason to reject the
+representational view of data and data models in favor of the relational
+view of data and data models.</strong>
+</p>
+<hr />
+<div
+id="silberzahn-et-al.s-many-analysts-one-data-set-making-transparent-how-variations-in-analytic-choices-affect-results"
+class="section level3">
+<h3>Silberzahn et al.’s “Many Analysts, One Data Set: Making Transparent
+How Variations in Analytic Choices Affect Results”</h3>
+<p>In <span class="citation">Silberzahn et al. (<a
+href="#ref-soccer-case" role="doc-biblioref">2017</a>)</span>, 29 data
+analysis teams were asked to use the same data set to determine “whether
+soccer referees are more likely to give red cards to dark-skin-toned
+players than light-skin-toned players,”. Despite operating from the same
+data set, the final conclusions were split: 20 teams found that there
+was a statistically significant positive relationship, and 9 teams did
+not find a significant association between skin tone and the likelihood
+of the referee giving a red card.</p>
+<p>The difference in chosen data model type and the relative importance
+of the potential predictor variables contributed to the division in the
+teams’ final decisions:</p>
+<ul>
+<li><p>4 different model types were used: 15 teams used logistic models,
+6 teams used Poisson models, 6 teams used linear models, and 2 teams
+used other types of models.</p></li>
+<li><p>21/29 teams used unique combinations of predictor
+variables.</p></li>
+</ul>
+<p>Through <span class="citation">Silberzahn et al. (<a
+href="#ref-soccer-case" role="doc-biblioref">2017</a>)</span>, we can
+also see how ambiguity about the data model and the relative importance
+of certain predictor variables also impacts what data is taken as
+evidence. No two teams had the same set of evidence for their claim
+about the relationship between skin tone and the likelihood of the
+referee giving a red card. As emphasized by <span
+class="citation">Silberzahn et al. (<a href="#ref-soccer-case"
+role="doc-biblioref">2017</a>)</span>, each team’s evidence set was
+defensible based on the original data set provided. Yet, these evidence
+sets were also subjective in the sense that they relied upon the
+analysts’ background assumptions, value judgments, knowledge, and social
+contexts.</p>
+<p style="background-color: #ededed; border: 5px solid #ededed;">
+<strong>Hence, <span class="citation">Silberzahn et al. (<a
+href="#ref-soccer-case" role="doc-biblioref">2017</a>)</span> emphasize
+that data and data models should be viewed relationally rather than
+representationally.</strong>
+</p>
+<hr />
+</div>
+</div>
+<div id="the-final-data-science-lifecycle" class="section level1">
+<h1>The Final Data Science Lifecycle</h1>
+<hr />
+<p>The final data science lifecycle endorses the relational view of data
+and data models proposed by <span class="citation">Leonelli (<a
+href="#ref-Leonelli" role="doc-biblioref">2018</a>)</span>. The diagram
+below shows us where paradigmatic data science practices occur in the
+lifecycle <span class="citation">(<a href="#ref-Beaulieu-Leonelli"
+role="doc-biblioref">Beaulieu &amp; Leonelli, 2021, p.
+58</a>)</span>.</p>
+<div class="figure" style="text-align: center">
+<img src="images/Pipeline-Practices.png" alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. Data Collection belongs to (1) Interactions with the World. Data Processing creates (2) Objects. Data Cleaning produces (3) Data. Exploratory Data Analysis is an intermediary between (3) Data and (4) Models. Machine Learning, Algorithms, Statistical Models are paradigmatic examples of (4) Models representing the World. Deployment of (4) Models creates interpretations of (5) Knowledge, which includes Communication, Visualizations, Report-Findings, and Decision making. Finally, (5) Knowledge informs further (1) Interactions with the world via Data Product Development." width="80%" height="80%" />
+<p class="caption">
+Data Science Lifecycle under the Relational View of Data and Models
+Superimposed with Paradigmatic Data Science Practices <span
+class="citation">(<a href="#ref-Beaulieu-Leonelli"
+role="doc-biblioref">Beaulieu &amp; Leonelli, 2021, p. 58</a>)</span>.
+</p>
+</div>
+<hr />
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<hr />
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-Beaulieu-Leonelli" class="csl-entry">
+Beaulieu, A., &amp; Leonelli, S. (2021). <em>Data and society: A
+critical introduction</em> (First). SAGE Publications Ltd.
+</div>
+<div id="ref-Leonelli" class="csl-entry">
+Leonelli, S. (2018). What distinguishes data from models? <em>European
+Journal for Philosophy of Science</em>, <em>9</em>. <a
+href="https://doi.org/10.1007/s13194-018-0246-0">https://doi.org/10.1007/s13194-018-0246-0</a>
+</div>
+<div id="ref-soccer-case" class="csl-entry">
+Silberzahn, R., Uhlmann, E., Martin, D., Anselmi, P., Aust, F., Awtrey,
+E., … Nosek, B. (2017). Many analysts, one dataset: Making transparent
+how variations in analytical choices affect results. <em>Advances in
+Methods and Practices in Psychological Science</em>.
+</div>
+</div>
+</div>
+
+<html>
+
+<br>
+
+<footer>
+  <div class = "container">
+    <div class="row">
+        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7); border-top: 1px solid #ddd'><br>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
+  <a style = 'font-family: "Helvetica Neue"; float: center;' href="https://github.com/scolando/DSethics-summer2023">
+    <span class="fa fa-github"></span>
+    Source Code </a>
+  </p>
+  </div>
+  </div>
+</footer>
+
+</html>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
