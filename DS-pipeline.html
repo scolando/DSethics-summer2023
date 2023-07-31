@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Common Syllabi Topics’ Connections to the Data Science Lifecycle</title>
+
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-17.0.0/react.min.js"></script>
+<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/DSethics.png"><body>Data Science Ethics Summer 2023</body></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Intro to Data Science Ethics
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Intro-DS-ethics.html">What is Data Science Ethics?</a>
+    </li>
+    <li>
+      <a href="DS-pedagogies.html">Data Science Ethics Pedagogies</a>
+    </li>
+    <li>
+      <a href="Intro-DS-lifecycle.html">Data Science Lifecycle</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Inside the Syllabi
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="inside-syllabi.html">Inside the Syllabi Notes</a>
+    </li>
+    <li>
+      <a href="Common-Topics.html">Common Syllabi Topics</a>
+    </li>
+    <li>
+      <a href="DS-pipeline.html">Data Science Lifecycle Connections</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Reading-Tags.html">
+    <span class="fa fa-book-open"></span>
+     
+    Readings
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Common Syllabi Topics’ Connections to the
+Data Science Lifecycle</h1>
+
+</div>
+
+
+<hr />
+<style type="text/css">
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+</style>
+<hr />
+<div id="common-syllabi-topics" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Common Syllabi
+Topics</h1>
+<hr />
+<div class="figure" style="text-align: center">
+<div id="htmlwidget-c7fcbec4cc0e09aa9794" class="reactable html-widget " style="width:800px;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c7fcbec4cc0e09aa9794">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Syllabi_Topics":["Privacy","Bias","Fairness","Explainability","Workplace","Alignment","Transparency","Causation","Characterizations of Data and Data Science","Consent","Democracy","Interpretability","Justice","Predictive Policing","Responsibility"],"Count":[11,8,8,6,5,4,4,3,3,3,3,3,3,3,3]},"columns":[{"id":"Syllabi_Topics","name":"Syllabi Topic","type":"character"},{"id":"Count","name":"Count","type":"numeric"}],"searchable":true,"defaultPageSize":8,"showPagination":true,"highlight":true,"showSortable":true,"width":"800px","theme":{"highlightColor":"#F0EDD1","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"}},"dataKey":"8a384a6acb5ecbddc7a8140ad79e3911"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Most Common Syllabi Topics Arranged in Descending Order by Count
+</p>
+</div>
+<hr />
+</div>
+<div id="lifecycle-locations-of-the-most-common-syllabi-topics"
+class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Lifecycle Locations of
+the Most Common Syllabi Topics</h1>
+<hr />
+<p><span
+style="color:#877e2c; background-color: #F0EDD1; border: 3px solid #F0EDD1; border-radius: 4px;"><strong>‘Most
+Common’ = has a count of 3 or more</strong></span> <br></p>
+<div id="lifecycle-1" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Lifecycle 1</h2>
+<ul>
+I considered paradigmatic ethical issues that relate to each most common
+topic to place them on the Data Science lifecycle:
+</ul>
+<p><br></p>
+<div class="figure" style="text-align: center">
+<img src="images/Pipeline-Ethics.png" alt="this is the data science lifecycle diagram with rings around it that represent the connections between the ethical issues and the lifecycle. The connections between the ethical issues and the lifecycle are described in section 3:'Connections'." width="110%" height="90%" />
+<p class="caption">
+<br>This diagram helps us understand which stages or processes of the
+Data Science lifecycle are represented in the syllabi and which stages
+or processes are (generally) underrepresented in the syllabi.
+Importantly though, there are arguments to be made for why the most
+common topics should overlap with other stages of the lifecycle too.
+</p>
+</div>
+<hr />
+</div>
+<div id="lifecycle-2" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Lifecycle 2</h2>
+<p>Rings with less opacity denote areas where there seems to be
+substantial overlap between common topics and the data science stage
+though these considerations are not “paradigmatic” ethical issues.</p>
+<div class="figure" style="text-align: center">
+<img src="images/Pipeline-Ethics-Alpha.png" alt="this is the data science lifecycle diagram with rings around it that represent the connections between the ethical issues and the lifecycle. The connections between the ethical issues and the lifecycle are described in section 3:'Connections'" width="100%" height="90%" />
+<p class="caption">
+This diagram helps us understand which stages or processes of the Data
+Science lifecycle are represented in the syllabi and which stages or
+processes are (generally) underrepresented in the syllabi. The
+components with less opacity are areas of overlap between syllabi topics
+and data science stages that are less commonly thought of within data
+science literature
+</p>
+</div>
+<hr />
+</div>
+</div>
+<div id="connections" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Connections</h1>
+<hr />
+<p>This section is meant to give some brief justifications for my
+placement of the most common syllabi topics on the data science
+lifecycle in the diagram above. As with most topics in <em>both</em>
+data science and ethics, there is so much nuance that I cannot possibly
+capture in a few paragraphs. I recommend going through the readings
+linked below to understand more intricacies and applications of the
+connections between data science practices and the ethical issues that I
+begin to explicate below.</p>
+<hr />
+<div id="consent" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Consent</h2>
+<hr />
+<p>Generally, when people think about consent in data science, they
+think about it in data collection. That is, did the researchers or
+business have informed consent when collecting people’s data? Usually,
+when researchers or companies get permission to collect people’s data,
+they also ask for consent to use the data in a specific capacity later
+in the lifecycle (e.g., to build models, be placed in a database, sell
+to another company, etc.).</p>
+<p>Yet, an agent must also consent to have the knowledge interpreted
+from a data model applied to them, even if none of their data was
+collected for the model building. For example, imagine that a company
+creates a data model that predicts that people who watch a certain
+television show are more likely to vote for a particular presidential
+candidate based on previously observed cases. A person begins watching
+the television show, and none of their information was used in building
+the predictive data model. Still, it seems crucial to consider if the
+person gave informed consent to have the model make predictions about
+them and their likelihood of voting for a particular presidential
+candidate.</p>
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Consent.html"><strong>Consent
+Readings</strong></a></p>
+<p><br></p>
+<hr />
+</div>
+<div id="privacy" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Privacy</h2>
+<hr />
+<p>In 2016, university researchers published personal data from the
+OkCupid dating site to an open data repository. This data revealed
+intimate details about over 70,000 users, including usernames, sexual
+preferences, and personal opinions. A scholar at Carnegie Mellon
+University said about 30% of these profiles were directly identifiable,
+meaning their OkCupid profile data could be connected to their real
+name, causing international outrage <span class="citation">(<a
+href="#ref-OkCupid" role="doc-biblioref">Woollacott, 2016</a>)</span>.
+The OkCupid case study underscores why data science ethics courses
+heavily emphasize privacy’s importance. Data science often requires
+massive amounts of data and, as aforementioned, informed consent to be
+collected. Intuitively, it is unethical for personal data that people
+usually consented to be used by a particular entity for a specific
+purpose to be available to other entities, especially when the available
+data is identifiable (i.e., traceable back to them).</p>
+<p>Therefore, privacy is central to interactions with the world that
+lead to data collection, processing, and data storage, especially when
+the information collected is personal. Usually, data is aggregated and
+thus anonymized to develop a model, so there are typically no concerns
+about the model or its predictions exposing personal information.</p>
+<p>When knowledge inferred from a data model informs further
+interactions with the world, worries about privacy resurface. For
+instance, imagine a data model by one company predicts that you are
+unqualified for a job. It would be unethical for this prediction to be
+shared with every other company you applied to or for your prediction to
+be given to career development companies to target course advertisements
+toward you. Hence, just like personal data, it seems like people have a
+right to keep model predictions about them private.</p>
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Privacy.html"><strong>Privacy
+Readings</strong></a></p>
+<p><br></p>
+<hr />
+</div>
+<div id="explainability-interpretability-transparency"
+class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Explainability,
+Interpretability, Transparency</h2>
+<hr />
+<p>A common complaint about data science models, particularly more
+advanced ones, is that they are black boxes. Explainability,
+interpretability, and transparency all describe similar desires for data
+science technologies to be more understandable to humans, particularly
+the technology’s stakeholders. People usually demand that data science
+technologies are comprehensible to humans at the deployment stage, where
+predictions about individuals or groups are made. For example, if an
+inmate’s bail is set higher than they think it should be because an
+algorithm recommended the higher bail amount, it seems highly likely
+that the inmate would be upset. Some would argue that the inmate’s
+upsetness is partly because they have a right to an explanation.</p>
+<p>The “right to an explanation” argument extends to future interactions
+with our world. Imagine law enforcement starts over-policing
+neighborhood A relative to neighborhood B because people in neighborhood
+A tend to have higher bail amounts than people in neighborhood B. It
+seems that the people in neighborhood A have a right to know why they
+are being over-policed relative to the people in neighborhood B.</p>
+<p>Like many data science ethics terms, what exactly explainability,
+interpretability, and transparency require is an open question. It does
+not seem sufficient to publish the model’s code because this does not
+tell us why the model made the decision it did on a particular person.
+Simultaneously, more advanced data science models can use millions of
+hyper-parameters to make predictions. So, we cannot point to a single
+variable and say that it caused the algorithm to predict class X over
+class Y for Individual I.</p>
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Explainability.html"><strong>Explainability,
+Interpretability, and Transparency Readings</strong></a></p>
+<p><br></p>
+<hr />
+</div>
+<div id="democracy-workplace-predictive-policing" class="section level2"
+number="3.4">
+<h2><span class="header-section-number">3.4</span> Democracy, Workplace,
+Predictive Policing</h2>
+<hr />
+<p>Democracy, workplace, and predictive policing are settings where data
+science practices have exceptionally high moral stakes. As such, case
+studies from democracy, workplace, or predictive policing settings are
+routinely used in data science ethics classes to underscore how
+pernicious data science’s moral harms can be. Usually, when case studies
+are referenced, it concerns deploying predictive models in these
+settings. The COMPAS algorithm, which predicted an inmate’s risk of
+being reconvicted to determine their sentence length, is a well-known
+example of an algorithm that was scrutinized for being deployed in
+courtrooms, given that it predicted a higher proportion of false
+high-risk appraisals for Black men than White men <span
+class="citation">(<a href="#ref-COMPAS" role="doc-biblioref">Julia
+Angwin, 2016</a>)</span>.</p>
+<p>Furthermore, these predictions can lead to morally problematic
+interactions with the world. For instance, suppose that law enforcement
+starts over-policing a predominantly Black neighborhood because a
+recidivism algorithm predicted that people from that neighborhood are
+more likely to be reconvicted of a crime. Yet, the recidivism algorithm
+was trained on historical data riddled with racial biases. Over-policing
+that neighborhood could lead to specific populations being wrongfully
+convicted or more likely to be convicted solely because of their
+demographic characteristics – both of which are intuitively morally
+problematic.</p>
+<p>Interestingly, even though there is a high likelihood of immoral
+outcomes of deploying predictive models in democracy, workplace, and
+predictive policing settings, creating these predictive models is not
+intuitively morally problematic in itself. Imagine that a civil rights
+group develops an algorithm to predict a person’s likelihood of being
+reconvicted to show that the criminal justice system is racially biased,
+which intuitively, does not seem morally troublesome. Though, if the
+recidivism algorithm is deployed, meaning it influences people’s beliefs
+about a person’s reconviction risk, does it become morally
+pernicious.</p>
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Democracy.html"><strong>Democracy
+Readings</strong></a></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Workplace.html"><strong>Workplace
+Readings</strong></a></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Predictive-Policing.html"><strong>Predictive
+Policing Readings</strong></a></p>
+<p><br></p>
+<hr />
+</div>
+<div id="causation" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Causation</h2>
+<hr />
+<p>Probably the most-known lesson in statistics is that “correlation
+does not imply causation”. This lesson becomes especially poignant when
+a model representing the world is interpreted as knowledge. At least
+currently, most models only identify correlations between the predictor
+variables and the response variable, not causation (there is also
+centuries worth of philosophical debates about how to define causation).
+Interpreting correlative relationships as causal can have significant
+moral repercussions. For instance, suppose we have a logistic model that
+predicts whether a person will drop out of high school. Our model has a
+positive correlation between having Spanish as your first language and
+your expected probability of dropping out (i.e., if your first language
+is Spanish, you are expected to have a higher chance of dropping out of
+high school, holding all other variables constant). Clearly, several
+confounding variables, such as socioeconomic status and available
+academic opportunities, lead to the positive relationship we found. But,
+suppose that someone took our model and, from it, declared that having
+Spanish as your first language causes a higher probability of dropping
+out of high school. They might conclude that people whose first language
+is Spanish are less intelligent or lazier in school than those whose
+first language is not Spanish, leading to racist beliefs and actions
+that morally harm people whose first language is Spanish. Therefore,
+several data science ethics classes focus on causation at the
+knowledge-interpretation stage and, specifically, how it is dangerous to
+interpret causal relationships from most data models.</p>
+<p>There can also be ethical repercussions of false causal relationships
+between predictors and the response variable in informing future
+interactions with the world. Imagine biologists theorize that native
+Spanish speakers are naturally less intelligent than native English
+speakers and use false causal claims they took from our model to justify
+data collection. Thus, ethical worries related causation span not just
+what we should interpret as knowledge from a data model but also what
+sorts of interactions with the world are can be justified on the basis
+of previously interpreted knowledge.</p>
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Causation.html"><strong>Causation
+Readings</strong></a></p>
+<p><br></p>
+</div>
+<div id="bias-fairness-justice" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Bias, Fairness,
+Justice</h2>
+<hr />
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Bias.html"><strong>Bias,
+Fairness, Justice Readings</strong></a></p>
+<p><br></p>
+<hr />
+</div>
+<div
+id="alignment-responsibility-characterizations-of-data-and-data-science"
+class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Alignment,
+Responsibility, Characterizations of Data and Data Science</h2>
+<hr />
+<p><br></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Alignment.html"><strong>Alignment
+Readings</strong></a></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Responsibility.html"><strong>Responsibility
+Readings</strong></a></p>
+<p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Characterizations.html"><strong>Characterizations
+of Data and Data Science Readings</strong></a></p>
+<hr />
+</div>
+</div>
+<div id="references" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> References</h1>
+<hr />
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-COMPAS" class="csl-entry">
+Julia Angwin, L. K., Jeff Larson. (2016). <em><span>M</span>achine
+<span>B</span>ias — propublica.org</em>. <a
+href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+class="uri">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.
+</div>
+<div id="ref-OkCupid" class="csl-entry">
+Woollacott, E. (2016). <em>70,000 <span>O</span>k<span>C</span>upid
+<span>P</span>rofiles <span>L</span>eaked, <span>I</span>ntimate
+<span>D</span>etails <span>A</span>nd <span>A</span>ll —
+forbes.com</em>. <a
+href="https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data-of-70000-okcupid-users-released/?sh=2ac42f2f1e15"
+class="uri">https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data-of-70000-okcupid-users-released/?sh=2ac42f2f1e15</a>.
+</div>
+</div>
+</div>
+
+<html>
+
+<br>
+
+<footer>
+  <div class = "container">
+    <div class="row">
+        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7); border-top: 1px solid #ddd'><br>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
+  <a style = 'font-family: "Helvetica Neue"; float: center;' href="https://github.com/scolando/DSethics-summer2023">
+    <span class="fa fa-github"></span>
+    Source Code </a>
+  </p>
+  </div>
+  </div>
+</footer>
+
+</html>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -11,7 +11,7 @@
 
 
 
-<title>Data Science Ethics Summer 2023</title>
+<title>What is Data Science Ethics?</title>
 
 <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -223,6 +226,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -230,6 +296,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -301,47 +377,30 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Data Science Ethics Summer 2023</h1>
+<h1 class="title toc-ignore">What is Data Science Ethics?</h1>
 
 </div>
 
 
-<p><br></p>
-<div id="introduction-to-website" class="section level2">
-<h2>Introduction to Website</h2>
-<p>Through my Statistics and Philosophy coursework, I have seen diverse
-approaches to grappling with issues in Data Science Ethics. For my
-Summer Undergraduate Research Project (SURP) through Pomona College, I
-am exploring the pedagogies of existing Data Science Ethics courses.
-Exploring the pedagogies for Data Science Ethics is a fantastic way for
-me to understand the central concepts in the field and the current
-conversations in Data Science Ethics research. Additionally, it also
-gives insights into interesting pedagogical questions such as:</p>
-<ul>
-<li><p>Who is teaching Data Science Ethics courses?</p></li>
-<li><p>Which topics are most common within Data Science Ethics
-classes?</p></li>
-<li><p>How do Data Science Ethics courses, which are inherently
-interdisciplinary, cater to students with different philosophical and
-technical backgrounds?</p></li>
-</ul>
-<p>This website is a hub for my summer project on the teaching
-pedagogies of Data Science Ethics. By documenting my findings on this
-public website, I hope that others can also learn more about Data
-Science Ethics’ teaching pedagogies or, just generally, the nascent
-field of Data Science Ethics.</p>
-</div>
-<div id="syllabi-table" class="section level2">
-<h2>Syllabi Table</h2>
-<p>The table below details the syllabi that I consulted during this
-project. A majority of them are undergraduate courses and include a
-reading list. Feel free to visit <a href="inside-syllabi.html">Inside
-the Syllabi Notes</a> for in-depth notes on each course’s learning goals
-and topics.</p>
-<div class="column-page">
-<iframe src="https://scolando.github.io/DSethics-summer2023/syllabi-table.html" width="95%" height="1000" data-external="1" style="border: none; text-align = &#39;center&#39;;">
-</iframe>
-</div>
+<style type="text/css">
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+</style>
+<p>Comic via <a href="https://www.evilaicartoons.com/">Evil AI
+Cartoons</a>:</p>
+<p><img src="images/AI-ethics.jpg" width="100%" height="50%" style="display: block; margin: auto;" /></p>
+<hr />
+<div id="references" class="section level1">
+<h1>References</h1>
+<hr />
 </div>
 
 <html>
@@ -363,6 +422,8 @@ and topics.</p>
 </html>
 
 
+</div>
+</div>
 
 </div>
 
@@ -395,6 +456,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

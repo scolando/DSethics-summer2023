@@ -11,7 +11,7 @@
 
 
 
-<title>Data Science Ethics Summer 2023</title>
+<title>Consent Readings</title>
 
 <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -32,6 +32,13 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-17.0.0/react.min.js"></script>
+<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -60,6 +67,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -301,46 +330,75 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Data Science Ethics Summer 2023</h1>
+<h1 class="title toc-ignore">Consent Readings</h1>
 
 </div>
 
 
-<p><br></p>
-<div id="introduction-to-website" class="section level2">
-<h2>Introduction to Website</h2>
-<p>Through my Statistics and Philosophy coursework, I have seen diverse
-approaches to grappling with issues in Data Science Ethics. For my
-Summer Undergraduate Research Project (SURP) through Pomona College, I
-am exploring the pedagogies of existing Data Science Ethics courses.
-Exploring the pedagogies for Data Science Ethics is a fantastic way for
-me to understand the central concepts in the field and the current
-conversations in Data Science Ethics research. Additionally, it also
-gives insights into interesting pedagogical questions such as:</p>
-<ul>
-<li><p>Who is teaching Data Science Ethics courses?</p></li>
-<li><p>Which topics are most common within Data Science Ethics
-classes?</p></li>
-<li><p>How do Data Science Ethics courses, which are inherently
-interdisciplinary, cater to students with different philosophical and
-technical backgrounds?</p></li>
-</ul>
-<p>This website is a hub for my summer project on the teaching
-pedagogies of Data Science Ethics. By documenting my findings on this
-public website, I hope that others can also learn more about Data
-Science Ethics’ teaching pedagogies or, just generally, the nascent
-field of Data Science Ethics.</p>
+<style type="text/css">
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+</style>
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-11bb6e3d897929e44104" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-11bb6e3d897929e44104">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Reading_One":["<p><span class=\"citation\">Eyal (<a href=\"#ref-sep-informed-consent\" role=\"doc-biblioref\">2019<\/a>)<\/span><\/p>","<p><span class=\"citation\">Solove (<a href=\"#ref-Solove\"\nrole=\"doc-biblioref\">2012<\/a>)<\/span><\/p>","<p><span class=\"citation\">Acquisti, Brandimarte, &amp; Loewenstein (<a\nhref=\"#ref-Acquisti\" role=\"doc-biblioref\">2015<\/a>)<\/span><\/p>","<p><span class=\"citation\">Miller &amp; Wertheimer (<a\nhref=\"#ref-ethics-consent\" role=\"doc-biblioref\">2010<\/a>)<\/span><\/p>","<p><span class=\"citation\">Wolmarans &amp; Voorhoeve (<a\nhref=\"#ref-wolmarans_voorhoeve_2022\"\nrole=\"doc-biblioref\">2022<\/a>)<\/span><\/p>","<p><span class=\"citation\">Parasidis, Pike, &amp; McGraw (<a\nhref=\"#ref-Belmont\" role=\"doc-biblioref\">2019<\/a>)<\/span><\/p>","<span class=\"citation\">Butler, Delaney, Hesselbo, &amp; Spoelstra\n(<a href=\"#ref-beyond-measure\"\nrole=\"doc-biblioref\">2020<\/a>)<\/span>","<span class=\"citation\">Rusert (<a href=\"#ref-Coercion\"\nrole=\"doc-biblioref\">2019<\/a>)<\/span>"],"Summary":["This Stanford Encyclopedia of Philosophy (SEP) entry overviews the philosophical discussions about Informed Consent. Specifically, this entry discusses what informed consent is, in which scenarios informed one is morally obligated to obtain informed consent, and why a moral obligation to obtain informed consent exists in the first place. This entry focuses on informed consent in the medical field. Yet, several concepts discussed in the SEP entry could be pertinent to the worries surrounding informed consent in data science.","'Privacy Self-Management and the Consent Dilemma' by Daniel J. Solove articulates how the rights to 'privacy self-management' and informed consent are deeply intertwined when collecting, using, and disclosing information (e.g., personal data). In this article, Solove contends that individuals cannot adequately weigh the costs and benefits of revealing personal information or permitting its use and transfer, which limits the ability for privacy to be self-managed. Solove argues that these issues in privacy self-management lead to a 'consent dilemma' about how to ensure that one's informed consent to collect, use, or disclose personal data is meaningful without resorting to paternalistic laws or policies. Solove ends by proposing ways for privacy law to 'grapple with the consent dilemma'.","here","here","here","here","here","here"],"Readability":["no","no","here","here","here","here","here","here"],"Tags":["lol","lol","here","here","here","here","here","here"]},"columns":[{"id":"Reading_One","name":"Reference","type":"character","html":true,"minWidth":100,"align":"center","vAlign":"center"},{"id":"Summary","name":"Summary","type":"character","html":true,"minWidth":250},{"id":"Readability","name":"Readability","type":"character","html":true},{"id":"Tags","name":"Tags","type":"character","html":true,"width":90}],"resizable":true,"searchable":true,"pagination":false,"highlight":true,"showSortable":true,"theme":{"highlightColor":"#F0EDD1","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif","fontSize":"14px"}},"dataKey":"ee1cda530fa7baa3342db91c58170fc9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<hr />
+<div id="references" class="section level1">
+<h1>References</h1>
+<hr />
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-Acquisti" class="csl-entry">
+Acquisti, A., Brandimarte, L., &amp; Loewenstein, G. (2015). Privacy and
+human behavior in the age of information. <em>Science (New York,
+N.Y.)</em>, <em>347</em>, 509–514. <a
+href="https://doi.org/10.1126/science.aaa1465">https://doi.org/10.1126/science.aaa1465</a>
 </div>
-<div id="syllabi-table" class="section level2">
-<h2>Syllabi Table</h2>
-<p>The table below details the syllabi that I consulted during this
-project. A majority of them are undergraduate courses and include a
-reading list. Feel free to visit <a href="inside-syllabi.html">Inside
-the Syllabi Notes</a> for in-depth notes on each course’s learning goals
-and topics.</p>
-<div class="column-page">
-<iframe src="https://scolando.github.io/DSethics-summer2023/syllabi-table.html" width="95%" height="1000" data-external="1" style="border: none; text-align = &#39;center&#39;;">
-</iframe>
+<div id="ref-beyond-measure" class="csl-entry">
+Butler, N., Delaney, H., Hesselbo, E., &amp; Spoelstra, S. (2020).
+<em>Beyond measure</em>. <em>ephemera, vol 20</em>, 1–16.
+</div>
+<div id="ref-sep-informed-consent" class="csl-entry">
+Eyal, N. (2019). <span>Informed Consent</span>. In E. N. Zalta (Ed.),
+<em>The <span>Stanford</span> encyclopedia of philosophy</em>
+(<span>S</span>pring 2019). <a
+href="https://plato.stanford.edu/archives/spr2019/entries/informed-consent/"
+class="uri">https://plato.stanford.edu/archives/spr2019/entries/informed-consent/</a>;
+Metaphysics Research Lab, Stanford University.
+</div>
+<div id="ref-ethics-consent" class="csl-entry">
+Miller, F. G., &amp; Wertheimer, A. (2010). <em>The ethics of consent :
+Theory and practice</em> (pp. 1–430). <a
+href="https://doi.org/10.1093/acprof:oso/9780195335149.001.0001">https://doi.org/10.1093/acprof:oso/9780195335149.001.0001</a>
+</div>
+<div id="ref-Belmont" class="csl-entry">
+Parasidis, E., Pike, E., &amp; McGraw, D. (2019). A belmont report for
+health data. <em>New England Journal of Medicine</em>, <em>380</em>,
+1493–1495. <a
+href="https://doi.org/10.1056/NEJMp1816373">https://doi.org/10.1056/NEJMp1816373</a>
+</div>
+<div id="ref-Coercion" class="csl-entry">
+Rusert, B. (2019). <em>Naturalizing coercion:: The tuskegee experiments
+and the laboratory life of the plantation</em>. <a
+href="https://doi.org/10.1215/9781478004493-003">https://doi.org/10.1215/9781478004493-003</a>
+</div>
+<div id="ref-Solove" class="csl-entry">
+Solove, D. (2012). Privacy self-management and the consent dilemma.
+<em>Harvard Law Review</em>, <em>126</em>.
+</div>
+<div id="ref-wolmarans_voorhoeve_2022" class="csl-entry">
+Wolmarans, L., &amp; Voorhoeve, A. (2022). What makes personal data
+processing by social networking services permissible? <em>Canadian
+Journal of Philosophy</em>, <em>52</em>(1), 93–108. <a
+href="https://doi.org/10.1017/can.2022.4">https://doi.org/10.1017/can.2022.4</a>
+</div>
 </div>
 </div>
 
