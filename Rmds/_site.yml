@@ -63,7 +63,7 @@
 
 name: DS Ethics 2023
 favicon: images/favicon.ico
-output_dir: ".."
+output_dir: "../htmls"
 navbar:
   title: <img src="images/DSethics.png"><body>Data Science Ethics Summer 2023</body>
   background: success
@@ -75,7 +75,7 @@ navbar:
         - text: "What is Data Science Ethics?"
           href: Intro-DS-ethics.html
         - text: "Data Science Ethics Pedagogies"
-          href: DSethics-pedagogies.html
+          href: DS-pedagogies.html
         - text: "Data Science Lifecycle"
           href: Intro-DS-lifecycle.html
     - text: "Inside the Syllabi"
@@ -86,9 +86,9 @@ navbar:
           href: Common-Topics.html
         - text: "Data Science Lifecycle Connections"
           href: DS-pipeline.html
-    - text: "Reading Tags"
-      icon: fa-tag
-      href: Reading-Tags.html 
+    - text: "Readings"
+      icon: fa-book-open
+      href: Reading-Tags.html
       
       
 output:

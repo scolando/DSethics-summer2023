@@ -1,8 +1,51 @@
 ---
-title: "Reading Tags"
+title: "Reading Lists"
 output: html_document
 ---
 
+----
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
+
+```{css}
+h1 {
+  text-align: left;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color:  #877e2c;
+    border-color:  #877e2c;
+}
+```
+
+* [Consent](Consent.html)
+
+* [Privacy](Privacy.html)
+
+* [Explainability, Interpretability, and Transparency](Explainability.html)
+
+* [Democracy](Democracy.html)
+
+* [Workplace](Workplace.html)
+
+* [Predictive Policing](Predictive-Policing.html)
+
+* [Causation](Causation.html)
+
+* [Bias, Fairness, and Justice](Bias.html)
+
+* [Alignment](Alignment.html)
+
+* [Responsibility](Responsibility.html)
+
+* [Characterizations of Data and Data Science](Characterizations.html)
+
+----
+
+# Reading Tags
+
+----

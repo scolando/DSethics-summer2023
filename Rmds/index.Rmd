@@ -9,23 +9,21 @@ output:
 
 ## Introduction to Website
 
-My name is Sara, and I am a Mathematics and Philosophy double major at Pomona College. Through my coursework in Math and Philosophy, I have seen the diverse approaches to grappling with the ethical issues that arise in Data Science. For my Summer Undergraduate Research Project through Pomona College, I am exploring the pedagogies of existing Data Science Ethics courses at other institutions to better understand the who's teaching the course, what the common topics are, and how these courses cater to students with different backgrounds. 
+Through my Statistics and Philosophy coursework, I have seen diverse approaches to grappling with issues in Data Science Ethics. For my Summer Undergraduate Research Project (SURP) through Pomona College, I am exploring the pedagogies of existing Data Science Ethics courses. Exploring the pedagogies for Data Science Ethics is a fantastic way for me to understand the central concepts in the field and the current conversations in Data Science Ethics research. Additionally, it also gives insights into interesting pedagogical questions such as: 
 
-This website serves as a hub for my work for the summer with the intention of it also helping others who are interested in understanding more about the pedagogies of Data Science Ethics courses or just generally about the nascent field of Data Science Ethics.
+* Who is teaching Data Science Ethics courses?
+
+* Which topics are most common within Data Science Ethics classes?
+
+* How do Data Science Ethics courses, which are inherently interdisciplinary, cater to students with different philosophical and technical backgrounds? 
+
+This website is a hub for my summer project on the teaching pedagogies of Data Science Ethics. By documenting my findings on this public website, I hope that others can also learn more about Data Science Ethics' teaching pedagogies or, just generally, the nascent field of Data Science Ethics.
 
 ## Syllabi Table 
-The table below details the syllabi that I have consulted during this project. A majority of them our Undergraduate courses and have a reading list included within their syllabus. 
 
-<br>
+The table below details the syllabi that I consulted during this project. A majority of them are undergraduate courses and include a reading list. Feel free to visit [Inside the Syllabi Notes](inside-syllabi.html) for in-depth notes on each course's learning goals and topics.
 
 :::{.column-page}   
 <iframe src = "https://scolando.github.io/DSethics-summer2023/syllabi-table.html" width="95%" height="1000" data-external="1" style="border: none; text-align = 'center';"></iframe>
 :::
-
-```{r extraneous, echo = FALSE}
-## Inside the Syllabi: Course Outcomes and Topics
-
-#For my notes about the course outcomes and topics for each data science ethics course in the syllabi table, #click [**HERE**](inside-syllabi.html).
-```
- 
 

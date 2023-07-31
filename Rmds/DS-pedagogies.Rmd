@@ -1,5 +1,5 @@
 ---
-title: "What is Data Science Ethics?"
+title: "Data Science Ethics Pedagogies"
 output: 
   html_document:
     toc: TRUE
@@ -30,7 +30,7 @@ h1 {
 Comic via [Evil AI Cartoons](https://www.evilaicartoons.com/):
 
 ```{r out.width = '100%', out.height='50%'}
-knitr::include_graphics("images/AI-ethics.jpg")
+knitr::include_graphics("images/teaching-ethics.png")
 ```
 
 

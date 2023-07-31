@@ -1,5 +1,5 @@
 ---
-title: "Inside the Syllabi Notes:<br>Course Outcomes and Listed Topics"
+title: "Inside the Syllabi:<br>Listed Course Outcomes and Topics"
 output: 
   html_document:
     toc: TRUE
