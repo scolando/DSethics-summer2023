@@ -4,6 +4,7 @@ output:
   html_document:
     toc: TRUE
     toc_float: TRUE
+    toc_depth: 2
     number_sections: TRUE
 bibliography: bibliographies/DSethics-summer2023.bib
 link-citations: true
@@ -172,7 +173,7 @@ Like many data science ethics terms, what exactly explainability, interpretabili
 
 ----
 
-Democracy, workplace, and predictive policing are settings where data science practices have exceptionally high moral stakes. As such, case studies from democracy, workplace, or predictive policing settings are routinely used in data science ethics classes to underscore how pernicious data science's moral harms can be. Usually, when case studies are referenced, it concerns deploying predictive models in these settings. The COMPAS algorithm, which predicted an inmate's risk of being reconvicted to determine their sentence length, is a well-known example of an algorithm that was scrutinized for being deployed in courtrooms, given that it predicted a higher proportion of false high-risk appraisals for Black men than White men [@COMPAS].
+Democracy, workplace, and predictive policing are settings where data science practices have exceptionally high moral stakes. As such, case studies from democracy, workplace, or predictive policing settings are routinely used in data science ethics classes to underscore how pernicious data science's moral harms can be. Usually, when case studies are referenced, it concerns deploying predictive models in these settings. The COMPAS algorithm, which predicted an inmate's risk of being reconvicted to determine their sentence length, is a well-known example of an algorithm that was scrutinized for being deployed in courtrooms, given that it predicted a higher proportion of false high-risk appraisals for Black defendants than White defendants [@COMPAS].
 
 Furthermore, these predictions can lead to morally problematic interactions with the world. For instance, suppose that law enforcement starts over-policing a predominantly Black neighborhood because a recidivism algorithm predicted that people from that neighborhood are more likely to be reconvicted of a crime. Yet, the recidivism algorithm was trained on historical data riddled with racial biases. Over-policing that neighborhood could lead to specific populations being wrongfully convicted or more likely to be convicted solely because of their demographic characteristics -- both of which are intuitively morally problematic.
 
@@ -196,7 +197,7 @@ Interestingly, even though there is a high likelihood of immoral outcomes of dep
 
 Probably the most-known lesson in statistics is that "correlation does not imply causation". This lesson becomes especially poignant when a model representing the world is interpreted as knowledge. At least currently, most models only identify correlations between the predictor variables and the response variable, not causation (there is also centuries worth of philosophical debates about how to define causation). Interpreting correlative relationships as causal can have significant moral repercussions. For instance, suppose we have a logistic model that predicts whether a person will drop out of high school. Our model has a positive correlation between having Spanish as your first language and your expected probability of dropping out (i.e., if your first language is Spanish, you are expected to have a higher chance of dropping out of high school, holding all other variables constant). Clearly, several confounding variables, such as socioeconomic status and available academic opportunities, lead to the positive relationship we found. But, suppose that someone took our model and, from it, declared that having Spanish as your first language causes a higher probability of dropping out of high school. They might conclude that people whose first language is Spanish are less intelligent or lazier in school than those whose first language is not Spanish, leading to racist beliefs and actions that morally harm people whose first language is Spanish. Therefore, several data science ethics classes focus on causation at the knowledge-interpretation stage and, specifically, how it is dangerous to interpret causal relationships from most data models.
 
-There can also be ethical repercussions of false causal relationships between predictors and the response variable in informing future interactions with the world. Imagine biologists theorize that native Spanish speakers are naturally less intelligent than native English speakers and use false causal claims they took from our model to justify data collection. Thus, ethical worries related causation span not just what we should interpret as knowledge from a data model but also what sorts of interactions with the world are can be justified on the basis of previously interpreted knowledge.
+There can also be ethical repercussions of false causal relationships between predictors and the response variable in informing future interactions with the world. Imagine biologists theorize that native Spanish speakers are naturally less intelligent than native English speakers and use false causal claims they took from our model to justify data collection. Thus, ethical worries related to causation span not just what we should interpret as knowledge from a data model but also what sorts of interactions with the world are can be justified on the basis of previously interpreted knowledge.
 
 <br>
 
@@ -208,6 +209,13 @@ There can also be ethical repercussions of false causal relationships between pr
 
 ----
 
+Bias, fairness, and justice are all fundamental topics in data science ethics. Ongoing philosophical work is committed to defining bias, fairness, and justice and their relationship to one another. As such, I will not attempt to define nor explain the relationship between bias, fairness, and justice in this short connection paragraph. Even without definitions, though, there are intuitive cases of biased, unfair, and unjust data science practices and models. For instance, consider the COMPAS algorithm: a data model that predicted the risk of recidivism had higher rates of false “high risk” predictions for Black defendants than White defendants [@COMPAS]. Intuitively, COMPAS’ predictions are biased against Black people, and similarly, it would be unfair (and unjust) to decide a person’s parole or set their bail using COMPAS. 
+
+ The COMPAS case study highlights why most data science ethics courses tend to focus on bias, fairness, and justice surrounding data models: primarily, what is input into them (i.e., the data) as well as what they output (i.e., their predictions) and how decision-makers use the model’s outputs. The saying  “garbage in, garbage out” encapsulates the commonly-seen connection between bias, fairness, and justice and data modeling. “Garbage in, garbage out” indicates that if the data used to build the data model was biased against group X, then the model’s predictions would be biased against group X and could lead to unfair outcomes for group X. This explains why the opaque concentric circle for bias, fairness, and justice extends from “data” to “knowledge” in the data science lifecycle. 
+
+Another paradigmatic stage of the data science lifecycle where bias, fairness, and justice emerge is “interactions with the world”. Suppose a data scientist wants to model the average number of hours in the hospital after giving birth but only surveys white females. We would consequently consider the data set biased towards white women and be cautious about generalizing the data scientist’s findings to people who are not white women.
+
+While there is a focus on bias, fairness, and justice in data modeling and interactions with the world, they are essential concepts to consider at every stage in the data science lifecycle. For example, we might drop observations with missing values when processing interactions as objects and then data. Yet, dropping those values can create biases in our data and subsequent analysis if they are not missing at random ([example inspired by this paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668100/)). Bias, fairness, and justice can also come into play from “knowledge” to “interactions with our world”. For instance, it might be considered unjust or unfair to give nannying job ads to only women because an algorithm found that women were significantly more likely than men to click on a nannying ad ([example inspired by this article](https://hbr.org/2019/05/all-the-ways-hiring-algorithms-can-introduce-bias)).
 
 <br>
 
@@ -221,6 +229,22 @@ There can also be ethical repercussions of false causal relationships between pr
 
 ----
 
+### Alignment
+
+Alignment refers to how our moral values align with our data science practices and technologies. We frequently consider alignment during the deployment stage, where our data model generates predictions about novel inputs. When seeing the outputs, it becomes salient if our moral values and data science practices are misaligned. Still, alignment comes into play throughout the lifecycle. We apply our moral values in interactions with our world (e.g., the moral requirement to get informed consent when collecting personal information). We use our moral values in data processing and cleaning when thinking about what to do with missing data, especially when it is not missing at random. Alignment also comes into play when developing data models. For instance, we use our moral values when deciding what fairness metric to use when evaluating our model’s performance and thereafter when thinking about how we apply the model outputs to inform future interactions with the world (e.g., see the privacy and consent sections above).
+
+### Responsibility
+
+Here, I am focusing on *moral* rather than mere legal responsibility; an individual might be morally responsible for X, even if X is legal (e.g., cheating on a significant other). Moral responsibility comes up throughout the data science lifecycle. Most commonly, data science focuses on moral responsibility concerning model deployment and interactions with the world. For example, Amazon was seen as morally responsible for deploying a hiring algorithm that was biased against female applicants [@Amazon]. Moral responsibility also arises when building data models. It seems reasonable to contend that if another company made Amazon’s faulty hiring algorithm, it would also be morally responsible for the biased results – even if that company never deployed the model itself. 
+
+Moral responsibility is also crucial in interactions with the world. For instance, there are several case studies, data science, and beyond where people are morally responsible for failing to obtain informed consent when collecting personal information. Some examples include the Tuskegee Study or commercializing a social media user’s data without informed consent.
+
+Though less commonly thought about, moral responsibility also influences the “interactions with the world” to “data” stages of the lifecycle. Specifically, it seems valid to hold data scientists morally responsible for how data is stored and cleaned. For example, if a data scientist stored personal data in a foreseeably faulty database, they would be at least partially morally responsible for any data leakages. Similarly, if data is publicized that is not adequately anonymized, the data scientist who was supposed to remove identifiers from the data would be at least partially morally responsible for any ethical repercussions that arose from the data not being adequately anonymized.  
+
+
+### Characterizations of Data and Data Science
+
+Finally, characterizations of data and data science affect how we conceive of the data science lifecycle in general and, in turn, influence each stage in the data science lifecycle (see the [Data Science Lifecycle Page](Intro-DS-lifecycle.html) for more information).
 
 <br>
 
@@ -229,6 +253,8 @@ There can also be ethical repercussions of false causal relationships between pr
 <a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Responsibility.html">**Responsibility Readings**</a>
 
 <a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Characterizations.html">**Characterizations of Data and Data Science Readings**</a>
+
+<br>
 
 ----
 

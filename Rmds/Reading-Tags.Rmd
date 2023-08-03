@@ -48,4 +48,16 @@ h1 {
 
 # Reading Tags
 
+*some ideas for tags that I currently have*
+
+* Primer
+
+* Policy
+
+* Law
+
+* Case Study
+
+* Contains Mathematical Formulas
+
 ----

@@ -431,8 +431,8 @@ h1 {
 Topics</h1>
 <hr />
 <div class="figure" style="text-align: center">
-<div id="htmlwidget-c7fcbec4cc0e09aa9794" class="reactable html-widget " style="width:800px;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c7fcbec4cc0e09aa9794">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Syllabi_Topics":["Privacy","Bias","Fairness","Explainability","Workplace","Alignment","Transparency","Causation","Characterizations of Data and Data Science","Consent","Democracy","Interpretability","Justice","Predictive Policing","Responsibility"],"Count":[11,8,8,6,5,4,4,3,3,3,3,3,3,3,3]},"columns":[{"id":"Syllabi_Topics","name":"Syllabi Topic","type":"character"},{"id":"Count","name":"Count","type":"numeric"}],"searchable":true,"defaultPageSize":8,"showPagination":true,"highlight":true,"showSortable":true,"width":"800px","theme":{"highlightColor":"#F0EDD1","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"}},"dataKey":"8a384a6acb5ecbddc7a8140ad79e3911"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-573d4b4b87d2c5eea460" class="reactable html-widget " style="width:800px;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-573d4b4b87d2c5eea460">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Syllabi_Topics":["Privacy","Bias","Fairness","Explainability","Workplace","Alignment","Transparency","Causation","Characterizations of Data and Data Science","Consent","Democracy","Interpretability","Justice","Predictive Policing","Responsibility"],"Count":[11,8,8,6,5,4,4,3,3,3,3,3,3,3,3]},"columns":[{"id":"Syllabi_Topics","name":"Syllabi Topic","type":"character"},{"id":"Count","name":"Count","type":"numeric"}],"searchable":true,"defaultPageSize":8,"showPagination":true,"highlight":true,"showSortable":true,"width":"800px","theme":{"highlightColor":"#F0EDD1","style":{"fontFamily":"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"}},"dataKey":"8a384a6acb5ecbddc7a8140ad79e3911"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Most Common Syllabi Topics Arranged in Descending Order by Count
 </p>
@@ -612,7 +612,7 @@ settings. The COMPAS algorithm, which predicted an inmate’s risk of
 being reconvicted to determine their sentence length, is a well-known
 example of an algorithm that was scrutinized for being deployed in
 courtrooms, given that it predicted a higher proportion of false
-high-risk appraisals for Black men than White men <span
+high-risk appraisals for Black defendants than White defendants <span
 class="citation">(<a href="#ref-COMPAS" role="doc-biblioref">Julia
 Angwin, 2016</a>)</span>.</p>
 <p>Furthermore, these predictions can lead to morally problematic
@@ -677,10 +677,10 @@ between predictors and the response variable in informing future
 interactions with the world. Imagine biologists theorize that native
 Spanish speakers are naturally less intelligent than native English
 speakers and use false causal claims they took from our model to justify
-data collection. Thus, ethical worries related causation span not just
-what we should interpret as knowledge from a data model but also what
-sorts of interactions with the world are can be justified on the basis
-of previously interpreted knowledge.</p>
+data collection. Thus, ethical worries related to causation span not
+just what we should interpret as knowledge from a data model but also
+what sorts of interactions with the world are can be justified on the
+basis of previously interpreted knowledge.</p>
 <p><br></p>
 <p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Causation.html"><strong>Causation
 Readings</strong></a></p>
@@ -690,6 +690,53 @@ Readings</strong></a></p>
 <h2><span class="header-section-number">3.6</span> Bias, Fairness,
 Justice</h2>
 <hr />
+<p>Bias, fairness, and justice are all fundamental topics in data
+science ethics. Ongoing philosophical work is committed to defining
+bias, fairness, and justice and their relationship to one another. As
+such, I will not attempt to define nor explain the relationship between
+bias, fairness, and justice in this short connection paragraph. Even
+without definitions, though, there are intuitive cases of biased,
+unfair, and unjust data science practices and models. For instance,
+consider the COMPAS algorithm: a data model that predicted the risk of
+recidivism had higher rates of false “high risk” predictions for Black
+defendants than White defendants <span class="citation">(<a
+href="#ref-COMPAS" role="doc-biblioref">Julia Angwin, 2016</a>)</span>.
+Intuitively, COMPAS’ predictions are biased against Black people, and
+similarly, it would be unfair (and unjust) to decide a person’s parole
+or set their bail using COMPAS.</p>
+<p>The COMPAS case study highlights why most data science ethics courses
+tend to focus on bias, fairness, and justice surrounding data models:
+primarily, what is input into them (i.e., the data) as well as what they
+output (i.e., their predictions) and how decision-makers use the model’s
+outputs. The saying “garbage in, garbage out” encapsulates the
+commonly-seen connection between bias, fairness, and justice and data
+modeling. “Garbage in, garbage out” indicates that if the data used to
+build the data model was biased against group X, then the model’s
+predictions would be biased against group X and could lead to unfair
+outcomes for group X. This explains why the opaque concentric circle for
+bias, fairness, and justice extends from “data” to “knowledge” in the
+data science lifecycle.</p>
+<p>Another paradigmatic stage of the data science lifecycle where bias,
+fairness, and justice emerge is “interactions with the world”. Suppose a
+data scientist wants to model the average number of hours in the
+hospital after giving birth but only surveys white females. We would
+consequently consider the data set biased towards white women and be
+cautious about generalizing the data scientist’s findings to people who
+are not white women.</p>
+<p>While there is a focus on bias, fairness, and justice in data
+modeling and interactions with the world, they are essential concepts to
+consider at every stage in the data science lifecycle. For example, we
+might drop observations with missing values when processing interactions
+as objects and then data. Yet, dropping those values can create biases
+in our data and subsequent analysis if they are not missing at random
+(<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668100/">example
+inspired by this paper</a>). Bias, fairness, and justice can also come
+into play from “knowledge” to “interactions with our world”. For
+instance, it might be considered unjust or unfair to give nannying job
+ads to only women because an algorithm found that women were
+significantly more likely than men to click on a nannying ad (<a
+href="https://hbr.org/2019/05/all-the-ways-hiring-algorithms-can-introduce-bias">example
+inspired by this article</a>).</p>
 <p><br></p>
 <p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Bias.html"><strong>Bias,
 Fairness, Justice Readings</strong></a></p>
@@ -702,6 +749,66 @@ class="section level2" number="3.7">
 <h2><span class="header-section-number">3.7</span> Alignment,
 Responsibility, Characterizations of Data and Data Science</h2>
 <hr />
+<div id="alignment" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Alignment</h3>
+<p>Alignment refers to how our moral values align with our data science
+practices and technologies. We frequently consider alignment during the
+deployment stage, where our data model generates predictions about novel
+inputs. When seeing the outputs, it becomes salient if our moral values
+and data science practices are misaligned. Still, alignment comes into
+play throughout the lifecycle. We apply our moral values in interactions
+with our world (e.g., the moral requirement to get informed consent when
+collecting personal information). We use our moral values in data
+processing and cleaning when thinking about what to do with missing
+data, especially when it is not missing at random. Alignment also comes
+into play when developing data models. For instance, we use our moral
+values when deciding what fairness metric to use when evaluating our
+model’s performance and thereafter when thinking about how we apply the
+model outputs to inform future interactions with the world (e.g., see
+the privacy and consent sections above).</p>
+</div>
+<div id="responsibility" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Responsibility</h3>
+<p>Here, I am focusing on <em>moral</em> rather than mere legal
+responsibility; an individual might be morally responsible for X, even
+if X is legal (e.g., cheating on a significant other). Moral
+responsibility comes up throughout the data science lifecycle. Most
+commonly, data science focuses on moral responsibility concerning model
+deployment and interactions with the world. For example, Amazon was seen
+as morally responsible for deploying a hiring algorithm that was biased
+against female applicants <span class="citation">(<a href="#ref-Amazon"
+role="doc-biblioref">Dastin, 2018</a>)</span>. Moral responsibility also
+arises when building data models. It seems reasonable to contend that if
+another company made Amazon’s faulty hiring algorithm, it would also be
+morally responsible for the biased results – even if that company never
+deployed the model itself.</p>
+<p>Moral responsibility is also crucial in interactions with the world.
+For instance, there are several case studies, data science, and beyond
+where people are morally responsible for failing to obtain informed
+consent when collecting personal information. Some examples include the
+Tuskegee Study or commercializing a social media user’s data without
+informed consent.</p>
+<p>Though less commonly thought about, moral responsibility also
+influences the “interactions with the world” to “data” stages of the
+lifecycle. Specifically, it seems valid to hold data scientists morally
+responsible for how data is stored and cleaned. For example, if a data
+scientist stored personal data in a foreseeably faulty database, they
+would be at least partially morally responsible for any data leakages.
+Similarly, if data is publicized that is not adequately anonymized, the
+data scientist who was supposed to remove identifiers from the data
+would be at least partially morally responsible for any ethical
+repercussions that arose from the data not being adequately
+anonymized.</p>
+</div>
+<div id="characterizations-of-data-and-data-science"
+class="section level3" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Characterizations
+of Data and Data Science</h3>
+<p>Finally, characterizations of data and data science affect how we
+conceive of the data science lifecycle in general and, in turn,
+influence each stage in the data science lifecycle (see the <a
+href="Intro-DS-lifecycle.html">Data Science Lifecycle Page</a> for more
+information).</p>
 <p><br></p>
 <p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Alignment.html"><strong>Alignment
 Readings</strong></a></p>
@@ -709,7 +816,9 @@ Readings</strong></a></p>
 Readings</strong></a></p>
 <p><a style="color:#877e2c; background-color: #F0EDD1; border: 5px solid #F0EDD1; border-radius: 4px;" href="Characterizations.html"><strong>Characterizations
 of Data and Data Science Readings</strong></a></p>
+<p><br></p>
 <hr />
+</div>
 </div>
 </div>
 <div id="references" class="section level1" number="4">
@@ -717,19 +826,28 @@ of Data and Data Science Readings</strong></a></p>
 <hr />
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
+<div id="ref-Amazon" class="csl-entry">
+Dastin, J. (2018). <em><span>A</span>mazon scraps secret
+<span>A</span><span>I</span> recruiting tool that showed bias against
+women</em>. <a
+href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G"
+class="uri">https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G</a>;
+Reuters.
+</div>
 <div id="ref-COMPAS" class="csl-entry">
 Julia Angwin, L. K., Jeff Larson. (2016). <em><span>M</span>achine
-<span>B</span>ias — propublica.org</em>. <a
+<span>B</span>ias</em>. <a
 href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
-class="uri">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.
+class="uri">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>;
+ProPublica.
 </div>
 <div id="ref-OkCupid" class="csl-entry">
 Woollacott, E. (2016). <em>70,000 <span>O</span>k<span>C</span>upid
 <span>P</span>rofiles <span>L</span>eaked, <span>I</span>ntimate
-<span>D</span>etails <span>A</span>nd <span>A</span>ll —
-forbes.com</em>. <a
+<span>D</span>etails <span>A</span>nd <span>A</span>ll</em>. <a
 href="https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data-of-70000-okcupid-users-released/?sh=2ac42f2f1e15"
-class="uri">https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data-of-70000-okcupid-users-released/?sh=2ac42f2f1e15</a>.
+class="uri">https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data-of-70000-okcupid-users-released/?sh=2ac42f2f1e15</a>;
+Forbes.
 </div>
 </div>
 </div>
@@ -739,9 +857,10 @@ class="uri">https://www.forbes.com/sites/emmawoollacott/2016/05/13/intimate-data
 <br>
 
 <footer>
+  <hr />
   <div class = "container">
     <div class="row">
-        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7); border-top: 1px solid #ddd'><br>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
+        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7);'>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
   <a style = 'font-family: "Helvetica Neue"; float: center;' href="https://github.com/scolando/DSethics-summer2023">
     <span class="fa fa-github"></span>
     Source Code </a>
@@ -800,7 +919,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {

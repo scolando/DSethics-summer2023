@@ -63,7 +63,7 @@
 
 name: DS Ethics 2023
 favicon: images/favicon.ico
-output_dir: "../htmls"
+output_dir: "../"
 navbar:
   title: <img src="images/DSethics.png"><body>Data Science Ethics Summer 2023</body>
   background: success
