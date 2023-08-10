@@ -63,6 +63,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -396,11 +418,231 @@ h1 {
 </style>
 <p>Comic via <a href="https://www.evilaicartoons.com/">Evil AI
 Cartoons</a>:</p>
-<p><img src="images/AI-ethics.jpg" width="100%" height="50%" style="display: block; margin: auto;" /></p>
+<p><img src="images/AI-ethics.jpg" width="100%" height="20%" style="display: block; margin: auto;" /></p>
 <hr />
+<div id="what-is-data-science" class="section level1">
+<h1>What is Data Science?</h1>
+<hr />
+<div id="data-science-definition" class="section level3">
+<h3>Data Science Definition</h3>
+<p>Data Science is typically focused on transforming the data into data
+model(s), but data science encompasses the <em>all the stages</em>
+needed to answer questions with data: from “Problem Definition” to
+“Deployment and Use”.</p>
+<p><img src="images/DS-stack.png" width="943" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p><strong>Problem Definition:</strong> asks what is the problem?
+What counts as success (i.e., when do we say a data model is
+successful)? How can we actually measure (or approximately measure) our
+event-of-interest?</p></li>
+<li><p><strong>Raw Data:</strong> the information collected from the
+world. For example, if we are interested in which baby names are popular
+in the US during the 2010s, our raw data might be the birth certificates
+for babies born between 2010 and 2019 in the US.</p></li>
+<li><p><strong>Data:</strong> the processed form of the raw data, often
+involving taking the raw data and formatting it as a data table. For
+example, data would be the birth certificate information put into a data
+frame in which each row represents a baby born in the US during the
+2010s and the columns are different features-of-interest for that baby
+(e.g., their name, birth year, and sex).</p></li>
+<li><p><strong>Learning Algorithm:</strong> a mathematical formula that
+predicts an output from an input. Learning algorithms range from simple
+linear regression to neural networks with millions of
+hyperparameters.</p></li>
+<li><p><strong>Data Model(s):</strong> an output created by running the
+data through selected learning algorithm that aims to generalize the
+relationship between variables in the data. For example, simple linear
+regression, <span class="math inline">\(\mathbb{E}(Y_i|x_i) = \beta_0 +
+\beta_1(x_i)\)</span>, is a data model that generalizes a relationship
+between <em>x</em> and the expected value of <em>Y</em> (given
+<em>x</em>) as linear.</p></li>
+<li><p><strong>Tuned Data Model(s):</strong> a data model in which the
+model’s parameters are adjusted, usually to better balance the model’s
+generalizablity and (prediction) accuracy for the
+population-of-interest. In practice, the tuning is done either through
+splitting the data into training and test sets or performing
+cross-validation.</p></li>
+<li><p><strong>Deployment and Use:</strong> generation of predictions
+(or other output) from the tuned data model. This is the stage where we
+ask questions like where should the system be used, who should be using
+it, and who/what should the data model be used on?</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="what-is-ethics" class="section level1">
+<h1>What is Ethics?</h1>
+<hr />
+<div id="ethics-definition" class="section level3">
+<h3>Ethics Definition</h3>
+<p>Ethics (also referred to as moral philosophy) is comprised of three
+main branches:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Applied Ethics:</strong> concerns the treatment of “moral
+problems, practices, and policies in personal life, professions,
+technology, and government,” <span class="citation">(<a
+href="#ref-applied-ethics" role="doc-biblioref">Petersen &amp; Ryberg,
+2010</a>)</span>.</li>
+</ol>
+<ul>
+<strong>E.g.,</strong> <em>Is it morally permissible to deploy
+predictive-policing algorithms? When (if ever) is it morally permissible
+to let someone die?</em>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Ethical Theory:</strong> concerns “the articulation and
+justification of the fundamental moral principles that govern how we
+should live and what we ought to morally do,” <span class="citation">(<a
+href="#ref-ethical-theory" role="doc-biblioref">Driver,
+2007</a>)</span>.</li>
+</ol>
+<ul>
+<strong>E.g.,</strong> <em>What ought we value? What moral principles
+ought to guide our actions?</em><br>Ethical theory is where higher-level
+moral principles, such as <a
+href="https://plato.stanford.edu/entries/consequentialism/">consequentialism</a>
+(such as utilitarianism), <a
+href="https://plato.stanford.edu/entries/ethics-deontological/">deontological
+ethics</a> (such as Kantian ethics), and <a
+href="https://plato.stanford.edu/entries/ethics-virtue/">virtue
+ethics</a> are explicated and justified.
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Metaethics:</strong> explores “the status, foundations, and
+scope of moral values, properties, and words,” <span
+class="citation">(<a href="#ref-metaethics"
+role="doc-biblioref">DeLapp</a>)</span>.</li>
+</ol>
+<ul>
+<strong>E.g.,</strong> <em>What does it mean to invoke one’s
+hypothetical will? What is morality?</em>
+</ul>
+<p>A key takeaway is that ethics attempts to answer <em>normative</em>
+questions. For instance, ethics attempts to answer not what person A
+values, but rather what person A <em>should</em> value? Similarly,
+ethics is interested in what decision person A <em>should</em> act and
+not what act person A makes (or is likely to make).</p>
+<p>Another important distinction is between ethics and the law. Ethics
+is not interested in legal normative claims, that is, in identifying
+trade-offs between values or actions from the perspective of legal
+norms. Moral and legal normative claims can come apart. For example, it
+seems morally impermissible to cheat on a romantic partner you are in a
+monogamous relationship with, even though it is legal.</p>
+</div>
+<div id="relevant-ethics-vocabulary" class="section level3">
+<h3>Relevant Ethics Vocabulary</h3>
+<ul>
+<li><p><strong>(Moral) Right:</strong> an entitlement “(not) to perform
+certain actions, or (not) to be in certain states” based on a moral
+justification <span class="citation">(<a href="#ref-sep-rights"
+role="doc-biblioref">Wenar, 2023</a>)</span>. For example, a person’s
+right choose what they do with their body is based on the moral
+principle that one’s autonomy ought to be respected. Notably, rights can
+be waived, forfeited, or overridden. More information available in this
+<a href="https://plato.stanford.edu/entries/rights/">Stanford
+Encyclopedia of Philosophy entry</a>.</p></li>
+<li><p><strong>(Moral) Duty:</strong> B has a duty to give X to A <em>if
+and only if</em> A has right to be given X by B. Given rights can be
+forfeited, waived, and overridden, A’s duty to give X to B might exist
+at <span class="math inline">\(t_1\)</span> but no longer exist at <span
+class="math inline">\(t_2\)</span>.</p></li>
+<li><p><strong>Stakeholder:</strong> those who could be impacted by a
+decision. Usually, we have to pare down to stakeholders we think have
+the most relevant interests during ethical analysis.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="why-data-science-ethics" class="section level1">
+<h1>Why Data Science Ethics?</h1>
+<hr />
+<p>Data Science Ethics is usually considered an example of Applied
+Ethics. Though, case studies in Data Science Ethics can also influence
+our answers to Ethical Theory and Metaethics questions too.</p>
+<div id="data-science-ethics-definition" class="section level3">
+<h3>Data Science Ethics Definition</h3>
+<p>Per <span class="citation">Floridi &amp; Taddeo (<a
+href="#ref-DS-ethics-def" role="doc-biblioref">2016</a>)</span>:</p>
+<p><strong>Data Science Ethics</strong> studies and evaluates moral
+problems related to:</p>
+<ul>
+<li><p><strong>Data</strong> including generation, recording,
+processing, dissemination, and sharing</p></li>
+<li><p><strong>Algorithms</strong> including artificial intelligence,
+machine learning and statistical learning</p></li>
+<li><p><strong>Corresponding Practices</strong> including responsible
+innovation, programming, hacking, and professional codes</p></li>
+</ul>
+<p>in order to formulate and support morally good solutions (e.g. right
+conducts or right values).</p>
+</div>
+<div id="importance-of-data-science-ethics" class="section level3">
+<h3>Importance of Data Science Ethics</h3>
+<p>There are a number of critical decision-points in data science, which
+can lead to moral problems in data, algorithms, and corresponding
+practices.</p>
+<p><strong>Here are just some of the key decision-points in data
+science:</strong> <br></p>
+<p><img src="images/DS-stack-values.png" width="944" style="display: block; margin: auto;" /></p>
+<p><br> Given the commonly-held belief that math, and consequently
+statistics, is “objective” (in the sense that it is not influenced by
+one’s moral values), these potentially morally-charged choices are often
+made implicitly, without the decision-maker reflecting on, for example,
+how opting for <em>Choice A</em> over <em>Choice B</em> (mis)aligns with
+their moral values and/or duties to stakeholders.</p>
+<p>Data Science Ethics attempts to illuminate the ethical repercussions
+of these choices and take an interdisciplinary perspective on aligning
+our moral values and duties with our data science practices.</p>
+<p style="background-color: #ededed; border: 5px solid #ededed;">
+<strong>Therefore, understanding Data Science Ethics is critical to
+ensuring morally responsible data science practices and becomes even
+more essential as our decisions become increasingly influenced by data
+science.</strong>
+</p>
+<hr />
+</div>
+</div>
 <div id="references" class="section level1">
 <h1>References</h1>
 <hr />
+<p><em>Beyond formal references, I also owe many ideas from my ethics
+classes with Julie Tannenbaum, Associate Professor of Philosophy at
+Pomona College and the workshops from <a
+href="https://sites.google.com/view/ideas-summer-program/">Intelligence,
+Data, And Society (IDEAS) Summer Program</a> at the University of
+California, San Diego in Summer 2023.</em></p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-metaethics" class="csl-entry">
+DeLapp, K. M. <em><span>M</span>etaethics</em>. <a
+href="https://iep.utm.edu/metaethi/"
+class="uri">https://iep.utm.edu/metaethi/</a>; <span>I</span>nternet
+<span>E</span>ncyclopedia of <span>P</span>hilosophy.
+</div>
+<div id="ref-ethical-theory" class="csl-entry">
+Driver, J. (2007). <em>Normative ethics</em>. <a
+href="https://doi.org/10.1093/oxfordhb/9780199234769.003.0002">https://doi.org/10.1093/oxfordhb/9780199234769.003.0002</a>
+</div>
+<div id="ref-DS-ethics-def" class="csl-entry">
+Floridi, L., &amp; Taddeo, M. (2016). What is data ethics?
+<em>Philosophical Transactions of The Royal Society A Mathematical
+Physical and Engineering Sciences</em>, <em>374</em>, 20160360. <a
+href="https://doi.org/10.1098/rsta.2016.0360">https://doi.org/10.1098/rsta.2016.0360</a>
+</div>
+<div id="ref-applied-ethics" class="csl-entry">
+Petersen, T. S., &amp; Ryberg, J. (2010). <em>Applied ethics</em>.
+Oxford University Press. <a
+href="https://doi.org/10.1093/obo/9780195396577-0006">https://doi.org/10.1093/obo/9780195396577-0006</a>
+</div>
+<div id="ref-sep-rights" class="csl-entry">
+Wenar, L. (2023). <span>Rights</span>. In E. N. Zalta &amp; U. Nodelman
+(Eds.), <em>The <span>Stanford</span> encyclopedia of philosophy</em>
+(<span>S</span>pring 2023). <a
+href="https://plato.stanford.edu/archives/spr2023/entries/rights/"
+class="uri">https://plato.stanford.edu/archives/spr2023/entries/rights/</a>;
+Metaphysics Research Lab, Stanford University.
+</div>
+</div>
 </div>
 
 <html>
@@ -408,9 +650,10 @@ Cartoons</a>:</p>
 <br>
 
 <footer>
+  <hr />
   <div class = "container">
     <div class="row">
-        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7); border-top: 1px solid #ddd'><br>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
+        <p style = 'text-align: left; font-family: "Helvetica Neue"; color: rgba(0, 0, 0, 0.7);'>Created during <a href="pomona.edu">Pomona College's</a> Summer Undergraduate Research Experience in Summer 2023 | 
   <a style = 'font-family: "Helvetica Neue"; float: center;' href="https://github.com/scolando/DSethics-summer2023">
     <span class="fa fa-github"></span>
     Source Code </a>

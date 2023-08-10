@@ -38,7 +38,7 @@ h1 {
 
 Though it might not be explicit, using one lifecycle or pipeline over another endorses specific views about data, data models, and their respective relationships to what we take to be knowledge about our world. Thus, the choice to use a certain data science lifecycle is **value-laden**.  
 
-There are two popular conceptions of the relationships between data, data models, and what we should interpret as knowledge about our world (i.e., the epistemic roles of data and data models) [@Leonelli]:
+Here, I examine two popular conceptions of the relationships between data, data models, and what we should interpret as knowledge about our world (i.e., the epistemic roles of data and data models) [@Leonelli]:
 
 1. **The representational view of data and data models**
 
@@ -48,7 +48,7 @@ There are two popular conceptions of the relationships between data, data models
 **Data Models:**  "arrangements of data that are evaluated, manipulated and modified with the explicit goal of representing a phenomenon, which is often (though not always) meant to capture specific aspects of the world," [@Leonelli].<br><br>**Examples of Data Models:**<br><br>1. A simple linear regression that uses years of education to model the expected income is a data model.<br><br>2. An algorithm that utilizes millions of hyperparameters to predict an incarcerated individual’s risk of recidivism.<br><br>3. A data visualization that describes a relationship between variables within a sample.
 </p>
 
-In the following two subsections, I provide an explication of the representational and relational view of data and data models and some reasoning for why we ought to reject the representational view of data and data models in favor of the relational one. I recommend reading @Leonelli for a more in-depth justification of the value of a relational view of data and data models over a representational one.  
+In the following two subsections, I provide an explication of the representational and relational view of data and data models and some benefits of using the relational view of data and data models over the representational one. I recommend reading @Leonelli for a more in-depth justification of the value of a relational view of data and data models over a representational one.  
 
 ----
 
@@ -111,14 +111,13 @@ Through @soccer-case, we can also see how ambiguity about the data model and the
 <p style="background-color: #ededed; border: 5px solid #ededed;">**Hence, @soccer-case emphasize that data and data models should be viewed relationally rather than representationally.**</p> 
 
 
-
 ----
 
 # The Final Data Science Lifecycle
 
 ----
 
-The final data science lifecycle endorses the relational view of data and data models proposed by @Leonelli. The diagram below shows us where paradigmatic data science practices occur in the lifecycle [@Beaulieu-Leonelli, 58].
+Several lifecycles are compatible with a relational view of data. The final data science lifecycle I will use on this website endorses the relational view of data and data models proposed by @Leonelli. The diagram below shows us where paradigmatic data science practices occur in the selected lifecycle [@Beaulieu-Leonelli, 58].
 
 ```{r dpi= 500, fig.align='center', echo = FALSE, out.width='80%', out.height='80%', fig.alt="Data Science Lifecycle under the Relational View of Data and Models conceptualized by Sabina Leonelli in 2019. The lifecycle is represented as a circle with 5 stages. Data Collection belongs to (1) Interactions with the World. Data Processing creates (2) Objects. Data Cleaning produces (3) Data. Exploratory Data Analysis is an intermediary between (3) Data and (4) Models. Machine Learning, Algorithms, Statistical Models are paradigmatic examples of (4) Models representing the World. Deployment of (4) Models creates interpretations of (5) Knowledge, which includes Communication, Visualizations, Report-Findings, and Decision making. Finally, (5) Knowledge informs further (1) Interactions with the world via Data Product Development.", fig.cap = "Data Science Lifecycle under the Relational View of Data and Models Superimposed with Paradigmatic Data Science Practices [@Beaulieu-Leonelli, 58]."}
 knitr::include_graphics("images/Pipeline-Practices.png")

@@ -60,10 +60,10 @@
 
 
   /* Whole document: */
-body{
+body, p {
   font-family: Helvetica;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 15px;
+  font-size: 16px;
 }
 
   h1 {
@@ -162,6 +162,18 @@ h6:before {
   margin-left: -3.7em;
   content: "//////";
   color: #c1b43e;
+}
+
+ul {
+  font-size: 16px;
+}
+
+li {
+  font-size: 16px;
+}
+
+blockquote {
+  border-left: 5px solid #ddd;
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
