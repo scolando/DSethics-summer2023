@@ -1,7 +1,7 @@
 ---
 title: "Privacy Readings"
 output: html_document
-bibliography: bibliographies/DSethics-readings.bib
+bibliography: bibliographies/Privacy-readings.bib
 link-citations: true
 csl: bibliographies/apa-6th-edition.csl
 nocite: '@*'
@@ -37,33 +37,62 @@ h1 {
 
 ```{r}
 privacy <- tribble(~Title, ~Reading_One, ~Summary, ~Tags,
-                                        "Informed Consent\n(Stanford Encyclopedia of Philosophy)",
-                   '<p><span class="citation">Eyal (<a href="#ref-sep-informed-consent" role="doc-biblioref">2019</a>)</span></p>', 
-                   "This Stanford Encyclopedia of Philosophy (SEP) entry overviews the philosophical discussions about Informed Consent. Specifically, this entry discusses what informed consent is, in which scenarios informed one is morally obligated to obtain informed consent, and why a moral obligation to obtain informed consent exists in the first place. This entry focuses on informed consent in the medical field. Yet, several concepts discussed in the SEP entry could be pertinent to the worries surrounding informed consent in data science.", 
+                                        "Privacy\n(Stanford Encyclopedia of Philosophy)",
+                   '<span class="citation">DeCew (<a href="#ref-sep-privacy"
+role="doc-biblioref">2018</a>)</span>', 
+                   ".", 
                    "<a href='consent.html'>Primer</a>,",
-                   "Privacy Self-Management and the Consent Dilemma",
-                    '<p><span class="citation">Solove (<a href="#ref-Solove"
-role="doc-biblioref">2012</a>)</span></p>',
-                    "'Privacy Self-Management and the Consent Dilemma' by Daniel J. Solove articulates how the rights to 'privacy self-management' and informed consent are deeply intertwined when collecting, using, and disclosing information (e.g., personal data). In this article, Solove contends that individuals cannot adequately weigh the costs and benefits of revealing personal information or permitting its use and transfer, which limits the ability for privacy to be self-managed. Solove argues that these issues in privacy self-management lead to a 'consent dilemma' about how to ensure that one's informed consent to collect, use, or disclose personal data is meaningful without resorting to paternalistic laws or policies. Solove ends by proposing ways for privacy law to 'grapple with the consent dilemma'.", 
-"<a href='consent.html'>Law</a>,",
-"The Ethics of Consent: Theory and Practice",
-'<p><span class="citation">Miller &amp; Wertheimer (<a
-href="#ref-ethics-consent" role="doc-biblioref">2010</a>)</span></p>',
-"This book is a collection of prominent scholars' theoretical and practical perspectives on consent. Part one of the book dives into the theory behind consent and, namely, why it is morally required in certain contexts. Part two then goes into consent applications, such as in contracts, sexual relations, and clinic research. This book provides a substantial overview of philosophical work related to consent, and thus its excerpts could be useful when reflecting on the role of consent in the data science context.",
-"<a href='consent.html'>Primer</a>,",
-"What Makes Personal Data Processing by Social Networking Services Permissible?",
-'<p><span class="citation">Wolmarans &amp; Voorhoeve (<a
-href="#ref-wolmarans_voorhoeve_2022"
-role="doc-biblioref">2022</a>)</span></p>',
-"Wolmarans and Voorhoeve's paper focuses on consent in the context of social networking services. Specifically, they explore when the exchange of commericialization rights to personal information for social networking services is morally permissible. They ultimately argue that the exchange of personal information for social networking services is not permissible because a user consented to the exchange, but rather because social networks provide 'sufficiently valuable opportunities' in exchange for the right to commericialize a user's data. Beyond objecting to the common view for why commericialization rights to personal data in exchange for social networking services is permissible, Wolmarans and Voorhoeve also give a helpful overview of real case studies related to exchanging commericialization rights for social networking services in the paper's introduction.",
-"<a href='consent.html'>Policy</a>, <a href='consent.html'>Law</a>,",
-"Beyond Measure",
-'<span class="citation">Butler, Delaney, Hesselbo, &amp; Spoelstra
-(<a href="#ref-beyond-measure"
-role="doc-biblioref">2020</a>)</span>',
-"'Beyond Measure' is the introductory article of a special issue of the journal, ephmera, that explores measurement in the context of 'management, organization, and politics'. The authors explicate how the increase in measurement (quantification) is deeply tied to capitalist organizations and the desire to increase objectivity (which they define as 'not relying on the perspective of the individual'). However, as the authors explain, many things that we try to quantify for the sake of objectivity are not naturally quantifiable, including ourselves. While not directly related to consent, this article impels us to think more deeply about what the aim is of data science, and to think critically about what we should attempt to quantify through data science.",
+"Why Privacy is Important",
+'<span class="citation">Rachels (<a
+href="#ref-why-privacy-imp" role="doc-biblioref">1975</a>)</span>',
+".",
 "<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
-
+"Why We Care about Privacy",
+'<span class="citation"> McFarland (<a href="#ref-why-care-privacy"
+role="doc-biblioref">2012</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
+"The Right to Privacy",
+'<span class="citation">Thomson (<a
+href="#ref-right-privacy" role="doc-biblioref">1975</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
+                   "A Modern Pascal's Wager for Mass Electronic Surveillance",
+                    '<span class="citation">Danks (<a
+href="#ref-Danks-privacy" role="doc-biblioref">2014</a>)</span>',
+                    "", 
+"<a href='consent.html'>Law</a>,",
+"Privacy and Paternalism: The Ethics of Student Data Collection",
+'<span class="citation">Miller &amp; Wertheimer (<a
+href="#ref-ethics-consent" role="doc-biblioref">2010</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>,",
+"What’s Wrong with Automated Influence?",
+'<span class="citation">Benn &amp; Lazar (<a href="#ref-automated-influence"
+role="doc-biblioref">2021</a>)</span>',
+".",
+"<a href='consent.html'>Policy</a>, <a href='consent.html'>Law</a>,",
+"Privacy and Human Behavior in the Age of Information",
+'<span class="citation">Acquisti, Brandimarte, &amp; Loewenstein (<a
+href="#ref-privacy-behavior" role="doc-biblioref">2015</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
+"From Individual to Group Privacy in Big Data Analytics",
+'<span class="citation">Mittelstadt (<a href="#ref-individual-group"
+role="doc-biblioref">2017</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
+"Big Data's End Run around Procedural Privacy Protections",
+'<span class="citation">Barocas &amp; Nissenbaum (<a href="#ref-end-procedural"
+role="doc-biblioref">2014b</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
+"Why 'Anonymous' Data Sometimes Isn't",
+'<span class="citation">Schneier
+(<a href="#ref-anonymous-data"
+role="doc-biblioref">2007</a>)</span>',
+".",
+"<a href='consent.html'>Primer</a>, <a href='consent.html'>Case Study</a>,",
 )
 ```
 
@@ -87,12 +116,32 @@ reactable(privacy,
 )
 ```
 
-
 ----
 
 ## Additional Privacy Readings
 
 ----
+
+
+* [Privacy and Human Behavior in the Age of Information](https://www.cmu.edu/dietrich/sds/docs/loewenstein/PrivacyHumanBeh.pdf)
+
+* [Philosophy of Privacy and Digital Life](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4022657#:~:text=The%20most%20comprehensive%20philosophy%20of,live%20digitally%20driven%20and%20digitally)
+
+* [Nothing to Hide](https://drive.google.com/file/d/1bhtSpwDlTlZSJMXIH1f-Kqz8U6lVo2-7/view)
+
+* [It’s Not Privacy, and It's Not Fair](https://www.stanfordlawreview.org/online/privacy-and-big-data-its-not-privacy-and-its-not-fair/)
+
+* [Digital Reputation in an Era of Runaway Data](https://www.degruyter.com/document/doi/10.4159/harvard.9780674736061.c3/html?lang=en)
+
+* [Surveillance and Capture: Two Models of Privacy](https://www.tandfonline.com/doi/abs/10.1080/01972243.1994.9960162)
+
+* [The Surveillance Society](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1460-2466.1989.tb01040.x)
+
+* [Recommender Systems and Their Ethical Challenges](https://link.springer.com/article/10.1007/s00146-020-00950-y)
+
+* [Why ‘I Have Nothing to Hide’ is the Wrong Way to Think About Surveillance](https://www.wired.com/2013/06/why-i-have-nothing-to-hide-is-the-wrong-way-to-think-about-surveillance/)
+
+* [Can a Set of Equations keep U.S. Census Data Private?](https://www.science.org/content/article/can-set-equations-keep-us-census-data-private)
 
 ----
 

@@ -48,7 +48,7 @@ h1 {
 
 # Reading Tags
 
-*some ideas for tags that I currently have*
+----
 
 * Primer
 
@@ -58,6 +58,8 @@ h1 {
 
 * Case Study
 
-* Contains Mathematical Formulas
+* Mathematically Dense
+
+* Philosophically Dense
 
 ----
