@@ -60,9 +60,12 @@ Responsible Data Science", "New York University", "Data Science", "Undergraduate
 
 ```{r echo = FALSE, message = FALSE, warning=FALSE}
 reactable(syllabi, elementId = "syllabi-table",
-          columns = list(title = colDef("Course Title", html = TRUE),
+          columns = list(title = colDef("Course Title", 
+                                        minWidth = 120,
+                                        html = TRUE
+                                        ),
                                                     institution = colDef("Institution",
-                                                                         minWidth = 120,
+                                                                         minWidth = 125,
                                                                          html = TRUE), 
                                                     department = colDef("Department",
                                                                         minWidth = 120,
@@ -95,6 +98,6 @@ reactable(syllabi, elementId = "syllabi-table",
              style = list(
       fontFamily = "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif",
       fontSize = '14px',
-      marginLeft = "-80px",
-      marginRight="40px"
+      marginLeft = "-90px",
+      marginRight="45px"
     )))
