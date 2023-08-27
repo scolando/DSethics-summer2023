@@ -74,8 +74,8 @@ navbar:
       menu: 
         - text: "What is Data Science Ethics?"
           href: Intro-DS-ethics.html
-        - text: "Data Science Ethics Pedagogies"
-          href: DS-pedagogies.html
+ #       - text: "Data Science Ethics Pedagogies"
+#          href: DS-pedagogies.html
         - text: "Data Science Lifecycle"
           href: Intro-DS-lifecycle.html
     - text: "Inside the Syllabi"
