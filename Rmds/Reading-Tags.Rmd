@@ -38,11 +38,11 @@ h1 {
 
 * [Bias, Fairness, and Justice](construction.html)
 
-* [Alignment](Alignment.html)
+* [Alignment](construction.html)
 
-* [Responsibility](Responsibility.html)
+* [Responsibility](construction.html)
 
-* [Characterizations of Data and Data Science](Characterizations.html)
+* [Characterizations of Data and Data Science](construction.html)
 
 ----
 
