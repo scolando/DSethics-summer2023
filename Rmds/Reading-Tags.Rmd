@@ -26,17 +26,17 @@ h1 {
 
 * [Privacy](Privacy.html)
 
-* [Explainability, Interpretability, and Transparency](Explainability.html)
+* [Explainability, Interpretability, and Transparency](construction.html)
 
-* [Democracy](Democracy.html)
+* [Democracy](construction.html)
 
-* [Workplace](Workplace.html)
+* [Workplace](construction.html)
 
-* [Predictive Policing](Predictive-Policing.html)
+* [Predictive Policing](construction.html)
 
-* [Causation](Causation.html)
+* [Causation](construction.html)
 
-* [Bias, Fairness, and Justice](Bias.html)
+* [Bias, Fairness, and Justice](construction.html)
 
 * [Alignment](Alignment.html)
 
